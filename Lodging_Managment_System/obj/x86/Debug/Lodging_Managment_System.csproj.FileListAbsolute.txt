@@ -1,0 +1,80 @@
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Confirm_Booking.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Ammount.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Tabcontrol_Customer_Resistration.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Tabcontrol_Room.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Tabcontrol_Customer.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Tabcontrol_Employee.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Employee.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Room.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Booking_Next.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.frm_Booking1.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Gallary.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Login.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Amount.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Search_Customer.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service_Next.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Customer.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Rooms.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Employee_Details.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Form1.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI_LMS.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.WelCome_Msg.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Rooms.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Employee_Details.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Service.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.User_Managment.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Remove_Employee.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Customer_Details.resources
+D:\visual studio programs\c# Assignment\Window Application\Lodging_Managment_System - Copy Practice\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Room_Booking_Details.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Employee.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Room.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Booking_Next.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Form1.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.frm_Booking1.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Gallary.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Login.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI_LMS.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Amount.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Customer_Details.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Room_Booking_Details.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Remove_Employee.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Search_Customer.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service_Next.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Employee_Details.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Rooms.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Service.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.User_Managment.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Customer.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Rooms.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Employee_Details.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.WelCome_Msg.resources
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
