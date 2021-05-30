@@ -102,11 +102,6 @@ namespace Lodging_Managment_System
             obj.MdiParent = this;
             obj.WindowState = FormWindowState.Maximized;
             obj.Show();
-
-            //Pay_Amount obj = new Pay_Amount();
-            //obj.MdiParent = this;
-            //obj.WindowState = FormWindowState.Maximized;
-            //obj.Show();
             
         }
 

@@ -12,7 +12,7 @@ namespace Lodging_Managment_System
 {
     public partial class Login : Form
     {
-        SqlConnection Con = new SqlConnection(@"Data Source=.\SQLEXPRESS;Initial Catalog=Lodging_Managment_System_DB;Integrated Security=True");
+        SqlConnection Con = new SqlConnection(@"Data Source=.\EXPRESS;Initial Catalog=Lodging_Managment_System_DB;Integrated Security=True");
 
         void Con_Open()
         {

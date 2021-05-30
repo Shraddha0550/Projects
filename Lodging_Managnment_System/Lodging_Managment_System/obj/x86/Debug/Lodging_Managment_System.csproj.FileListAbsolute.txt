@@ -78,35 +78,66 @@ C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2
 C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
 C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
 C:\Users\sai\Desktop\Github\Lodging_Managment_System - Copy Practice\LMS_1_JAN_2021\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Employee.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Room.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Booking_Next.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Form1.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.frm_Booking1.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Gallary.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Login.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI_LMS.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Amount.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Customer_Details.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Room_Booking_Details.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Remove_Employee.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Search_Customer.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service_Next.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Employee_Details.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Rooms.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Service.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.User_Managment.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Customer.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Rooms.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Employee_Details.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.WelCome_Msg.resources
-C:\Users\sai\Desktop\Github\LMS.Net_Project\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Employee.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Room.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Booking_Next.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Form1.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.frm_Booking1.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Gallary.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Login.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI_LMS.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Amount.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Customer_Details.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Room_Booking_Details.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Remove_Employee.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Search_Customer.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service_Next.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Employee_Details.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Rooms.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Service.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.User_Managment.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Customer.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Rooms.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Employee_Details.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.WelCome_Msg.resources
+C:\Users\sai\Desktop\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.pdb
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.pdb
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csprojResolveAssemblyReference.cache
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Employee.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Add_Room.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Check_Out.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.frm_Booking1.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Gallary.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Login.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.MDI_LMS.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Pay_Amount.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Properties.Resources.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Customer_Details.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Room_Booking_Details.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Remove_Employee.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Search_Customer.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Service_Next.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Employee_Details.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Rooms.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Update_Service.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.User_Managment.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Rooms.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_Employee_Details.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.WelCome_Msg.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.csproj.GenerateResource.Cache
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.View_All_Customer.resources
+C:\Users\sai\Desktop\Projects C#\Lodging_Managment_System\Lodging_Managment_System\obj\x86\Debug\Lodging_Managment_System.Booking_Next.resources

@@ -285,11 +285,13 @@ namespace Lodging_Managment_System {
             
             private global::System.Data.DataColumn columnBedType;
             
+            private global::System.Data.DataColumn columnAmount_Day;
+            
             private global::System.Data.DataColumn columnSpecification;
             
-            private global::System.Data.DataColumn columnAmount;
+            private global::System.Data.DataColumn columnReserve;
             
-            private global::System.Data.DataColumn columnReserved;
+            private global::System.Data.DataColumn columnPer_Hrs;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -350,6 +352,14 @@ namespace Lodging_Managment_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Amount_DayColumn {
+                get {
+                    return this.columnAmount_Day;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn SpecificationColumn {
                 get {
                     return this.columnSpecification;
@@ -358,17 +368,17 @@ namespace Lodging_Managment_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn AmountColumn {
+            public global::System.Data.DataColumn ReserveColumn {
                 get {
-                    return this.columnAmount;
+                    return this.columnReserve;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ReservedColumn {
+            public global::System.Data.DataColumn Per_HrsColumn {
                 get {
-                    return this.columnReserved;
+                    return this.columnPer_Hrs;
                 }
             }
             
@@ -409,15 +419,16 @@ namespace Lodging_Managment_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public RoomsRow AddRoomsRow(string RoomType, string BedType, string Specification, decimal Amount, bool Reserved) {
+            public RoomsRow AddRoomsRow(int RoomNo, string RoomType, string BedType, decimal Amount_Day, string Specification, string Reserve, decimal Per_Hrs) {
                 RoomsRow rowRoomsRow = ((RoomsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        RoomNo,
                         RoomType,
                         BedType,
+                        Amount_Day,
                         Specification,
-                        Amount,
-                        Reserved};
+                        Reserve,
+                        Per_Hrs};
                 rowRoomsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRoomsRow);
                 return rowRoomsRow;
@@ -450,9 +461,10 @@ namespace Lodging_Managment_System {
                 this.columnRoomNo = base.Columns["RoomNo"];
                 this.columnRoomType = base.Columns["RoomType"];
                 this.columnBedType = base.Columns["BedType"];
+                this.columnAmount_Day = base.Columns["Amount_Day"];
                 this.columnSpecification = base.Columns["Specification"];
-                this.columnAmount = base.Columns["Amount"];
-                this.columnReserved = base.Columns["Reserved"];
+                this.columnReserve = base.Columns["Reserve"];
+                this.columnPer_Hrs = base.Columns["Per_Hrs"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -464,28 +476,26 @@ namespace Lodging_Managment_System {
                 base.Columns.Add(this.columnRoomType);
                 this.columnBedType = new global::System.Data.DataColumn("BedType", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBedType);
+                this.columnAmount_Day = new global::System.Data.DataColumn("Amount_Day", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAmount_Day);
                 this.columnSpecification = new global::System.Data.DataColumn("Specification", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSpecification);
-                this.columnAmount = new global::System.Data.DataColumn("Amount", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnAmount);
-                this.columnReserved = new global::System.Data.DataColumn("Reserved", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnReserved);
+                this.columnReserve = new global::System.Data.DataColumn("Reserve", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnReserve);
+                this.columnPer_Hrs = new global::System.Data.DataColumn("Per_Hrs", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPer_Hrs);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRoomNo}, true));
-                this.columnRoomNo.AutoIncrement = true;
-                this.columnRoomNo.AutoIncrementSeed = -1;
-                this.columnRoomNo.AutoIncrementStep = -1;
                 this.columnRoomNo.AllowDBNull = false;
-                this.columnRoomNo.ReadOnly = true;
                 this.columnRoomNo.Unique = true;
                 this.columnRoomType.AllowDBNull = false;
                 this.columnRoomType.MaxLength = 50;
                 this.columnBedType.AllowDBNull = false;
                 this.columnBedType.MaxLength = 50;
+                this.columnAmount_Day.AllowDBNull = false;
                 this.columnSpecification.AllowDBNull = false;
                 this.columnSpecification.MaxLength = 250;
-                this.columnAmount.AllowDBNull = false;
-                this.columnReserved.AllowDBNull = false;
+                this.columnReserve.MaxLength = 50;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -661,6 +671,17 @@ namespace Lodging_Managment_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Amount_Day {
+                get {
+                    return ((decimal)(this[this.tableRooms.Amount_DayColumn]));
+                }
+                set {
+                    this[this.tableRooms.Amount_DayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string Specification {
                 get {
                     return ((string)(this[this.tableRooms.SpecificationColumn]));
@@ -672,24 +693,58 @@ namespace Lodging_Managment_System {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public decimal Amount {
+            public string Reserve {
                 get {
-                    return ((decimal)(this[this.tableRooms.AmountColumn]));
+                    try {
+                        return ((string)(this[this.tableRooms.ReserveColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Reserve\' in table \'Rooms\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableRooms.AmountColumn] = value;
+                    this[this.tableRooms.ReserveColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool Reserved {
+            public decimal Per_Hrs {
                 get {
-                    return ((bool)(this[this.tableRooms.ReservedColumn]));
+                    try {
+                        return ((decimal)(this[this.tableRooms.Per_HrsColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Per_Hrs\' in table \'Rooms\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableRooms.ReservedColumn] = value;
+                    this[this.tableRooms.Per_HrsColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsReserveNull() {
+                return this.IsNull(this.tableRooms.ReserveColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetReserveNull() {
+                this[this.tableRooms.ReserveColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPer_HrsNull() {
+                return this.IsNull(this.tableRooms.Per_HrsColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPer_HrsNull() {
+                this[this.tableRooms.Per_HrsColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -855,47 +910,45 @@ namespace Lodging_Managment_System.Lodging_Managment_System_DBDataSetTableAdapte
             tableMapping.ColumnMappings.Add("RoomNo", "RoomNo");
             tableMapping.ColumnMappings.Add("RoomType", "RoomType");
             tableMapping.ColumnMappings.Add("BedType", "BedType");
+            tableMapping.ColumnMappings.Add("Amount_Day", "Amount_Day");
             tableMapping.ColumnMappings.Add("Specification", "Specification");
-            tableMapping.ColumnMappings.Add("Amount", "Amount");
-            tableMapping.ColumnMappings.Add("Reserved", "Reserved");
+            tableMapping.ColumnMappings.Add("Reserve", "Reserve");
+            tableMapping.ColumnMappings.Add("Per_Hrs", "Per_Hrs");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Rooms] WHERE (([RoomNo] = @Original_RoomNo) AND ([RoomType] = @Original_RoomType) AND ([BedType] = @Original_BedType) AND ([Specification] = @Original_Specification) AND ([Amount] = @Original_Amount) AND ([Reserved] = @Original_Reserved))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Rooms] WHERE (([RoomNo] = @Original_RoomNo) AND ([RoomType] = @Original_RoomType) AND ([BedType] = @Original_BedType) AND ([Amount_Day] = @Original_Amount_Day) AND ([Specification] = @Original_Specification) AND ((@IsNull_Reserve = 1 AND [Reserve] IS NULL) OR ([Reserve] = @Original_Reserve)) AND ((@IsNull_Per_Hrs = 1 AND [Per_Hrs] IS NULL) OR ([Per_Hrs] = @Original_Per_Hrs)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoomNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoomType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Day", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Specification", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserved", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Rooms] ([RoomType], [BedType], [Specification], [Amount], [Reserved]) VALUES (@RoomType, @BedType, @Specification, @Amount, @Reserved);
-SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHERE (RoomNo = SCOPE_IDENTITY())";
-            this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Specification", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reserved", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reserve", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserve", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserve", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserve", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Per_Hrs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Per_Hrs", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Per_Hrs", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Per_Hrs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rooms] SET [RoomType] = @RoomType, [BedType] = @BedType, [Specification] = @Specification, [Amount] = @Amount, [Reserved] = @Reserved WHERE (([RoomNo] = @Original_RoomNo) AND ([RoomType] = @Original_RoomType) AND ([BedType] = @Original_BedType) AND ([Specification] = @Original_Specification) AND ([Amount] = @Original_Amount) AND ([Reserved] = @Original_Reserved));
-SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHERE (RoomNo = @RoomNo)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Rooms] SET [RoomNo] = @RoomNo, [RoomType] = @RoomType, [BedType] = @BedType, [Amount_Day] = @Amount_Day, [Specification] = @Specification, [Reserve] = @Reserve, [Per_Hrs] = @Per_Hrs WHERE (([RoomNo] = @Original_RoomNo) AND ([RoomType] = @Original_RoomType) AND ([BedType] = @Original_BedType) AND ([Amount_Day] = @Original_Amount_Day) AND ([Specification] = @Original_Specification) AND ((@IsNull_Reserve = 1 AND [Reserve] IS NULL) OR ([Reserve] = @Original_Reserve)) AND ((@IsNull_Per_Hrs = 1 AND [Per_Hrs] IS NULL) OR ([Per_Hrs] = @Original_Per_Hrs)));
+SELECT RoomNo, RoomType, BedType, Amount_Day, Specification, Reserve, Per_Hrs FROM Rooms WHERE (RoomNo = @RoomNo)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@BedType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedType", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount_Day", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Day", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Specification", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reserved", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Reserve", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserve", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Per_Hrs", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Per_Hrs", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoomNo", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomNo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RoomType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RoomType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_BedType", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "BedType", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount_Day", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount_Day", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Specification", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Specification", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Amount", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Amount", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserved", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserved", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RoomNo", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "RoomNo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Reserve", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserve", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Reserve", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Reserve", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_Per_Hrs", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Per_Hrs", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Per_Hrs", global::System.Data.SqlDbType.Money, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Per_Hrs", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -911,7 +964,8 @@ SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHE
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM dbo.Rooms";
+            this._commandCollection[0].CommandText = "SELECT RoomNo, RoomType, BedType, Amount_Day, Specification, Reserve, Per_Hrs FRO" +
+                "M dbo.Rooms";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -972,7 +1026,7 @@ SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_RoomNo, string Original_RoomType, string Original_BedType, string Original_Specification, decimal Original_Amount, bool Original_Reserved) {
+        public virtual int Delete(int Original_RoomNo, string Original_RoomType, string Original_BedType, decimal Original_Amount_Day, string Original_Specification, string Original_Reserve, global::System.Nullable<decimal> Original_Per_Hrs) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_RoomNo));
             if ((Original_RoomType == null)) {
                 throw new global::System.ArgumentNullException("Original_RoomType");
@@ -986,14 +1040,29 @@ SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHE
             else {
                 this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_BedType));
             }
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((decimal)(Original_Amount_Day));
             if ((Original_Specification == null)) {
                 throw new global::System.ArgumentNullException("Original_Specification");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(Original_Specification));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Specification));
             }
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((decimal)(Original_Amount));
-            this.Adapter.DeleteCommand.Parameters[5].Value = ((bool)(Original_Reserved));
+            if ((Original_Reserve == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Reserve));
+            }
+            if ((Original_Per_Hrs.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((decimal)(Original_Per_Hrs.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1013,91 +1082,76 @@ SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string RoomType, string BedType, string Specification, decimal Amount, bool Reserved) {
-            if ((RoomType == null)) {
-                throw new global::System.ArgumentNullException("RoomType");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(RoomType));
-            }
-            if ((BedType == null)) {
-                throw new global::System.ArgumentNullException("BedType");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(BedType));
-            }
-            if ((Specification == null)) {
-                throw new global::System.ArgumentNullException("Specification");
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Specification));
-            }
-            this.Adapter.InsertCommand.Parameters[3].Value = ((decimal)(Amount));
-            this.Adapter.InsertCommand.Parameters[4].Value = ((bool)(Reserved));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
-            if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.InsertCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.InsertCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.InsertCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RoomType, string BedType, string Specification, decimal Amount, bool Reserved, int Original_RoomNo, string Original_RoomType, string Original_BedType, string Original_Specification, decimal Original_Amount, bool Original_Reserved, int RoomNo) {
+        public virtual int Update(int RoomNo, string RoomType, string BedType, decimal Amount_Day, string Specification, string Reserve, global::System.Nullable<decimal> Per_Hrs, int Original_RoomNo, string Original_RoomType, string Original_BedType, decimal Original_Amount_Day, string Original_Specification, string Original_Reserve, global::System.Nullable<decimal> Original_Per_Hrs) {
+            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(RoomNo));
             if ((RoomType == null)) {
                 throw new global::System.ArgumentNullException("RoomType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(RoomType));
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(RoomType));
             }
             if ((BedType == null)) {
                 throw new global::System.ArgumentNullException("BedType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(BedType));
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(BedType));
             }
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Amount_Day));
             if ((Specification == null)) {
                 throw new global::System.ArgumentNullException("Specification");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Specification));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Specification));
             }
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((decimal)(Amount));
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((bool)(Reserved));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_RoomNo));
+            if ((Reserve == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Reserve));
+            }
+            if ((Per_Hrs.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((decimal)(Per_Hrs.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_RoomNo));
             if ((Original_RoomType == null)) {
                 throw new global::System.ArgumentNullException("Original_RoomType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_RoomType));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_RoomType));
             }
             if ((Original_BedType == null)) {
                 throw new global::System.ArgumentNullException("Original_BedType");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(Original_BedType));
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(Original_BedType));
             }
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((decimal)(Original_Amount_Day));
             if ((Original_Specification == null)) {
                 throw new global::System.ArgumentNullException("Original_Specification");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Specification));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Specification));
             }
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((decimal)(Original_Amount));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_Reserved));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(RoomNo));
+            if ((Original_Reserve == null)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_Reserve));
+            }
+            if ((Original_Per_Hrs.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((decimal)(Original_Per_Hrs.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1118,8 +1172,8 @@ SELECT RoomNo, RoomType, BedType, Specification, Amount, Reserved FROM Rooms WHE
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string RoomType, string BedType, string Specification, decimal Amount, bool Reserved, int Original_RoomNo, string Original_RoomType, string Original_BedType, string Original_Specification, decimal Original_Amount, bool Original_Reserved) {
-            return this.Update(RoomType, BedType, Specification, Amount, Reserved, Original_RoomNo, Original_RoomType, Original_BedType, Original_Specification, Original_Amount, Original_Reserved, Original_RoomNo);
+        public virtual int Update(string RoomType, string BedType, decimal Amount_Day, string Specification, string Reserve, global::System.Nullable<decimal> Per_Hrs, int Original_RoomNo, string Original_RoomType, string Original_BedType, decimal Original_Amount_Day, string Original_Specification, string Original_Reserve, global::System.Nullable<decimal> Original_Per_Hrs) {
+            return this.Update(Original_RoomNo, RoomType, BedType, Amount_Day, Specification, Reserve, Per_Hrs, Original_RoomNo, Original_RoomType, Original_BedType, Original_Amount_Day, Original_Specification, Original_Reserve, Original_Per_Hrs);
         }
     }
     

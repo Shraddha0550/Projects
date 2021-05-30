@@ -55,11 +55,11 @@
             this.btn_Services.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Services.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Services.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Services.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Services.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Services.Location = new System.Drawing.Point(0, 588);
             this.btn_Services.Name = "btn_Services";
-            this.btn_Services.Size = new System.Drawing.Size(288, 55);
+            this.btn_Services.Size = new System.Drawing.Size(307, 55);
             this.btn_Services.TabIndex = 16;
             this.btn_Services.Text = "    Services";
             this.btn_Services.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -74,11 +74,11 @@
             this.btn_Gallary.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Gallary.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Gallary.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Gallary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Gallary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Gallary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Gallary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Gallary.Location = new System.Drawing.Point(-3, 527);
             this.btn_Gallary.Name = "btn_Gallary";
-            this.btn_Gallary.Size = new System.Drawing.Size(288, 55);
+            this.btn_Gallary.Size = new System.Drawing.Size(307, 55);
             this.btn_Gallary.TabIndex = 15;
             this.btn_Gallary.Text = "    Gallary";
             this.btn_Gallary.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -93,11 +93,11 @@
             this.btn_Customer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Customer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Customer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Customer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Customer.Location = new System.Drawing.Point(0, 466);
             this.btn_Customer.Name = "btn_Customer";
-            this.btn_Customer.Size = new System.Drawing.Size(288, 55);
+            this.btn_Customer.Size = new System.Drawing.Size(307, 55);
             this.btn_Customer.TabIndex = 14;
             this.btn_Customer.Text = "    Customer";
             this.btn_Customer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,44 +121,45 @@
             this.pnl_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnl_left.Location = new System.Drawing.Point(0, 0);
             this.pnl_left.Name = "pnl_left";
-            this.pnl_left.Size = new System.Drawing.Size(288, 781);
+            this.pnl_left.Size = new System.Drawing.Size(307, 953);
             this.pnl_left.TabIndex = 12;
             // 
             // pnl_UserName
             // 
             this.pnl_UserName.Controls.Add(this.lb_UserName);
             this.pnl_UserName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl_UserName.Location = new System.Drawing.Point(0, 169);
             this.pnl_UserName.Name = "pnl_UserName";
-            this.pnl_UserName.Size = new System.Drawing.Size(288, 55);
+            this.pnl_UserName.Size = new System.Drawing.Size(307, 55);
             this.pnl_UserName.TabIndex = 14;
             // 
             // lb_UserName
             // 
             this.lb_UserName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lb_UserName.AutoSize = true;
-            this.lb_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_UserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_UserName.ForeColor = System.Drawing.Color.Red;
-            this.lb_UserName.Location = new System.Drawing.Point(51, 15);
+            this.lb_UserName.Location = new System.Drawing.Point(60, 15);
             this.lb_UserName.Name = "lb_UserName";
-            this.lb_UserName.Size = new System.Drawing.Size(97, 24);
+            this.lb_UserName.Size = new System.Drawing.Size(102, 25);
             this.lb_UserName.TabIndex = 0;
             this.lb_UserName.Text = "Username";
             // 
             // btn_LogOut
             // 
-            this.btn_LogOut.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btn_LogOut.FlatAppearance.BorderSize = 0;
             this.btn_LogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_LogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_LogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
-            this.btn_LogOut.Location = new System.Drawing.Point(0, 726);
+            this.btn_LogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_LogOut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.btn_LogOut.Location = new System.Drawing.Point(0, 649);
             this.btn_LogOut.Name = "btn_LogOut";
             this.btn_LogOut.Size = new System.Drawing.Size(288, 55);
             this.btn_LogOut.TabIndex = 17;
-            this.btn_LogOut.Text = "Log Out";
+            this.btn_LogOut.Text = "     Log Out";
+            this.btn_LogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_LogOut.UseVisualStyleBackColor = true;
             this.btn_LogOut.Click += new System.EventHandler(this.btn_LogOut_Click);
             // 
@@ -170,11 +171,11 @@
             this.btn_Employee.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Employee.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Employee.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Employee.Location = new System.Drawing.Point(3, 405);
             this.btn_Employee.Name = "btn_Employee";
-            this.btn_Employee.Size = new System.Drawing.Size(285, 55);
+            this.btn_Employee.Size = new System.Drawing.Size(304, 55);
             this.btn_Employee.TabIndex = 13;
             this.btn_Employee.Text = "    Employee";
             this.btn_Employee.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -189,11 +190,11 @@
             this.btn_Room.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Room.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Room.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Room.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Room.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Room.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Room.Location = new System.Drawing.Point(0, 344);
             this.btn_Room.Name = "btn_Room";
-            this.btn_Room.Size = new System.Drawing.Size(285, 55);
+            this.btn_Room.Size = new System.Drawing.Size(304, 55);
             this.btn_Room.TabIndex = 12;
             this.btn_Room.Text = "    Room";
             this.btn_Room.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -208,11 +209,11 @@
             this.btn_Check_Out.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Check_Out.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Check_Out.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Check_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Check_Out.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Check_Out.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Check_Out.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Check_Out.Location = new System.Drawing.Point(0, 283);
             this.btn_Check_Out.Name = "btn_Check_Out";
-            this.btn_Check_Out.Size = new System.Drawing.Size(285, 55);
+            this.btn_Check_Out.Size = new System.Drawing.Size(304, 55);
             this.btn_Check_Out.TabIndex = 11;
             this.btn_Check_Out.Text = "    Check - Out";
             this.btn_Check_Out.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -227,11 +228,11 @@
             this.btn_Customer_Resistration.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Navy;
             this.btn_Customer_Resistration.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.btn_Customer_Resistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Customer_Resistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Customer_Resistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(249)))));
+            this.btn_Customer_Resistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Customer_Resistration.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
             this.btn_Customer_Resistration.Location = new System.Drawing.Point(-3, 222);
             this.btn_Customer_Resistration.Name = "btn_Customer_Resistration";
-            this.btn_Customer_Resistration.Size = new System.Drawing.Size(285, 55);
+            this.btn_Customer_Resistration.Size = new System.Drawing.Size(304, 55);
             this.btn_Customer_Resistration.TabIndex = 10;
             this.btn_Customer_Resistration.Text = "    Customer Resistration ";
             this.btn_Customer_Resistration.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -244,7 +245,7 @@
             this.pnl_Logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Logo.Location = new System.Drawing.Point(0, 0);
             this.pnl_Logo.Name = "pnl_Logo";
-            this.pnl_Logo.Size = new System.Drawing.Size(288, 169);
+            this.pnl_Logo.Size = new System.Drawing.Size(307, 169);
             this.pnl_Logo.TabIndex = 0;
             // 
             // pb_Logo
@@ -255,7 +256,7 @@
             this.pb_Logo.Image = global::Lodging_Managment_System.Properties.Resources.hotel_logo;
             this.pb_Logo.Location = new System.Drawing.Point(0, 3);
             this.pb_Logo.Name = "pb_Logo";
-            this.pb_Logo.Size = new System.Drawing.Size(285, 160);
+            this.pb_Logo.Size = new System.Drawing.Size(304, 160);
             this.pb_Logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Logo.TabIndex = 9;
             this.pb_Logo.TabStop = false;
@@ -264,7 +265,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1460, 781);
+            this.ClientSize = new System.Drawing.Size(1902, 953);
             this.ControlBox = false;
             this.Controls.Add(this.pnl_left);
             this.IsMdiContainer = true;
