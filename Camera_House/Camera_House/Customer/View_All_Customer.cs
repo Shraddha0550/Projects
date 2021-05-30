@@ -22,8 +22,8 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-           // SqlDataAdapter sda = new SqlDataAdapter("Select Cust_Payment.Cust_ID,Cust_Payment.Name,Cust_Payment.Mob_No,Cust_Camera_Details.Date,Cust_Camera_Details.Company_Name,Cust_Camera_Details.Model_Name,Cust_Camera_Details.Price,Cust_Camera_Details.Quantity,Cust_Camera_Details.GST,Cust_Camera_Details.Total,Cust_Payment.Bill,Cust_Payment.Discount,Cust_Payment.Total_Bill From Cust_Camera_Details INNER JOIN Cust_Payment ON Cust_Camera_Details.Cust_ID = Cust_Payment.Cust_ID ", CF.Con);
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Cust_Payment", CF.Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select Cust_Camera_Details.Cust_ID,Cust_Payment.Name,Cust_Payment.Mob_No,Cust_Payment.Address,Cust_Camera_Details.Date,Cust_Camera_Details.Company_Name,Cust_Camera_Details.Model_Name,Cust_Camera_Details.Price,Cust_Camera_Details.Stock,Cust_Camera_Details.GST,Cust_Camera_Details.Total,Cust_Payment.Bill,Cust_Payment.Discount,Cust_Payment.Total_Bill From Cust_Camera_Details INNER JOIN Cust_Payment ON Cust_Camera_Details.Cust_ID = Cust_Payment.Cust_ID ", CF.Con);
+            // SqlDataAdapter sda = new SqlDataAdapter("Select * From Cust_Payment", CF.Con);
 
             DataTable dt = new DataTable();
             sda.Fill(dt);

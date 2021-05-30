@@ -44,7 +44,7 @@ namespace Camera_House
 
         public void clear()
         {
-            tb_Product_ID.Text = "";
+          
             tb_Description.Text = "";
             tb_Purches_Price.Text = "";
             tb_Sale_Price.Text = "";
@@ -68,8 +68,9 @@ namespace Camera_House
 
                 MessageBox.Show("SuccessFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 clear();
-               
-             
+                tb_Product_ID.Text = Auto_Inc().ToString();
+
+
             }
             else
             {

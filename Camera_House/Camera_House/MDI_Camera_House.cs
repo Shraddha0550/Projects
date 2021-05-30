@@ -301,8 +301,12 @@ namespace Camera_House
             hidepanel();
         }
 
-       
-
-       
+        private void btn_View_Dist_Info_Click(object sender, EventArgs e)
+        {
+            View_Distrubutor_Details obj = new View_Distrubutor_Details();
+            obj.MdiParent = this;
+            obj.Show();
+            hidepanel();
+        }
     }
 }

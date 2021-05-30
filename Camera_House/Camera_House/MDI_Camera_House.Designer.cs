@@ -54,13 +54,13 @@
             this.btn_Update_Product_Details = new System.Windows.Forms.Button();
             this.btn_Add_New_Product = new System.Windows.Forms.Button();
             this.pnl_Stock = new System.Windows.Forms.Panel();
+            this.btn_Stock_Details = new System.Windows.Forms.Button();
             this.Btn_Add_Stock = new System.Windows.Forms.Button();
             this.btn_Add_Model_Name = new System.Windows.Forms.Button();
             this.btn_Add_Compony_Name = new System.Windows.Forms.Button();
             this.pnl_Distrubutor = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_View_Dist_Info = new System.Windows.Forms.Button();
             this.btn_Add_Distrubutor = new System.Windows.Forms.Button();
-            this.btn_Stock_Details = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_Customer.SuspendLayout();
@@ -387,6 +387,17 @@
             this.pnl_Stock.TabIndex = 12;
             this.pnl_Stock.Visible = false;
             // 
+            // btn_Stock_Details
+            // 
+            this.btn_Stock_Details.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Stock_Details.Location = new System.Drawing.Point(0, 144);
+            this.btn_Stock_Details.Name = "btn_Stock_Details";
+            this.btn_Stock_Details.Size = new System.Drawing.Size(242, 48);
+            this.btn_Stock_Details.TabIndex = 5;
+            this.btn_Stock_Details.Text = "Stock Details";
+            this.btn_Stock_Details.UseVisualStyleBackColor = true;
+            this.btn_Stock_Details.Click += new System.EventHandler(this.btn_Stock_Details_Click);
+            // 
             // Btn_Add_Stock
             // 
             this.Btn_Add_Stock.Dock = System.Windows.Forms.DockStyle.Top;
@@ -423,7 +434,7 @@
             // pnl_Distrubutor
             // 
             this.pnl_Distrubutor.BackColor = System.Drawing.SystemColors.MenuText;
-            this.pnl_Distrubutor.Controls.Add(this.button1);
+            this.pnl_Distrubutor.Controls.Add(this.btn_View_Dist_Info);
             this.pnl_Distrubutor.Controls.Add(this.btn_Add_Distrubutor);
             this.pnl_Distrubutor.Location = new System.Drawing.Point(965, 160);
             this.pnl_Distrubutor.Name = "pnl_Distrubutor";
@@ -431,14 +442,16 @@
             this.pnl_Distrubutor.TabIndex = 14;
             this.pnl_Distrubutor.Visible = false;
             // 
-            // button1
+            // btn_View_Dist_Info
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.Location = new System.Drawing.Point(0, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(246, 48);
-            this.button1.TabIndex = 3;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_View_Dist_Info.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_View_Dist_Info.Location = new System.Drawing.Point(0, 48);
+            this.btn_View_Dist_Info.Name = "btn_View_Dist_Info";
+            this.btn_View_Dist_Info.Size = new System.Drawing.Size(246, 48);
+            this.btn_View_Dist_Info.TabIndex = 3;
+            this.btn_View_Dist_Info.Text = "View DIstrubutor Info";
+            this.btn_View_Dist_Info.UseVisualStyleBackColor = true;
+            this.btn_View_Dist_Info.Click += new System.EventHandler(this.btn_View_Dist_Info_Click);
             // 
             // btn_Add_Distrubutor
             // 
@@ -450,17 +463,6 @@
             this.btn_Add_Distrubutor.Text = "Add Distrubutor";
             this.btn_Add_Distrubutor.UseVisualStyleBackColor = true;
             this.btn_Add_Distrubutor.Click += new System.EventHandler(this.btn_Add_Distrubutor_Click);
-            // 
-            // btn_Stock_Details
-            // 
-            this.btn_Stock_Details.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_Stock_Details.Location = new System.Drawing.Point(0, 144);
-            this.btn_Stock_Details.Name = "btn_Stock_Details";
-            this.btn_Stock_Details.Size = new System.Drawing.Size(242, 48);
-            this.btn_Stock_Details.TabIndex = 5;
-            this.btn_Stock_Details.Text = "Stock Details";
-            this.btn_Stock_Details.UseVisualStyleBackColor = true;
-            this.btn_Stock_Details.Click += new System.EventHandler(this.btn_Stock_Details_Click);
             // 
             // MDI_Camera_House
             // 
@@ -521,7 +523,7 @@
         private System.Windows.Forms.Button btn_Add_Compony_Name;
         private System.Windows.Forms.Button btn_Distrubutor;
         private System.Windows.Forms.Panel pnl_Distrubutor;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_View_Dist_Info;
         private System.Windows.Forms.Button btn_Add_Distrubutor;
         private System.Windows.Forms.Button Btn_Add_Stock;
         private System.Windows.Forms.Button btn_Stock_Details;

@@ -79,3 +79,6 @@ C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.View_All_Stocks.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.View_Stock.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.csproj.GenerateResource.Cache
+C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.View_Distrubutor_Details.resources
+C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Product_List.resources
+C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\bin\Debug\Camera_House.exe.config

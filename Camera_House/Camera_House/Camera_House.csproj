@@ -46,6 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Camera_House_DBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Camera_House_DBDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Distrubutor\Product_List.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrubutor\Product_List.Designer.cs">
+      <DependentUpon>Product_List.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stock\Add_Stock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +186,15 @@
     <Compile Include="Stock\View_Stock.Designer.cs">
       <DependentUpon>View_Stock.cs</DependentUpon>
     </Compile>
+    <Compile Include="Distrubutor\View_Distrubutor_Details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Distrubutor\View_Distrubutor_Details.Designer.cs">
+      <DependentUpon>View_Distrubutor_Details.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Distrubutor\Product_List.resx">
+      <DependentUpon>Product_List.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stock\Add_Stock.resx">
       <DependentUpon>Add_Stock.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +267,32 @@
     <EmbeddedResource Include="Stock\View_Stock.resx">
       <DependentUpon>View_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Distrubutor\View_Distrubutor_Details.resx">
+      <DependentUpon>View_Distrubutor_Details.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Camera_House_DBDataSet.xsc">
+      <DependentUpon>Camera_House_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Camera_House_DBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Camera_House_DBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Camera_House_DBDataSet.xss">
+      <DependentUpon>Camera_House_DBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Camera_House_DBDataSet1.xsc">
+      <DependentUpon>Camera_House_DBDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Camera_House_DBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Camera_House_DBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Camera_House_DBDataSet1.xss">
+      <DependentUpon>Camera_House_DBDataSet1.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

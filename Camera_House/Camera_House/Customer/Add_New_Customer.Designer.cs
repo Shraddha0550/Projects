@@ -85,8 +85,8 @@
             // 
             // tb_Address
             // 
-            this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Address.Location = new System.Drawing.Point(1416, 60);
             this.tb_Address.Name = "tb_Address";
@@ -95,8 +95,8 @@
             // 
             // tb_Mobile_No
             // 
-            this.tb_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Mobile_No.Location = new System.Drawing.Point(918, 60);
             this.tb_Mobile_No.Name = "tb_Mobile_No";
@@ -105,8 +105,8 @@
             // 
             // tb_Name
             // 
-            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.Location = new System.Drawing.Point(364, 60);
             this.tb_Name.Name = "tb_Name";
@@ -148,8 +148,9 @@
             // 
             // tb_Customer_ID
             // 
-            this.tb_Customer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Customer_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Customer_ID.Enabled = false;
             this.tb_Customer_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Customer_ID.Location = new System.Drawing.Point(364, 3);
             this.tb_Customer_ID.Name = "tb_Customer_ID";
@@ -170,13 +171,15 @@
             // 
             // tb_GST
             // 
-            this.tb_GST.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_GST.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_GST.Enabled = false;
             this.tb_GST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_GST.Location = new System.Drawing.Point(918, 174);
             this.tb_GST.Name = "tb_GST";
             this.tb_GST.Size = new System.Drawing.Size(280, 30);
             this.tb_GST.TabIndex = 32;
+            this.tb_GST.TextChanged += new System.EventHandler(this.tb_GST_TextChanged);
             // 
             // label1
             // 
@@ -191,8 +194,8 @@
             // 
             // tb_Price
             // 
-            this.tb_Price.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Price.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Price.Enabled = false;
             this.tb_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Price.Location = new System.Drawing.Point(1416, 117);
@@ -235,13 +238,15 @@
             // 
             // tb_Stock_Quantity
             // 
-            this.tb_Stock_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Stock_Quantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Stock_Quantity.Enabled = false;
             this.tb_Stock_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Stock_Quantity.Location = new System.Drawing.Point(364, 174);
             this.tb_Stock_Quantity.Name = "tb_Stock_Quantity";
             this.tb_Stock_Quantity.Size = new System.Drawing.Size(306, 30);
             this.tb_Stock_Quantity.TabIndex = 28;
+            this.tb_Stock_Quantity.TextChanged += new System.EventHandler(this.tb_Stock_Quantity_TextChanged);
             // 
             // lb_Stock_Quantity
             // 
@@ -256,14 +261,15 @@
             // 
             // tb_Total_Bill
             // 
-            this.tb_Total_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Total_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Total_Bill.Enabled = false;
             this.tb_Total_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Total_Bill.Location = new System.Drawing.Point(1419, 3);
             this.tb_Total_Bill.Name = "tb_Total_Bill";
             this.tb_Total_Bill.Size = new System.Drawing.Size(468, 30);
             this.tb_Total_Bill.TabIndex = 29;
+            this.tb_Total_Bill.TextChanged += new System.EventHandler(this.tb_Total_Bill_TextChanged);
             // 
             // btn_Refresh
             // 
@@ -280,6 +286,7 @@
             // btn_Save
             // 
             this.btn_Save.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_Save.Enabled = false;
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Save.Location = new System.Drawing.Point(388, 12);
             this.btn_Save.Name = "btn_Save";
@@ -291,8 +298,8 @@
             // 
             // tb_Bill
             // 
-            this.tb_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Bill.Enabled = false;
             this.tb_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Bill.Location = new System.Drawing.Point(359, 3);
@@ -315,11 +322,12 @@
             // 
             this.btn_Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_Add.BackColor = System.Drawing.Color.Indigo;
+            this.btn_Add.Enabled = false;
             this.btn_Add.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
-            this.btn_Add.Location = new System.Drawing.Point(1674, 117);
+            this.btn_Add.Location = new System.Drawing.Point(1674, 174);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(213, 51);
+            this.btn_Add.Size = new System.Drawing.Size(213, 50);
             this.btn_Add.TabIndex = 26;
             this.btn_Add.Text = "Add";
             this.btn_Add.UseVisualStyleBackColor = false;
@@ -327,8 +335,8 @@
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
             this.panel1.Controls.Add(this.lb_Add_New_Customer);
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -340,8 +348,8 @@
             // 
             this.dgv_Product_List.AllowUserToAddRows = false;
             this.dgv_Product_List.AllowUserToDeleteRows = false;
-            this.dgv_Product_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv_Product_List.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Product_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_Product_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Product_List.Location = new System.Drawing.Point(0, 349);
@@ -378,12 +386,12 @@
             this.tableLayoutPanel1.Controls.Add(this.tb_Mobile_No, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lb_Address, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.tb_Address, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Add, 6, 2);
             this.tableLayoutPanel1.Controls.Add(this.dtp_Date, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lb_Stock_Quantity, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.tb_Stock_Quantity, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.tb_Total_Price, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Total, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Add, 6, 3);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -407,8 +415,8 @@
             // 
             // cmb_Company_Name
             // 
-            this.cmb_Company_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Company_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_Company_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Company_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Company_Name.FormattingEnabled = true;
@@ -420,9 +428,10 @@
             // 
             // cmb_Model_Name
             // 
-            this.cmb_Model_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Model_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_Model_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Model_Name.Enabled = false;
             this.cmb_Model_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Model_Name.FormattingEnabled = true;
             this.cmb_Model_Name.Location = new System.Drawing.Point(918, 117);
@@ -442,18 +451,20 @@
             // 
             // tb_Total_Price
             // 
-            this.tb_Total_Price.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Total_Price.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Total_Price.Enabled = false;
             this.tb_Total_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Total_Price.Location = new System.Drawing.Point(1416, 174);
             this.tb_Total_Price.Name = "tb_Total_Price";
             this.tb_Total_Price.Size = new System.Drawing.Size(230, 30);
             this.tb_Total_Price.TabIndex = 36;
+            this.tb_Total_Price.TextChanged += new System.EventHandler(this.tb_Total_Price_TextChanged);
             // 
             // btn_Total
             // 
             this.btn_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Total.Enabled = false;
             this.btn_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.btn_Total.Location = new System.Drawing.Point(1288, 174);
             this.btn_Total.Name = "btn_Total";
@@ -512,17 +523,19 @@
             // 
             // tb_Discount
             // 
-            this.tb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Discount.Location = new System.Drawing.Point(941, 3);
             this.tb_Discount.Name = "tb_Discount";
             this.tb_Discount.Size = new System.Drawing.Size(304, 30);
             this.tb_Discount.TabIndex = 38;
+            this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
             // 
             // btn_Total_Bill
             // 
             this.btn_Total_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Total_Bill.Enabled = false;
             this.btn_Total_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F);
             this.btn_Total_Bill.Location = new System.Drawing.Point(1291, 3);
             this.btn_Total_Bill.Name = "btn_Total_Bill";

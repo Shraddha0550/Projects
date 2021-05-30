@@ -115,7 +115,7 @@ namespace Camera_House
         {
             if(cmb_Company_Name.Text != "" && cmb_Model_Name.Text != "" && cmb_Distrubutor_Name.Text != "" && tb_Total_Stock.Text != "" && tb_Stock_Added.Text != "")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Stock Values(" + tb_Product_ID.Text + " , '" + cmb_Company_Name.Text + "','" + cmb_Model_Name.Text + "','" + dtp_Date.Text + "'," + tb_Stock_Added.Text + "," + tb_Total_Stock.Text + " ) Update Add_New_Product set Stock = "+tb_Total_Stock.Text+"", CF.Con);
+                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Stock Values(" + tb_Product_ID.Text + " , '" + cmb_Company_Name.Text + "','" + cmb_Model_Name.Text + "','"+cmb_Distrubutor_Name.Text+"',"+tb_Current_Stock.Text+"," + tb_Stock_Added.Text + "," + tb_Total_Stock.Text + ",'" + dtp_Date.Text + "' ) Update Add_New_Product set Stock = " + tb_Total_Stock.Text+"", CF.Con);
 
                     DataTable dt = new DataTable();
 
@@ -145,6 +145,21 @@ namespace Camera_House
             int c = a + b;
 
             tb_Total_Stock.Text = c.ToString();
+        }
+
+        private void tb_Stock_Added_TextChanged(object sender, EventArgs e)
+        {
+            btn_Total_STock.Enabled = true;
+        }
+
+        private void btn_Clear_Click(object sender, EventArgs e)
+        {
+            cmb_Company_Name.SelectedIndex = -1;
+            cmb_Model_Name.SelectedIndex = -1;
+            cmb_Distrubutor_Name.SelectedIndex = -1;
+            tb_Current_Stock.Clear();
+            tb_Stock_Added.Clear();
+            tb_Total_Stock.Clear();
         }
     }
 }

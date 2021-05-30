@@ -21,13 +21,24 @@ namespace Camera_House
         private void btn_Search_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
+
+            
+
             if (tb_Product_ID.Text != "")
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Product Where Prod_ID = " + tb_Product_ID.Text + "", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                int val = Convert.ToInt32(tb_Product_ID.Text);
+                if (val <= 100)
+                {
+                    MessageBox.Show("Invalid ID");
+                }
+                else
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Product Where Prod_ID = " + tb_Product_ID.Text + "", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
-                dgv_Product_List.DataSource = dt;
+                    dgv_Product_List.DataSource = dt;
+                }
             }
             else
             {

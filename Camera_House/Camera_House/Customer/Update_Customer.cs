@@ -21,7 +21,9 @@ namespace Camera_House
 
         }
 
+        private void btn_Search_Click(object sender, EventArgs e)
+        {
 
-    
+        }
     }
 }

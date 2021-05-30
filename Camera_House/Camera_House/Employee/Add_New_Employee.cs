@@ -34,7 +34,7 @@ namespace Camera_House
                     Gender = rb_Female.Text;
                 }
 
-                SqlDataAdapter sda = new SqlDataAdapter("Insert into Add_New_Employee Values('" + tb_Employee_ID.Text + "','" + tb_Name.Text + "','" + tb_Address.Text + "','" + Gender + "','" + dtp_DOB.Text + "'," + tb_Mobile_No.Text + "," + tb_Alt_Mob_No.Text + ",'" + tb_Email_ID.Text + "'," + tb_Adhar_Card_No.Text + ",'" + tb_Pan_Card_No.Text + "'," + tb_Salary.Text + "," + tb_Account_No.Text + ",'"+tb_IFC_Code.Text+"','" + dtp_Hire_Date.Text + "')", CF.Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Insert into Add_New_Employee Values('" + tb_Employee_ID.Text + "','" + tb_Name.Text + "','" + tb_Address.Text + "','" + Gender + "','" + dtp_DOB.Text + "'," + tb_Mobile_No.Text + "," + tb_Alt_Mob_No.Text + ",'" + dtp_Hire_Date.Text + "','" + tb_Email_ID.Text + "'," + tb_Adhar_Card_No.Text + ",'" + tb_Pan_Card_No.Text + "'," + tb_Salary.Text + ",'" + tb_Account_No.Text + "','"+tb_IFC_Code.Text+"')", CF.Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 

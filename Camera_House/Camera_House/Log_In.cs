@@ -16,5 +16,9 @@ namespace Camera_House
             InitializeComponent();
         }
 
+        private void btn_Login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

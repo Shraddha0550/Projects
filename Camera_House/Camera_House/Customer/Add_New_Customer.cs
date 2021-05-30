@@ -61,6 +61,7 @@ namespace Camera_House
         private void cmb_Company_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             CF.Con_Open();
+            cmb_Model_Name.Enabled = true;
 
             SqlCommand cmd = new SqlCommand("Select Model_Name From Add_New_Product Where Company_Name = '" + cmb_Company_Name.Text + "'", CF.Con);
 
@@ -79,13 +80,13 @@ namespace Camera_House
         private void cmb_Model_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             CF.Con_Open();
-
+            tb_Price.Enabled = true;
             SqlCommand cmd = new SqlCommand("Select *From Add_New_Product Where Company_Name = '"+cmb_Company_Name.Text+"' And Model_Name = '"+cmb_Model_Name.Text+"' ",CF.Con);
             var obj = cmd.ExecuteReader();
 
             if (obj.Read())
             {
-                tb_Price.Text = obj["Sale_Price"].ToString();
+                tb_Price.Text = obj["Sales_Price"].ToString();
             }
             else
             {
@@ -176,13 +177,15 @@ namespace Camera_House
 
             if(tb_Customer_ID.Text != "" && tb_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Discount.Text != "" && tb_Total_Bill.Text != "")
             {
-                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Cust_Payment Values("+tb_Customer_ID.Text+",'"+tb_Name.Text+"',"+tb_Mobile_No.Text+","+tb_Bill.Text+","+tb_Discount.Text+","+tb_Total_Bill.Text+")", CF.Con);
+                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Cust_Payment Values("+tb_Customer_ID.Text+",'"+tb_Name.Text+"','"+dtp_Date.Text+"',"+tb_Mobile_No.Text+",'"+tb_Address.Text+"',"+tb_Bill.Text+","+tb_Discount.Text+","+tb_Total_Bill.Text+")", CF.Con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
 
                     MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        clear_Text();
-             
+                    clear_Text();
+                    tb_Customer_ID.Text = Auto_Inc().ToString();
+                     Refresh_Grid();
+
             }
             else
             {
@@ -191,6 +194,21 @@ namespace Camera_House
             }
 
           
+
+            CF.Con_Close();
+        }
+
+        void Refresh_Grid()
+        {
+            CF.Con_Open();
+
+            SqlDataAdapter sda = new SqlDataAdapter("Select * From Cust_Camera_Details Where Cust_ID = " + tb_Customer_ID.Text + " ", CF.Con);
+
+            DataTable dt = new DataTable();
+
+            sda.Fill(dt);
+
+            dgv_Product_List.DataSource = dt;
 
             CF.Con_Close();
         }
@@ -204,7 +222,7 @@ namespace Camera_House
         {
             tb_Address.Text = "";
             tb_Bill.Text = "";
-            tb_Customer_ID.Text = "";
+            dtp_Date.Text = "";
             tb_Discount.Text = "";
             tb_GST.Text = "";
             tb_Mobile_No.Text = "";
@@ -215,6 +233,31 @@ namespace Camera_House
             tb_Total_Price.Text = "";
             cmb_Company_Name.SelectedIndex = -1;
             cmb_Model_Name.SelectedIndex = -1;
+        }
+
+        private void tb_Stock_Quantity_TextChanged(object sender, EventArgs e)
+        {
+            tb_GST.Enabled = true;
+        }
+
+        private void tb_GST_TextChanged(object sender, EventArgs e)
+        {
+            btn_Total.Enabled = true;
+        }
+
+        private void tb_Total_Price_TextChanged(object sender, EventArgs e)
+        {
+            btn_Add.Enabled = true;
+        }
+
+        private void tb_Discount_TextChanged(object sender, EventArgs e)
+        {
+            btn_Total_Bill.Enabled = true;
+        }
+
+        private void tb_Total_Bill_TextChanged(object sender, EventArgs e)
+        {
+            btn_Save.Enabled = true;
         }
     }
 }

@@ -49,7 +49,6 @@
             this.lb_Add_New_Disrubutor = new System.Windows.Forms.Label();
             this.btn_Add = new System.Windows.Forms.Button();
             this.dgv_Product_List = new System.Windows.Forms.DataGridView();
-            this.btn_Refresh = new System.Windows.Forms.Button();
             this.btn_Save = new System.Windows.Forms.Button();
             this.tb_Account_No = new System.Windows.Forms.TextBox();
             this.lb_Account_No = new System.Windows.Forms.Label();
@@ -108,6 +107,7 @@
             // 
             this.tb_Distrubutor_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Distrubutor_ID.Enabled = false;
             this.tb_Distrubutor_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Distrubutor_ID.Location = new System.Drawing.Point(372, 3);
             this.tb_Distrubutor_ID.Name = "tb_Distrubutor_ID";
@@ -320,17 +320,6 @@
             this.dgv_Product_List.Size = new System.Drawing.Size(706, 245);
             this.dgv_Product_List.TabIndex = 31;
             // 
-            // btn_Refresh
-            // 
-            this.btn_Refresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Refresh.Location = new System.Drawing.Point(1577, 382);
-            this.btn_Refresh.Name = "btn_Refresh";
-            this.btn_Refresh.Size = new System.Drawing.Size(118, 58);
-            this.btn_Refresh.TabIndex = 32;
-            this.btn_Refresh.Text = "Refresh";
-            this.btn_Refresh.UseVisualStyleBackColor = true;
-            this.btn_Refresh.Click += new System.EventHandler(this.btn_Refresh_Click);
-            // 
             // btn_Save
             // 
             this.btn_Save.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -455,7 +444,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1902, 826);
             this.Controls.Add(this.tableLayoutPanel2);
-            this.Controls.Add(this.btn_Refresh);
             this.Controls.Add(this.btn_Save);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.dgv_Product_List);
@@ -497,7 +485,6 @@
         private System.Windows.Forms.Label lb_Add_New_Disrubutor;
         private System.Windows.Forms.Button btn_Add;
         private System.Windows.Forms.DataGridView dgv_Product_List;
-        private System.Windows.Forms.Button btn_Refresh;
         private System.Windows.Forms.Button btn_Save;
         private System.Windows.Forms.Label lb_Alt_Mob_No;
         private System.Windows.Forms.TextBox tb_Alt_Mob_No;

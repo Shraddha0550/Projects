@@ -95,13 +95,13 @@ namespace Camera_House
 
             CF.Con_Open();
 
-            SqlCommand cmd = new SqlCommand("Select Count(Model_Name) From  Add_Model_Name", CF.Con);
+            SqlCommand cmd = new SqlCommand("Select Count(ID) From  Add_Model_Name", CF.Con);
 
             Cnt = Convert.ToInt32(cmd.ExecuteScalar());
 
             Cnt = 1 + Cnt;
 
-            Cnt = 1 + Cnt;
+           // Cnt = 1 + Cnt;
             String count = Cnt.ToString();
 
             CF.Con_Close();

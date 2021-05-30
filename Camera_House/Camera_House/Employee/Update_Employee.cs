@@ -34,7 +34,7 @@ namespace Camera_House
                     res = rb_Female.Text;
                 }
 
-                SqlDataAdapter sda = new SqlDataAdapter("Update Add_New_Employee Set  Name =  '" + tb_Name.Text + "',Address = '" + tb_Address.Text + "',Gender = '"+res+"',DOB = '" + dtp_DOB.Text + "',Email_ID = '" + tb_Email_ID.Text + "',Hire_Date = '" + dtp_Hire_Date.Text + "',Mob_No = " + tb_Mobile_No.Text + ",Alt_Mob_No = "+tb_Alt_Mob_No.Text+",Adhar_No = " + tb_Adhar_Card_No.Text + ",PAN_No = '" + tb_Pan_Card_No.Text + "',Salary = " + tb_Salary.Text + ",Acc_No = " + tb_Account_No.Text + " , IFC_Code = '"+tb_IFC_Code.Text+"'  Where Emp_ID = '"+tb_Employee_ID.Text+"' ", CF.Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Update Add_New_Employee Set  Name =  '" + tb_Name.Text + "',Address = '" + tb_Address.Text + "',Gender = '"+res+"',DOB = '" + dtp_DOB.Text + "',Email = '" + tb_Email_ID.Text + "',Hire_Date = '" + dtp_Hire_Date.Text + "',Mob_No = " + tb_Mobile_No.Text + ",Alt_Mob_No = "+tb_Alt_Mob_No.Text+",Aadhar_No = " + tb_Adhar_Card_No.Text + ",PAN_No = '" + tb_Pan_Card_No.Text + "',Salary = " + tb_Salary.Text + ",Bank_No = '" + tb_Account_No.Text + "' , IFC_Code = '"+tb_IFC_Code.Text+"'  Where Emp_ID = '"+tb_Employee_ID.Text+"' ", CF.Con);
 
                 DataTable dt = new DataTable();
 
@@ -65,13 +65,13 @@ namespace Camera_House
                 tb_Name.Text = obj.GetString(obj.GetOrdinal("Name"));
                 tb_Address.Text = obj.GetString(obj.GetOrdinal("Address"));
                 dtp_DOB.Text = obj["DOB"].ToString();
-                tb_Email_ID.Text = obj.GetString(obj.GetOrdinal("Email_ID"));
+                tb_Email_ID.Text = obj.GetString(obj.GetOrdinal("Email"));
                 dtp_Hire_Date.Text = obj["Hire_Date"].ToString();
                 tb_Mobile_No.Text = obj["Mob_No"].ToString();
-                tb_Adhar_Card_No.Text = obj["Adhar_No"].ToString();
+                tb_Adhar_Card_No.Text = obj["Aadhar_No"].ToString();
                 tb_Pan_Card_No.Text = obj.GetString(obj.GetOrdinal("PAN_No"));
                 tb_Salary.Text = obj["Salary"].ToString();
-                tb_Account_No.Text = obj["Acc_No"].ToString();
+                tb_Account_No.Text = obj["Bank_No"].ToString();
                 tb_Alt_Mob_No.Text = obj["Alt_Mob_No"].ToString();
                 tb_IFC_Code.Text = obj.GetString(obj.GetOrdinal("IFC_Code"));
                 String Gender = obj.GetString(obj.GetOrdinal("Gender"));
