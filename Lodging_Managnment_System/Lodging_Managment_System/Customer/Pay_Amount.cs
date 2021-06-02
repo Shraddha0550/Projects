@@ -62,21 +62,28 @@ namespace Lodging_Managment_System
        
         private void Pay_Amount_Load(object sender, EventArgs e)
         {
-            double R_Bill = 0;
-            tb_Cust_ID.Text = Convert.ToString(Auto_Incr1());
-            Con_Open();
-            SqlCommand cm = new SqlCommand("select *From Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
-
-            var obj1 = cm.ExecuteReader();
-
-
-            while (obj1.Read())
+            try
             {
-                tb_Room_Bill.Text = (obj1["Total"].ToString());
-                double charge = Convert.ToDouble(tb_Room_Bill.Text);
-                R_Bill = R_Bill + charge;
+                double R_Bill = 0;
+                tb_Cust_ID.Text = Convert.ToString(Auto_Incr1());
+                Con_Open();
+                SqlCommand cm = new SqlCommand("select *From Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
+
+                var obj1 = cm.ExecuteReader();
+
+
+                while (obj1.Read())
+                {
+                    tb_Room_Bill.Text = (obj1["Total"].ToString());
+                    double charge = Convert.ToDouble(tb_Room_Bill.Text);
+                    R_Bill = R_Bill + charge;
+                }
+                tb_Room_Bill.Text = R_Bill.ToString();
             }
-            tb_Room_Bill.Text = R_Bill.ToString();
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             Con_Close();
 
@@ -153,24 +160,40 @@ namespace Lodging_Managment_System
 
         private void btn_Total_Click(object sender, EventArgs e)
         {
-            double Rprice = 0;
-            double Discount, Total, TPrice = 0;
+            try
+            {
+                double Rprice = 0;
+                double Discount, Total, TPrice = 0;
 
-            Rprice = double.Parse(tb_Room_Bill.Text);
-            Discount = double.Parse(tb_Discount.Text);
+                Rprice = double.Parse(tb_Room_Bill.Text);
+                Discount = double.Parse(tb_Discount.Text);
 
-            Total = Rprice * (Discount / 100);
-            TPrice = Rprice - Total;
+                Total = Rprice * (Discount / 100);
+                TPrice = Rprice - Total;
 
-            tb_Total.Text = TPrice.ToString();
+                tb_Total.Text = TPrice.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
         }
 
         private void btn_Remaining_Bill_Click(object sender, EventArgs e)
         {
-             double a = double.Parse(tb_Total.Text);
-             double b = double.Parse(tb_Pay.Text);
-           
-             tb_Remaining.Text = Convert.ToString(a - b);
+            try
+            {
+                double a = double.Parse(tb_Total.Text);
+                double b = double.Parse(tb_Pay.Text);
+
+                tb_Remaining.Text = Convert.ToString(a - b);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+            
         }
 
        

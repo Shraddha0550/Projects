@@ -49,25 +49,34 @@ namespace Lodging_Managment_System
             
             Con_Open();
 
-            SqlCommand cmd = new SqlCommand("Select * From Rooms where RoomNo = " + tb_Room_No.Text + " ", Con);
-
-            var obj = cmd.ExecuteReader();
-
-            if (obj.Read())
+            try
             {
-                cb_Room_Type.Text = obj.GetString(obj.GetOrdinal("RoomType"));
-                cb_Bed_Type.Text = obj.GetString(obj.GetOrdinal("BedType"));
-                tb_Room_Specification.Text = obj.GetString(obj.GetOrdinal("Specification"));
-                tb_Amount_Day.Text = (obj["Amount_Day"].ToString());
-                tb_Per_Hrs.Text = (obj["Per_Hrs"].ToString());
-              
+                SqlCommand cmd = new SqlCommand("Select * From Rooms where RoomNo = " + tb_Room_No.Text + " ", Con);
+
+                var obj = cmd.ExecuteReader();
+
+                if (obj.Read())
+                {
+                    cb_Room_Type.Text = obj.GetString(obj.GetOrdinal("RoomType"));
+                    cb_Bed_Type.Text = obj.GetString(obj.GetOrdinal("BedType"));
+                    tb_Room_Specification.Text = obj.GetString(obj.GetOrdinal("Specification"));
+                    tb_Amount_Day.Text = (obj["Amount_Day"].ToString());
+                    tb_Per_Hrs.Text = (obj["Per_Hrs"].ToString());
+
+                }
+                else
+                {
+                    MessageBox.Show("Invaild Room Number...");
+                    tb_Room_No.Clear();
+                    tb_Room_No.Focus();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invaild Room Number...");
-                tb_Room_No.Clear();
-                tb_Room_No.Focus();
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+
+
 
             Con_Close();
 

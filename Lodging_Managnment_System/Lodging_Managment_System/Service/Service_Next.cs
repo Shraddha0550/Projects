@@ -42,20 +42,36 @@ namespace Lodging_Managment_System
         void Bind_Data()
         {
             Con_Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From R_Service",Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dataGridView1.DataSource = dt;
+
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From R_Service", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dataGridView1.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+           
             Con_Close();
         }
 
         private void btn_Amount_Click(object sender, EventArgs e)
         {
-            tb_Amount.Text = "0";
-
-            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            try
             {
-                tb_Amount.Text = Convert.ToString(double.Parse(tb_Amount.Text) + double.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));
+                tb_Amount.Text = "0";
+
+                for (int i = 0; i < dataGridView1.Rows.Count; i++)
+                {
+                    tb_Amount.Text = Convert.ToString(double.Parse(tb_Amount.Text) + double.Parse(dataGridView1.Rows[i].Cells[2].Value.ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
         }
 
@@ -76,22 +92,31 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            if (tb_Cust_ID.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service Where  Cust_ID = " + tb_Cust_ID.Text + " ", Con);
+                if (tb_Cust_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service Where  Cust_ID = " + tb_Cust_ID.Text + " ", Con);
 
-                DataTable dt = new DataTable();
+                    DataTable dt = new DataTable();
 
-                dataGridView1.DataSource = dt;
+                    dataGridView1.DataSource = dt;
 
-                sda.Fill(dt);
+                    sda.Fill(dt);
+                }
+                else
+                {
+                    MessageBox.Show("Fill Customer ID");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Fill Customer ID");
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
-           
+
+
 
             Con_Close();
         }
@@ -100,16 +125,24 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service  ", Con);
+            try {
+                SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service  ", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            dataGridView1.DataSource = dt;
+                dataGridView1.DataSource = dt;
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            tb_Amount.Clear();
-            tb_Cust_ID.Clear();
+                tb_Amount.Clear();
+                tb_Cust_ID.Clear();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
+
 
             Con_Close();
         }

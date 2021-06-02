@@ -105,7 +105,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Amount_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Amount_Day.Location = new System.Drawing.Point(268, 286);
+            this.tb_Amount_Day.Location = new System.Drawing.Point(267, 286);
             this.tb_Amount_Day.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Amount_Day.Name = "tb_Amount_Day";
             this.tb_Amount_Day.Size = new System.Drawing.Size(415, 30);
@@ -146,7 +146,7 @@
             this.lb_Room_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Room_Type.AutoSize = true;
             this.lb_Room_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Room_Type.Location = new System.Drawing.Point(94, 63);
+            this.lb_Room_Type.Location = new System.Drawing.Point(93, 63);
             this.lb_Room_Type.Name = "lb_Room_Type";
             this.lb_Room_Type.Size = new System.Drawing.Size(168, 25);
             this.lb_Room_Type.TabIndex = 11;
@@ -176,7 +176,7 @@
             this.lb_Room_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Room_No.AutoSize = true;
             this.lb_Room_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Room_No.Location = new System.Drawing.Point(94, 0);
+            this.lb_Room_No.Location = new System.Drawing.Point(93, 0);
             this.lb_Room_No.Name = "lb_Room_No";
             this.lb_Room_No.Size = new System.Drawing.Size(168, 25);
             this.lb_Room_No.TabIndex = 9;
@@ -187,7 +187,7 @@
             this.tb_Room_Specification.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Room_Specification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Room_Specification.Location = new System.Drawing.Point(268, 191);
+            this.tb_Room_Specification.Location = new System.Drawing.Point(267, 191);
             this.tb_Room_Specification.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Room_Specification.MaxLength = 250;
             this.tb_Room_Specification.Multiline = true;
@@ -200,7 +200,7 @@
             this.Room_Secification.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Room_Secification.AutoSize = true;
             this.Room_Secification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Room_Secification.Location = new System.Drawing.Point(94, 189);
+            this.Room_Secification.Location = new System.Drawing.Point(93, 189);
             this.Room_Secification.Name = "Room_Secification";
             this.Room_Secification.Size = new System.Drawing.Size(168, 25);
             this.Room_Secification.TabIndex = 16;
@@ -214,7 +214,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.58974F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 61.41026F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 194F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 195F));
             this.tableLayoutPanel1.Controls.Add(this.lb_Per_Hrs, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.tb_Amount_Day, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.lb_Room_Type, 0, 1);
@@ -246,7 +246,7 @@
             this.lb_Per_Hrs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Per_Hrs.AutoSize = true;
             this.lb_Per_Hrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Per_Hrs.Location = new System.Drawing.Point(100, 345);
+            this.lb_Per_Hrs.Location = new System.Drawing.Point(99, 345);
             this.lb_Per_Hrs.Name = "lb_Per_Hrs";
             this.lb_Per_Hrs.Size = new System.Drawing.Size(162, 25);
             this.lb_Per_Hrs.TabIndex = 23;
@@ -258,7 +258,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Room_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Room_No.Location = new System.Drawing.Point(268, 2);
+            this.tb_Room_No.Location = new System.Drawing.Point(267, 2);
             this.tb_Room_No.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Room_No.Name = "tb_Room_No";
             this.tb_Room_No.Size = new System.Drawing.Size(415, 30);
@@ -275,7 +275,7 @@
             "single",
             "Double",
             "King-Size"});
-            this.cb_Bed_Type.Location = new System.Drawing.Point(268, 128);
+            this.cb_Bed_Type.Location = new System.Drawing.Point(267, 128);
             this.cb_Bed_Type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Bed_Type.Name = "cb_Bed_Type";
             this.cb_Bed_Type.Size = new System.Drawing.Size(415, 33);
@@ -291,7 +291,7 @@
             this.cb_Room_Type.Items.AddRange(new object[] {
             "A/C",
             "NON - A/C"});
-            this.cb_Room_Type.Location = new System.Drawing.Point(268, 65);
+            this.cb_Room_Type.Location = new System.Drawing.Point(267, 65);
             this.cb_Room_Type.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cb_Room_Type.Name = "cb_Room_Type";
             this.cb_Room_Type.Size = new System.Drawing.Size(415, 33);
@@ -302,7 +302,7 @@
             this.lbl_Bed_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_Bed_Type.AutoSize = true;
             this.lbl_Bed_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Bed_Type.Location = new System.Drawing.Point(95, 126);
+            this.lbl_Bed_Type.Location = new System.Drawing.Point(94, 126);
             this.lbl_Bed_Type.Name = "lbl_Bed_Type";
             this.lbl_Bed_Type.Size = new System.Drawing.Size(167, 25);
             this.lbl_Bed_Type.TabIndex = 14;
@@ -315,7 +315,7 @@
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Search.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_Search.Location = new System.Drawing.Point(710, 2);
+            this.btn_Search.Location = new System.Drawing.Point(709, 2);
             this.btn_Search.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(147, 52);
@@ -329,7 +329,7 @@
             this.lb_Amount_Day.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Amount_Day.AutoSize = true;
             this.lb_Amount_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Amount_Day.Location = new System.Drawing.Point(100, 284);
+            this.lb_Amount_Day.Location = new System.Drawing.Point(99, 284);
             this.lb_Amount_Day.Name = "lb_Amount_Day";
             this.lb_Amount_Day.Size = new System.Drawing.Size(162, 25);
             this.lb_Amount_Day.TabIndex = 21;
@@ -341,7 +341,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Per_Hrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Per_Hrs.Location = new System.Drawing.Point(268, 347);
+            this.tb_Per_Hrs.Location = new System.Drawing.Point(267, 347);
             this.tb_Per_Hrs.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tb_Per_Hrs.Name = "tb_Per_Hrs";
             this.tb_Per_Hrs.Size = new System.Drawing.Size(415, 30);

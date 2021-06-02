@@ -69,7 +69,7 @@
             this.lb_Date.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_Date.AutoSize = true;
             this.lb_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Date.Location = new System.Drawing.Point(681, 12);
+            this.lb_Date.Location = new System.Drawing.Point(680, 12);
             this.lb_Date.Name = "lb_Date";
             this.lb_Date.Size = new System.Drawing.Size(63, 29);
             this.lb_Date.TabIndex = 16;
@@ -81,7 +81,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Cust_ID.Location = new System.Drawing.Point(191, 3);
+            this.tb_Cust_ID.Location = new System.Drawing.Point(190, 3);
             this.tb_Cust_ID.Name = "tb_Cust_ID";
             this.tb_Cust_ID.Size = new System.Drawing.Size(214, 34);
             this.tb_Cust_ID.TabIndex = 13;
@@ -92,9 +92,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Charge.Location = new System.Drawing.Point(585, 176);
+            this.tb_Charge.Location = new System.Drawing.Point(584, 176);
             this.tb_Charge.Name = "tb_Charge";
-            this.tb_Charge.Size = new System.Drawing.Size(226, 34);
+            this.tb_Charge.Size = new System.Drawing.Size(225, 34);
             this.tb_Charge.TabIndex = 4;
             // 
             // lb_Charge
@@ -102,7 +102,7 @@
             this.lb_Charge.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Charge.AutoSize = true;
             this.lb_Charge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Charge.Location = new System.Drawing.Point(487, 173);
+            this.lb_Charge.Location = new System.Drawing.Point(486, 173);
             this.lb_Charge.Name = "lb_Charge";
             this.lb_Charge.Size = new System.Drawing.Size(92, 29);
             this.lb_Charge.TabIndex = 20;
@@ -113,7 +113,7 @@
             this.lb_Service.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Service.AutoSize = true;
             this.lb_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Service.Location = new System.Drawing.Point(49, 173);
+            this.lb_Service.Location = new System.Drawing.Point(48, 173);
             this.lb_Service.Name = "lb_Service";
             this.lb_Service.Size = new System.Drawing.Size(136, 29);
             this.lb_Service.TabIndex = 18;
@@ -144,7 +144,7 @@
             this.cb_Service.Items.AddRange(new object[] {
             "Laundry",
             "Room Cleaning"});
-            this.cb_Service.Location = new System.Drawing.Point(191, 176);
+            this.cb_Service.Location = new System.Drawing.Point(190, 176);
             this.cb_Service.Name = "cb_Service";
             this.cb_Service.Size = new System.Drawing.Size(214, 37);
             this.cb_Service.TabIndex = 3;
@@ -158,7 +158,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.03963F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.44522F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.43823F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 231F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 233F));
             this.tableLayoutPanel2.Controls.Add(this.cb_Service, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.lb_Charge, 2, 2);
             this.tableLayoutPanel2.Controls.Add(this.tb_Charge, 3, 2);
@@ -180,7 +180,7 @@
             this.lb_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_ID.AutoSize = true;
             this.lb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_ID.Location = new System.Drawing.Point(65, 0);
+            this.lb_ID.Location = new System.Drawing.Point(64, 0);
             this.lb_ID.Name = "lb_ID";
             this.lb_ID.Size = new System.Drawing.Size(120, 29);
             this.lb_ID.TabIndex = 12;
@@ -194,7 +194,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.03257F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.96743F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 302F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
             this.tableLayoutPanel1.Controls.Add(this.dtp_Date, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lb_Date, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 73);

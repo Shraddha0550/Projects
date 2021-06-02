@@ -58,15 +58,23 @@ namespace Lodging_Managment_System
 
         private void btn_Search_ID_Click(object sender, EventArgs e)
         {
-            if(tb_Customer_ID.Text != "")
+            try
             {
-                (dgv_Search_Customer.DataSource as DataTable).DefaultView.RowFilter = string.Format("Cust_ID='{0}'", tb_Customer_ID.Text);
+                if (tb_Customer_ID.Text != "")
+                {
+                    (dgv_Search_Customer.DataSource as DataTable).DefaultView.RowFilter = string.Format("Cust_ID='{0}'", tb_Customer_ID.Text);
+                }
+                else
+                {
+                    MessageBox.Show("Fill Customer ID ");
+                }
+
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Fill Customer ID ");
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
-            
+
         }
 
         private void btn_Search_Name_Click(object sender, EventArgs e)
@@ -92,12 +100,20 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select Cust_Personal_Info.Cust_ID,Cust_Personal_Info.Name,Cust_Personal_Info.Booking_Date,Cust_Personal_Info.Mobile_Number,Cust_Personal_Info.Alternate_Mob_No,Cust_Personal_Info.Email,Cust_Personal_Info.DOB,Cust_Personal_Info.Address,Cust_Personal_Info.AdharCard_No,Cust_Personal_Info.PAN_No,Cust_Booking_Room_Info.Room_No,Cust_Booking_Room_Info.Check_In_Date,Cust_Booking_Room_Info.Check_Out_Date,Cust_Booking_Room_Info.Room_Type,Cust_Booking_Room_Info.Bed_Type,Cust_Booking_Room_Info.Day,Cust_Booking_Room_Info.Hrs,Cust_Booking_Room_Info.Total,Pay_Amount.Room_Bill,Pay_Amount.Discount,Pay_Amount.Total,Pay_Amount.Pay,Pay_Amount.Remaining From Cust_Personal_Info INNER JOIN Cust_Booking_Room_Info ON Cust_Personal_Info.Cust_ID = Cust_Booking_Room_Info.Cust_ID INNER JOIN Pay_Amount ON Cust_Personal_Info.Cust_ID = Pay_Amount.Cust_ID ", Con);
-            DataTable dt = new DataTable();
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select Cust_Personal_Info.Cust_ID,Cust_Personal_Info.Name,Cust_Personal_Info.Booking_Date,Cust_Personal_Info.Mobile_Number,Cust_Personal_Info.Alternate_Mob_No,Cust_Personal_Info.Email,Cust_Personal_Info.DOB,Cust_Personal_Info.Address,Cust_Personal_Info.AdharCard_No,Cust_Personal_Info.PAN_No,Cust_Booking_Room_Info.Room_No,Cust_Booking_Room_Info.Check_In_Date,Cust_Booking_Room_Info.Check_Out_Date,Cust_Booking_Room_Info.Room_Type,Cust_Booking_Room_Info.Bed_Type,Cust_Booking_Room_Info.Day,Cust_Booking_Room_Info.Hrs,Cust_Booking_Room_Info.Total,Pay_Amount.Room_Bill,Pay_Amount.Discount,Pay_Amount.Total,Pay_Amount.Pay,Pay_Amount.Remaining From Cust_Personal_Info INNER JOIN Cust_Booking_Room_Info ON Cust_Personal_Info.Cust_ID = Cust_Booking_Room_Info.Cust_ID INNER JOIN Pay_Amount ON Cust_Personal_Info.Cust_ID = Pay_Amount.Cust_ID ", Con);
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Search_Customer.DataSource = dt;
+                dgv_Search_Customer.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+         
 
             Con_Close();
         }

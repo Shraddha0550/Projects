@@ -141,7 +141,7 @@
             this.btn_Enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enter.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Enter.Location = new System.Drawing.Point(491, 3);
+            this.btn_Enter.Location = new System.Drawing.Point(489, 3);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(110, 57);
             this.btn_Enter.TabIndex = 27;
@@ -183,7 +183,7 @@
             this.lb_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Cust_ID.AutoSize = true;
             this.lb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Cust_ID.Location = new System.Drawing.Point(120, 0);
+            this.lb_Cust_ID.Location = new System.Drawing.Point(119, 0);
             this.lb_Cust_ID.Name = "lb_Cust_ID";
             this.lb_Cust_ID.Size = new System.Drawing.Size(121, 29);
             this.lb_Cust_ID.TabIndex = 76;
@@ -195,9 +195,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Cust_ID.Location = new System.Drawing.Point(247, 3);
+            this.tb_Cust_ID.Location = new System.Drawing.Point(246, 3);
             this.tb_Cust_ID.Name = "tb_Cust_ID";
-            this.tb_Cust_ID.Size = new System.Drawing.Size(238, 34);
+            this.tb_Cust_ID.Size = new System.Drawing.Size(237, 34);
             this.tb_Cust_ID.TabIndex = 75;
             // 
             // lb_Paid
@@ -205,7 +205,7 @@
             this.lb_Paid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Paid.AutoSize = true;
             this.lb_Paid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Paid.Location = new System.Drawing.Point(1113, 103);
+            this.lb_Paid.Location = new System.Drawing.Point(1108, 103);
             this.lb_Paid.Name = "lb_Paid";
             this.lb_Paid.Size = new System.Drawing.Size(104, 29);
             this.lb_Paid.TabIndex = 86;
@@ -218,9 +218,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Paid.Enabled = false;
             this.tb_Paid.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Paid.Location = new System.Drawing.Point(1223, 106);
+            this.tb_Paid.Location = new System.Drawing.Point(1218, 106);
             this.tb_Paid.Name = "tb_Paid";
-            this.tb_Paid.Size = new System.Drawing.Size(238, 34);
+            this.tb_Paid.Size = new System.Drawing.Size(237, 34);
             this.tb_Paid.TabIndex = 87;
             // 
             // lb_Remaining_Room_Bill
@@ -228,7 +228,7 @@
             this.lb_Remaining_Room_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Remaining_Room_Bill.AutoSize = true;
             this.lb_Remaining_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Remaining_Room_Bill.Location = new System.Drawing.Point(29, 206);
+            this.lb_Remaining_Room_Bill.Location = new System.Drawing.Point(28, 206);
             this.lb_Remaining_Room_Bill.Name = "lb_Remaining_Room_Bill";
             this.lb_Remaining_Room_Bill.Size = new System.Drawing.Size(212, 58);
             this.lb_Remaining_Room_Bill.TabIndex = 84;
@@ -241,9 +241,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Remaining_Room_Bill.Enabled = false;
             this.tb_Remaining_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Remaining_Room_Bill.Location = new System.Drawing.Point(247, 209);
+            this.tb_Remaining_Room_Bill.Location = new System.Drawing.Point(246, 209);
             this.tb_Remaining_Room_Bill.Name = "tb_Remaining_Room_Bill";
-            this.tb_Remaining_Room_Bill.Size = new System.Drawing.Size(238, 34);
+            this.tb_Remaining_Room_Bill.Size = new System.Drawing.Size(237, 34);
             this.tb_Remaining_Room_Bill.TabIndex = 85;
             // 
             // panel1
@@ -293,9 +293,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Total.Enabled = false;
             this.tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Total.Location = new System.Drawing.Point(1223, 209);
+            this.tb_Total.Location = new System.Drawing.Point(1218, 209);
             this.tb_Total.Name = "tb_Total";
-            this.tb_Total.Size = new System.Drawing.Size(238, 34);
+            this.tb_Total.Size = new System.Drawing.Size(237, 34);
             this.tb_Total.TabIndex = 90;
             // 
             // lb_Total
@@ -303,7 +303,7 @@
             this.lb_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Total.AutoSize = true;
             this.lb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Total.Location = new System.Drawing.Point(1113, 206);
+            this.lb_Total.Location = new System.Drawing.Point(1108, 206);
             this.lb_Total.Name = "lb_Total";
             this.lb_Total.Size = new System.Drawing.Size(104, 29);
             this.lb_Total.TabIndex = 91;
@@ -316,9 +316,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Service.Enabled = false;
             this.tb_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Service.Location = new System.Drawing.Point(735, 209);
+            this.tb_Service.Location = new System.Drawing.Point(732, 209);
             this.tb_Service.Name = "tb_Service";
-            this.tb_Service.Size = new System.Drawing.Size(238, 34);
+            this.tb_Service.Size = new System.Drawing.Size(237, 34);
             this.tb_Service.TabIndex = 79;
             this.tb_Service.TextChanged += new System.EventHandler(this.tb_Service_TextChanged);
             // 
@@ -327,7 +327,7 @@
             this.lb_Service.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Service.AutoSize = true;
             this.lb_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Service.Location = new System.Drawing.Point(599, 206);
+            this.lb_Service.Location = new System.Drawing.Point(596, 206);
             this.lb_Service.Name = "lb_Service";
             this.lb_Service.Size = new System.Drawing.Size(130, 29);
             this.lb_Service.TabIndex = 64;
@@ -340,9 +340,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Room_Bill.Enabled = false;
             this.tb_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Room_Bill.Location = new System.Drawing.Point(735, 106);
+            this.tb_Room_Bill.Location = new System.Drawing.Point(732, 106);
             this.tb_Room_Bill.Name = "tb_Room_Bill";
-            this.tb_Room_Bill.Size = new System.Drawing.Size(238, 34);
+            this.tb_Room_Bill.Size = new System.Drawing.Size(237, 34);
             this.tb_Room_Bill.TabIndex = 81;
             // 
             // lb_Room_Bill
@@ -350,7 +350,7 @@
             this.lb_Room_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Room_Bill.AutoSize = true;
             this.lb_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Room_Bill.Location = new System.Drawing.Point(599, 103);
+            this.lb_Room_Bill.Location = new System.Drawing.Point(596, 103);
             this.lb_Room_Bill.Name = "lb_Room_Bill";
             this.lb_Room_Bill.Size = new System.Drawing.Size(130, 29);
             this.lb_Room_Bill.TabIndex = 80;
@@ -363,9 +363,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.Enabled = false;
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(247, 106);
+            this.tb_Name.Location = new System.Drawing.Point(246, 106);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(238, 34);
+            this.tb_Name.Size = new System.Drawing.Size(237, 34);
             this.tb_Name.TabIndex = 78;
             // 
             // lb_Name
@@ -373,7 +373,7 @@
             this.lb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Name.AutoSize = true;
             this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Name.Location = new System.Drawing.Point(139, 103);
+            this.lb_Name.Location = new System.Drawing.Point(138, 103);
             this.lb_Name.Name = "lb_Name";
             this.lb_Name.Size = new System.Drawing.Size(102, 29);
             this.lb_Name.TabIndex = 77;
@@ -388,7 +388,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 343F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 349F));
             this.tableLayoutPanel1.Controls.Add(this.lb_Cust_ID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Total, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.tb_Cust_ID, 1, 0);

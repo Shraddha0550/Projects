@@ -90,9 +90,6 @@ namespace Lodging_Managment_System
                 MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
-
-
-
             Con_Close();
             
         }
@@ -112,16 +109,25 @@ namespace Lodging_Managment_System
         public void clear_Grid()
         {
             Con_Open();
+            try
+            {
+                string val = "0";
 
-            string val = "0";
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From  Cust_Booking_Room_Info where Cust_ID = '" + val + "'  ", Con);
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From  Cust_Booking_Room_Info where Cust_ID = '" + val+ "'  ", Con);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            sda.Fill(dt);
+                dgv_Rooms.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
 
-            dgv_Rooms.DataSource = dt;
+                MessageBox.Show("Something Went Wrong" + ex.ToString());
+            }
+
+          
 
             Con_Close();
         }
@@ -144,20 +150,29 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            SqlCommand cm = new SqlCommand("select *From Cust_Personal_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
-
-            var obj1 = cm.ExecuteReader();
-
-            if (obj1.Read())
+            try
             {
-                tb_Name.Text = obj1.GetString(obj1.GetOrdinal("Name"));
+                SqlCommand cm = new SqlCommand("select *From Cust_Personal_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
 
+                var obj1 = cm.ExecuteReader();
+
+                if (obj1.Read())
+                {
+                    tb_Name.Text = obj1.GetString(obj1.GetOrdinal("Name"));
+
+                }
+                else
+                {
+                    MessageBox.Show("Inavlid ID");
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Inavlid ID");
-
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.ToString());
             }
+
+
 
             Con.Close();
         }
@@ -166,22 +181,31 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            SqlCommand cm = new SqlCommand("select *From Pay_Amount where Cust_ID = " + tb_Cust_ID.Text + " ", Con);
-
-            var obj1 = cm.ExecuteReader();
-
-            if (obj1.Read())
+            try
             {
-                tb_Room_Bill.Text = (obj1["Total"].ToString());
-                tb_Paid.Text = (obj1["Pay"].ToString());
-                tb_Remaining_Room_Bill.Text = (obj1["Remaining"].ToString());
-      
-            }
-            else
-            {
-                MessageBox.Show("Inavlid ID");
 
+                SqlCommand cm = new SqlCommand("select *From Pay_Amount where Cust_ID = " + tb_Cust_ID.Text + " ", Con);
+
+                var obj1 = cm.ExecuteReader();
+
+                if (obj1.Read())
+                {
+                    tb_Room_Bill.Text = (obj1["Total"].ToString());
+                    tb_Paid.Text = (obj1["Pay"].ToString());
+                    tb_Remaining_Room_Bill.Text = (obj1["Remaining"].ToString());
+
+                }
+                else
+                {
+                    MessageBox.Show("Inavlid ID");
+
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
 
             Con.Close();
         }
@@ -191,21 +215,28 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            double R_charge = 0;
-
-            SqlCommand cm = new SqlCommand("select *From R_Service where Cust_ID = " + tb_Cust_ID.Text + "", Con);
-
-            var obj1 = cm.ExecuteReader();
-
-
-            while (obj1.Read())
+            try
             {
-                tb_Charge.Text = (obj1["Charge"].ToString());
-                double charge = Convert.ToDouble(tb_Charge.Text);
-                R_charge = R_charge + charge;
+                double R_charge = 0;
+
+                SqlCommand cm = new SqlCommand("select *From R_Service where Cust_ID = " + tb_Cust_ID.Text + "", Con);
+
+                var obj1 = cm.ExecuteReader();
+
+
+                while (obj1.Read())
+                {
+                    tb_Charge.Text = (obj1["Charge"].ToString());
+                    double charge = Convert.ToDouble(tb_Charge.Text);
+                    R_charge = R_charge + charge;
+                }
+                tb_Service.Text = R_charge.ToString();
             }
-            tb_Service.Text = R_charge.ToString();
-           
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
             Con_Close();
         }
 
@@ -213,31 +244,40 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            
-            SqlCommand cm = new SqlCommand("select * From Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
-
-            var obj1 = cm.ExecuteReader();
-
-            ArrayList Al = new ArrayList();
-
-            while (obj1.Read())
+            try
             {
-                
-                tb_Room_No.Text = (obj1["Room_No"].ToString());
-                Al.Add(tb_Room_No.Text);
 
+                SqlCommand cm = new SqlCommand("select * From Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "", Con);
+
+                var obj1 = cm.ExecuteReader();
+
+                ArrayList Al = new ArrayList();
+
+                while (obj1.Read())
+                {
+
+                    tb_Room_No.Text = (obj1["Room_No"].ToString());
+                    Al.Add(tb_Room_No.Text);
+
+                }
+                obj1.Close();
+
+                foreach (object o in Al)
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Update Rooms Set Reserve = 'NO'  ", Con);
+
+                    DataTable dt = new DataTable();
+
+                    sda.Fill(dt);
+
+                }
             }
-            obj1.Close();
-         
-            foreach (object o in Al)
+            catch (Exception ex)
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Update Rooms Set Reserve = 'NO'  ", Con);
-
-                DataTable dt = new DataTable();
-
-                sda.Fill(dt);
-
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+
+
 
             Con_Close();
 
@@ -247,13 +287,21 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From  Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "  ", Con);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From  Cust_Booking_Room_Info where Cust_ID = " + tb_Cust_ID.Text + "  ", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Rooms.DataSource = dt;
+                dgv_Rooms.DataSource = dt;
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             Con_Close();
         }
@@ -276,16 +324,24 @@ namespace Lodging_Managment_System
 
         private void tb_Service_TextChanged(object sender, EventArgs e)
         {
-            if (tb_Service.Text != "")
+            try
             {
-                double a = double.Parse(tb_Remaining_Room_Bill.Text);
-                double b = double.Parse(tb_Service.Text);
-                tb_Total.Text = Convert.ToString(a + b);
+                if (tb_Service.Text != "")
+                {
+                    double a = double.Parse(tb_Remaining_Room_Bill.Text);
+                    double b = double.Parse(tb_Service.Text);
+                    tb_Total.Text = Convert.ToString(a + b);
+                }
+                else
+                {
+                    tb_Total.Text = tb_Remaining_Room_Bill.Text;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                tb_Total.Text = tb_Remaining_Room_Bill.Text;
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+
         }
     }
 }

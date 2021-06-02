@@ -46,53 +46,59 @@ namespace Lodging_Managment_System
         private void btn_Search_Click(object sender, EventArgs e)
         {
             Con_Open();
-            tb_Emp_ID.Enabled = false;
 
-            SqlCommand cmd = new SqlCommand("Select * From Employee_Details where Emp_ID = " + tb_Emp_ID.Text + " ", Con);
-
-            var obj = cmd.ExecuteReader();
-
-            if (obj.Read())
+            try
             {
-                tb_Emp_Name.Text = obj.GetString(obj.GetOrdinal("Emp_Name"));
-                tb_Mobile_No.Text = (obj["Mob_No"].ToString());
-                dtp_DOB.Text = (obj["DOB"].ToString());
-                tb_Gender.Text = obj.GetString(obj.GetOrdinal("Gender"));
-                tb_Aadhar_No.Text = (obj["Aadhar_No"].ToString());
-                Cb_Designation.Text = obj.GetString(obj.GetOrdinal("Designation"));
-                tb_Salary.Text = (obj["Salary"].ToString());
-                dtp_Hire_Date.Text = (obj["Hire_Date"].ToString());
-                tb_Email.Text = obj.GetString(obj.GetOrdinal("Email_Id"));
-                tb_PAN_No.Text = obj.GetString(obj.GetOrdinal("PAN_No"));
-                tb_Shift.Text = obj.GetString(obj.GetOrdinal("Shift_Time"));
+                tb_Emp_ID.Enabled = false;
 
-                if ( tb_Gender.Text == "Female")
-                {
-                    rb_Female.Checked = true;
-                }
-                else if (tb_Gender.Text == "Male")
-                {
-                    rb_Male.Checked = true;
-                }
+                SqlCommand cmd = new SqlCommand("Select * From Employee_Details where Emp_ID = " + tb_Emp_ID.Text + " ", Con);
 
-                if (tb_Shift.Text == "Morning")
-                {
-                    rb_Morning.Checked = true;
-                }
-                else if(tb_Shift.Text == "Night")
-                {
-                    rb_Night.Checked = true;
-                }
-                
-               
+                var obj = cmd.ExecuteReader();
 
+                if (obj.Read())
+                {
+                    tb_Emp_Name.Text = obj.GetString(obj.GetOrdinal("Emp_Name"));
+                    tb_Mobile_No.Text = (obj["Mob_No"].ToString());
+                    dtp_DOB.Text = (obj["DOB"].ToString());
+                    tb_Gender.Text = obj.GetString(obj.GetOrdinal("Gender"));
+                    tb_Aadhar_No.Text = (obj["Aadhar_No"].ToString());
+                    Cb_Designation.Text = obj.GetString(obj.GetOrdinal("Designation"));
+                    tb_Salary.Text = (obj["Salary"].ToString());
+                    dtp_Hire_Date.Text = (obj["Hire_Date"].ToString());
+                    tb_Email.Text = obj.GetString(obj.GetOrdinal("Email_Id"));
+                    tb_PAN_No.Text = obj.GetString(obj.GetOrdinal("PAN_No"));
+                    tb_Shift.Text = obj.GetString(obj.GetOrdinal("Shift_Time"));
+
+                    if (tb_Gender.Text == "Female")
+                    {
+                        rb_Female.Checked = true;
+                    }
+                    else if (tb_Gender.Text == "Male")
+                    {
+                        rb_Male.Checked = true;
+                    }
+
+                    if (tb_Shift.Text == "Morning")
+                    {
+                        rb_Morning.Checked = true;
+                    }
+                    else if (tb_Shift.Text == "Night")
+                    {
+                        rb_Night.Checked = true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Invaild Roll Number...");
+                    tb_Emp_ID.Clear();
+                    tb_Emp_ID.Focus();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invaild Roll Number...");
-                tb_Emp_ID.Clear();
-                tb_Emp_ID.Focus();
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+
             Con_Close();
         }
 

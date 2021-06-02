@@ -94,7 +94,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.03257F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 79.96743F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 148F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 303F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 304F));
             this.tableLayoutPanel1.Controls.Add(this.dtp_Date, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.lb_Date, 2, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 73);
@@ -109,7 +109,7 @@
             this.lb_Date.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.lb_Date.AutoSize = true;
             this.lb_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Date.Location = new System.Drawing.Point(638, 12);
+            this.lb_Date.Location = new System.Drawing.Point(637, 12);
             this.lb_Date.Name = "lb_Date";
             this.lb_Date.Size = new System.Drawing.Size(63, 29);
             this.lb_Date.TabIndex = 16;
@@ -149,7 +149,7 @@
             this.btn_Search.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Search.Location = new System.Drawing.Point(567, 3);
+            this.btn_Search.Location = new System.Drawing.Point(566, 3);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(181, 50);
             this.btn_Search.TabIndex = 2;
@@ -207,7 +207,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.57353F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 19.73039F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.79902F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 210F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 213F));
             this.tableLayoutPanel2.Controls.Add(this.btn_Search, 3, 0);
             this.tableLayoutPanel2.Controls.Add(this.lb_Cust_ID, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.tb_Cust_ID, 1, 0);
@@ -238,7 +238,7 @@
             this.tb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Cust_ID.Location = new System.Drawing.Point(192, 3);
             this.tb_Cust_ID.Name = "tb_Cust_ID";
-            this.tb_Cust_ID.Size = new System.Drawing.Size(213, 34);
+            this.tb_Cust_ID.Size = new System.Drawing.Size(212, 34);
             this.tb_Cust_ID.TabIndex = 13;
             // 
             // rServiceBindingSource2

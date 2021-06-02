@@ -49,10 +49,17 @@ namespace Lodging_Managment_System
         private void View_All_Rooms_Load(object sender, EventArgs e)
         {
             Con_Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Rooms", Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dgv_Data.DataSource = dt;
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Rooms", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgv_Data.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
             Con_Close();
         
         }

@@ -37,14 +37,21 @@ namespace Lodging_Managment_System
         private void View_Employee_Details_Load(object sender, EventArgs e)
         {
             Con_Open();
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Employee_Details", Con);
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Employee_Details", Con);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            sda.Fill(dt);
-
-            dgv_Employee_Details.DataSource = dt;
+                dgv_Employee_Details.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+          
 
             Con_Close();
         }
@@ -74,14 +81,21 @@ namespace Lodging_Managment_System
         private void btn_Search_Click(object sender, EventArgs e)
         {
             Con_Open();
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select *From Employee_Details Where Emp_ID = " + tb_Emp_Id.Text + " ", Con);
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From Employee_Details Where Emp_ID = " + tb_Emp_Id.Text + " ", Con);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                dgv_Employee_Details.DataSource = dt;
 
-            dgv_Employee_Details.DataSource = dt;
-
-            sda.Fill(dt);
+                sda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+         
 
             Con_Close();
         }
@@ -90,15 +104,23 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            tb_Emp_Id.Text = "";
+            try
+            {
+                tb_Emp_Id.Text = "";
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Employee_Details", Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Employee_Details", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Employee_Details.DataSource = dt;
+                dgv_Employee_Details.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
 
             Con_Close();
         }

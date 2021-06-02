@@ -51,13 +51,21 @@ namespace Lodging_Managment_System
         {
             Con.Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service Where  Cust_ID = " + tb_Cust_ID.Text + " ", Con);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select *From R_Service Where  Cust_ID = " + tb_Cust_ID.Text + " ", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            dgv_Service.DataSource = dt;
+                dgv_Service.DataSource = dt;
 
-            sda.Fill(dt);
+                sda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
 
             Con_Close();
         }
@@ -74,23 +82,38 @@ namespace Lodging_Managment_System
         void Bind_Data()
         {
             Con_Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From R_Service", Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            dgv_Service.DataSource = dt;
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From R_Service", Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                dgv_Service.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+           
             Con_Close();
         }
 
         private void dgv_Service_SelectionChanged(object sender, EventArgs e)
         {
-           
-            if (dgv_Service.SelectedRows.Count > 0)
-            {
-               tb_Charge.Text = dgv_Service.SelectedRows[0].Cells[1].Value.ToString();
-               tb_Service.Text = dgv_Service.SelectedRows[0].Cells[2].Value.ToString();
 
-           }
-        
+            try
+            {
+                if (dgv_Service.SelectedRows.Count > 0)
+                {
+                    tb_Charge.Text = dgv_Service.SelectedRows[0].Cells[1].Value.ToString();
+                    tb_Service.Text = dgv_Service.SelectedRows[0].Cells[2].Value.ToString();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
         }
 
         private void bt_Update_Click(object sender, EventArgs e)

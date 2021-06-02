@@ -46,34 +46,50 @@ namespace Lodging_Managment_System
 
         private void dtp_Check_Out_Date_ValueChanged(object sender, EventArgs e)
         {
-            DateTime date1 = dtp_Ckeck_In_Date.Value.Date;
-            DateTime date2 = dtp_Check_Out_Date.Value.Date;
+            try
+            {
+                DateTime date1 = dtp_Ckeck_In_Date.Value.Date;
+                DateTime date2 = dtp_Check_Out_Date.Value.Date;
 
-            int Days = ((TimeSpan)(date2 - date1)).Days;
+                int Days = ((TimeSpan)(date2 - date1)).Days;
 
-            tb_Day.Text = Days.ToString();
+                tb_Day.Text = Days.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
         }
 
         private void btn_View_Available_Rooms_Click(object sender, EventArgs e)
         {
             Con_Open();
 
-            if (tb_Day.Text != "0")
+            try
             {
-                btn_Hrs_Add.Visible = false;
+                if (tb_Day.Text != "0")
+                {
+                    btn_Hrs_Add.Visible = false;
+                }
+                if (tb_Day.Text == "0")
+                {
+                    btn_Add.Visible = false;
+                }
+
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From  Rooms where RoomType = '" + cb__Room_Type.Text + "' And BedType = '" + cb_Bed_Type.Text + "' And Reserve = 'NO' ", Con);
+
+                DataTable dt = new DataTable();
+
+                sda.Fill(dt);
+
+                dgv_Available_Room.DataSource = dt;
             }
-            if (tb_Day.Text == "0")
+            catch (Exception ex)
             {
-                btn_Add.Visible = false;
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From  Rooms where RoomType = '" + cb__Room_Type.Text + "' And BedType = '" + cb_Bed_Type.Text + "' And Reserve = 'NO' ", Con);
-
-            DataTable dt = new DataTable();
-
-            sda.Fill(dt);
-
-            dgv_Available_Room.DataSource = dt;
 
             Con_Close();
         }
@@ -148,24 +164,40 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From  Rooms ", Con);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From  Rooms ", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Available_Room.DataSource = dt;
+                dgv_Available_Room.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
 
             Con_Close();
         }
 
         private void dgv_Available_Room_SelectionChanged(object sender, EventArgs e)
         {
-            if (dgv_Available_Room.SelectedRows.Count > 0)
+            try
             {
-                tb_Room_No.Text = dgv_Available_Room.SelectedRows[0].Cells[1].Value.ToString();
+                if (dgv_Available_Room.SelectedRows.Count > 0)
+                {
+                    tb_Room_No.Text = dgv_Available_Room.SelectedRows[0].Cells[1].Value.ToString();
 
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
@@ -180,49 +212,58 @@ namespace Lodging_Managment_System
 
         private void btn_Hrs_Add_Click(object sender, EventArgs e)
         {
-            DataTable dt = new DataTable();
-            dt.Columns.Add("RoomNo");
-            dt.Columns.Add("RoomType");
-            dt.Columns.Add("BedType");
-            dt.Columns.Add("Per_Hrs");
+            Con_Open();
+           
+                DataTable dt = new DataTable();
+                dt.Columns.Add("RoomNo");
+                dt.Columns.Add("RoomType");
+                dt.Columns.Add("BedType");
+                dt.Columns.Add("Per_Hrs");
 
-            foreach (DataGridViewRow drv in dgv_Available_Room.Rows)
-            {
-                bool chkboxselect = Convert.ToBoolean(drv.Cells["Select"].Value);
-                if (chkboxselect)
+                foreach (DataGridViewRow drv in dgv_Available_Room.Rows)
                 {
-                    dt.Rows.Add(drv.Cells[1].Value, drv.Cells[2].Value, drv.Cells[3].Value, drv.Cells[7].Value);
-                    drv.DefaultCellStyle.BackColor = Color.Gray;
-                    drv.DefaultCellStyle.ForeColor = Color.Aqua;
+                    bool chkboxselect = Convert.ToBoolean(drv.Cells["Select"].Value);
+                    if (chkboxselect)
+                    {
+                        dt.Rows.Add(drv.Cells[1].Value, drv.Cells[2].Value, drv.Cells[3].Value, drv.Cells[7].Value);
+                        drv.DefaultCellStyle.BackColor = Color.Gray;
+                        drv.DefaultCellStyle.ForeColor = Color.Aqua;
+
+                    }
+                    dgv_Destination.DataSource = dt;
+
+                try
+                {
+
+                    SqlCommand cm = new SqlCommand("select *From Rooms where RoomNo = " + tb_Room_No.Text + "", Con);
+
+                    var obj1 = cm.ExecuteReader();
+
+
+                    if (obj1.Read())
+                    {
+                        tb_Amount.Text = (obj1["Per_Hrs"].ToString());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Inavlid ");
+                    }
+
+                    int numRow = dgv_Destination.Rows.Count;
+                    int count = numRow - 1;
+
+                    tb_Count_Of_Rooms.Text = count.ToString();
+
+                    string Total = (Convert.ToInt32(tb_Hrs.Text) * Convert.ToDecimal(tb_Amount.Text)).ToString();
+                    tb_Total.Text = Total;
 
                 }
-                dgv_Destination.DataSource = dt;
-
-                Con.Open();
-
-                SqlCommand cm = new SqlCommand("select *From Rooms where RoomNo = " + tb_Room_No.Text + "", Con);
-
-                var obj1 = cm.ExecuteReader();
-
-
-                if (obj1.Read())
+                catch (Exception ex)
                 {
-                    tb_Amount.Text = (obj1["Per_Hrs"].ToString());
-                }
-                else
-                {
-                    MessageBox.Show("Inavlid ");
+                    MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
                 }
 
-                int numRow = dgv_Destination.Rows.Count;
-                int count = numRow - 1;
-
-                tb_Count_Of_Rooms.Text = count.ToString();
-
-                string Total = (Convert.ToInt32(tb_Hrs.Text) * Convert.ToDecimal(tb_Amount.Text)).ToString();
-                tb_Total.Text = Total;
-
-                Con_Close();
+                  Con_Close();
 
             }
         }

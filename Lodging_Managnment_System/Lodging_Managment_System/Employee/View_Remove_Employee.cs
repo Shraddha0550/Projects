@@ -76,13 +76,22 @@ namespace Lodging_Managment_System
 
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Deleted_Emp", Con);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Deleted_Emp", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Employee_Delete.DataSource = dt;
+                dgv_Employee_Delete.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
+           
 
             Con_Close();
         }
@@ -91,13 +100,21 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From Deleted_Emp Where Emp_ID = " + tb_Emp_Id.Text + " ", Con);
+            try
+            {
 
-            DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter("Select *From Deleted_Emp Where Emp_ID = " + tb_Emp_Id.Text + " ", Con);
 
-            dgv_Employee_Delete.DataSource = dt;
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                dgv_Employee_Delete.DataSource = dt;
+
+                sda.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             Con_Close();
 
@@ -107,13 +124,21 @@ namespace Lodging_Managment_System
         {
             Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * from Deleted_Emp", Con);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * from Deleted_Emp", Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Employee_Delete.DataSource = dt;
+                dgv_Employee_Delete.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+
 
             Con_Close();
         }
