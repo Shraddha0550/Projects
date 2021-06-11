@@ -101,6 +101,7 @@ namespace Camera_House
             pnl_Product.Visible = false;
             pnl_Stock.Visible = false;
             pnl_Distrubutor.Visible = false;
+            pnl_Reports.Visible = false;
         }
 
         private void btn_Employee_MouseHover(object sender, EventArgs e)
@@ -110,6 +111,7 @@ namespace Camera_House
             pnl_Product.Visible = false;
             pnl_Stock.Visible = false;
             pnl_Distrubutor.Visible = false;
+            pnl_Reports.Visible = false;
         }
 
         private void btn_Product_MouseHover(object sender, EventArgs e)
@@ -119,6 +121,7 @@ namespace Camera_House
             pnl_Customer.Visible = false;
             pnl_Stock.Visible = false;
             pnl_Distrubutor.Visible = false;
+            pnl_Reports.Visible = false;
         }
         public void hidepanel()
         {
@@ -130,6 +133,7 @@ namespace Camera_House
         }
         private void btn_Stock_MouseHover(object sender, EventArgs e)
         {
+            pnl_Reports.Visible = false;
             pnl_Distrubutor.Visible = false;
             pnl_Product.Visible = false;
             pnl_Employee.Visible = false;
@@ -139,13 +143,23 @@ namespace Camera_House
 
         private void btn_Distrubutor_MouseHover(object sender, EventArgs e)
         {
+            pnl_Reports.Visible = false;
             pnl_Distrubutor.Visible = true;
             pnl_Product.Visible = false;
             pnl_Employee.Visible = false;
             pnl_Customer.Visible = false;
             pnl_Stock.Visible = false;
         }
-       
+
+        private void btn_Reports_MouseHover(object sender, EventArgs e)
+        {
+            pnl_Customer.Visible = false;
+            pnl_Employee.Visible = false;
+            pnl_Product.Visible = false;
+            pnl_Stock.Visible = false;
+            pnl_Distrubutor.Visible = false;
+            pnl_Reports.Visible = true;
+        }
 
         private void btn_Add_New_Customer_Click(object sender, EventArgs e)
         {
@@ -158,10 +172,7 @@ namespace Camera_House
 
         private void btn_Update_Customer_Details_Click(object sender, EventArgs e)
         {
-            Update_Customer obj = new Update_Customer();
-            obj.MdiParent = this;
-            obj.Show();
-            hidepanel();
+           
         }
 
         private void btn_Search_Customer_Click(object sender, EventArgs e)
@@ -308,5 +319,7 @@ namespace Camera_House
             obj.Show();
             hidepanel();
         }
+
+
     }
 }

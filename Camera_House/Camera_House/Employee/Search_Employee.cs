@@ -21,18 +21,26 @@ namespace Camera_House
         private void btn_Search_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            if (tb_Employee_ID.Text != "")
-            {
-                SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "' ", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
 
-                dgv_Employee_List.DataSource = dt;
-            }
-            else
+            try
             {
-                MessageBox.Show("Employee ID Not Found", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                if (tb_Employee_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "' ", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    dgv_Employee_List.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Employee ID Not Found", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -40,16 +48,29 @@ namespace Camera_House
 
         private void btn_Clear_Click(object sender, EventArgs e)
         {
-
-            tb_Employee_ID.Text = "";
-            String var = "0";
             CF.Con_Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Employee Where Emp_ID ='" + var + "' ", CF.Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-
-            dgv_Employee_List.DataSource = dt;
+            try
+            {
+                tb_Employee_ID.Text = "";
+                String var = "0";
+           
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Employee Where Emp_ID ='" + var + "' ", CF.Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+           
+                dgv_Employee_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+           
             CF.Con_Close();
+        }
+
+        private void Only_Numeric(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

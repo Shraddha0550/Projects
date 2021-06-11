@@ -15,7 +15,7 @@ namespace Camera_House
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MDI_Camera_House());
+            Application.Run(new Log_In());
         }
     }
 }

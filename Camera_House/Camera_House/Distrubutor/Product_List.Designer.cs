@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lb_View_Product_Items = new System.Windows.Forms.Label();
             this.lb_ID = new System.Windows.Forms.Label();
             this.tb_ID = new System.Windows.Forms.TextBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.dgv_Product_List = new System.Windows.Forms.DataGridView();
-            this.camera_House_DBDataSet = new Camera_House.Camera_House_DBDataSet();
-            this.distProductListBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dist_Product_ListTableAdapter = new Camera_House.Camera_House_DBDataSetTableAdapters.Dist_Product_ListTableAdapter();
             this.companyNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.distProductListBindingSource = new System.Windows.Forms.BindingSource(this.components);
+           // this.camera_House_DBDataSet = new Camera_House_main.Camera_House_DBDataSet();
+           // this.dist_Product_ListTableAdapter = new Camera_House_main.Camera_House_DBDataSetTableAdapters.Dist_Product_ListTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product_List)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.camera_House_DBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.distProductListBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_House_DBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,9 +84,11 @@
             // 
             this.tb_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_ID.Location = new System.Drawing.Point(405, 159);
+            this.tb_ID.MaxLength = 5;
             this.tb_ID.Name = "tb_ID";
             this.tb_ID.Size = new System.Drawing.Size(251, 30);
             this.tb_ID.TabIndex = 39;
+            this.tb_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_ID_KeyPress);
             // 
             // btn_Search
             // 
@@ -104,14 +106,14 @@
             this.dgv_Product_List.AllowUserToAddRows = false;
             this.dgv_Product_List.AutoGenerateColumns = false;
             this.dgv_Product_List.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product_List.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Product_List.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Product_List.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.companyNameDataGridViewTextBoxColumn,
@@ -119,31 +121,17 @@
             this.dgv_Product_List.DataSource = this.distProductListBindingSource;
             this.dgv_Product_List.Location = new System.Drawing.Point(213, 260);
             this.dgv_Product_List.Name = "dgv_Product_List";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Product_List.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Product_List.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_Product_List.RowTemplate.Height = 24;
             this.dgv_Product_List.Size = new System.Drawing.Size(711, 234);
             this.dgv_Product_List.TabIndex = 41;
-            // 
-            // camera_House_DBDataSet
-            // 
-            this.camera_House_DBDataSet.DataSetName = "Camera_House_DBDataSet";
-            this.camera_House_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // distProductListBindingSource
-            // 
-            this.distProductListBindingSource.DataMember = "Dist_Product_List";
-            this.distProductListBindingSource.DataSource = this.camera_House_DBDataSet;
-            // 
-            // dist_Product_ListTableAdapter
-            // 
-            this.dist_Product_ListTableAdapter.ClearBeforeFill = true;
             // 
             // companyNameDataGridViewTextBoxColumn
             // 
@@ -156,6 +144,20 @@
             this.modelNameDataGridViewTextBoxColumn.DataPropertyName = "Model_Name";
             this.modelNameDataGridViewTextBoxColumn.HeaderText = "Model_Name";
             this.modelNameDataGridViewTextBoxColumn.Name = "modelNameDataGridViewTextBoxColumn";
+            // 
+            // distProductListBindingSource
+            // 
+            this.distProductListBindingSource.DataMember = "Dist_Product_List";
+            this.distProductListBindingSource.DataSource = this.camera_House_DBDataSet;
+            // 
+            // camera_House_DBDataSet
+            // 
+            this.camera_House_DBDataSet.DataSetName = "Camera_House_DBDataSet";
+            this.camera_House_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dist_Product_ListTableAdapter
+            // 
+            this.dist_Product_ListTableAdapter.ClearBeforeFill = true;
             // 
             // Product_List
             // 
@@ -174,8 +176,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Product_List)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.camera_House_DBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.distProductListBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.camera_House_DBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

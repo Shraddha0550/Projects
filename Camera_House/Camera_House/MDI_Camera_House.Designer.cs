@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_Reports = new System.Windows.Forms.Button();
             this.btn_Distrubutor = new System.Windows.Forms.Button();
             this.btn_Stock = new System.Windows.Forms.Button();
             this.btn_Product = new System.Windows.Forms.Button();
@@ -61,6 +62,12 @@
             this.pnl_Distrubutor = new System.Windows.Forms.Panel();
             this.btn_View_Dist_Info = new System.Windows.Forms.Button();
             this.btn_Add_Distrubutor = new System.Windows.Forms.Button();
+            this.pnl_Reports = new System.Windows.Forms.Panel();
+            this.btn_Dist_Rep = new System.Windows.Forms.Button();
+            this.btn_Stock_Rep = new System.Windows.Forms.Button();
+            this.btn_Prod_Rep = new System.Windows.Forms.Button();
+            this.btn_Emp_Rep = new System.Windows.Forms.Button();
+            this.btn_Cust_Rep = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnl_Customer.SuspendLayout();
@@ -68,11 +75,13 @@
             this.pnl_Product.SuspendLayout();
             this.pnl_Stock.SuspendLayout();
             this.pnl_Distrubutor.SuspendLayout();
+            this.pnl_Reports.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.MenuText;
+            this.panel1.Controls.Add(this.btn_Reports);
             this.panel1.Controls.Add(this.btn_Distrubutor);
             this.panel1.Controls.Add(this.btn_Stock);
             this.panel1.Controls.Add(this.btn_Product);
@@ -82,8 +91,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1247, 158);
+            this.panel1.Size = new System.Drawing.Size(1574, 158);
             this.panel1.TabIndex = 4;
+            // 
+            // btn_Reports
+            // 
+            this.btn_Reports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Reports.BackColor = System.Drawing.SystemColors.InfoText;
+            this.btn_Reports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Reports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Reports.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_Reports.Location = new System.Drawing.Point(1328, 115);
+            this.btn_Reports.Name = "btn_Reports";
+            this.btn_Reports.Size = new System.Drawing.Size(246, 43);
+            this.btn_Reports.TabIndex = 63;
+            this.btn_Reports.Text = "Reports";
+            this.btn_Reports.UseVisualStyleBackColor = false;
+            this.btn_Reports.MouseHover += new System.EventHandler(this.btn_Reports_MouseHover);
             // 
             // btn_Distrubutor
             // 
@@ -137,7 +161,7 @@
             this.panel3.Controls.Add(this.lb_Camera_House);
             this.panel3.Location = new System.Drawing.Point(0, 28);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1253, 82);
+            this.panel3.Size = new System.Drawing.Size(1580, 82);
             this.panel3.TabIndex = 0;
             // 
             // lb_Camera_House
@@ -383,7 +407,7 @@
             this.pnl_Stock.Controls.Add(this.btn_Add_Compony_Name);
             this.pnl_Stock.Location = new System.Drawing.Point(717, 161);
             this.pnl_Stock.Name = "pnl_Stock";
-            this.pnl_Stock.Size = new System.Drawing.Size(242, 212);
+            this.pnl_Stock.Size = new System.Drawing.Size(242, 194);
             this.pnl_Stock.TabIndex = 12;
             this.pnl_Stock.Visible = false;
             // 
@@ -392,7 +416,7 @@
             this.btn_Stock_Details.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_Stock_Details.Location = new System.Drawing.Point(0, 144);
             this.btn_Stock_Details.Name = "btn_Stock_Details";
-            this.btn_Stock_Details.Size = new System.Drawing.Size(242, 48);
+            this.btn_Stock_Details.Size = new System.Drawing.Size(242, 47);
             this.btn_Stock_Details.TabIndex = 5;
             this.btn_Stock_Details.Text = "Stock Details";
             this.btn_Stock_Details.UseVisualStyleBackColor = true;
@@ -438,7 +462,7 @@
             this.pnl_Distrubutor.Controls.Add(this.btn_Add_Distrubutor);
             this.pnl_Distrubutor.Location = new System.Drawing.Point(965, 160);
             this.pnl_Distrubutor.Name = "pnl_Distrubutor";
-            this.pnl_Distrubutor.Size = new System.Drawing.Size(246, 156);
+            this.pnl_Distrubutor.Size = new System.Drawing.Size(246, 98);
             this.pnl_Distrubutor.TabIndex = 14;
             this.pnl_Distrubutor.Visible = false;
             // 
@@ -464,11 +488,77 @@
             this.btn_Add_Distrubutor.UseVisualStyleBackColor = true;
             this.btn_Add_Distrubutor.Click += new System.EventHandler(this.btn_Add_Distrubutor_Click);
             // 
+            // pnl_Reports
+            // 
+            this.pnl_Reports.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_Reports.BackColor = System.Drawing.SystemColors.MenuText;
+            this.pnl_Reports.Controls.Add(this.btn_Dist_Rep);
+            this.pnl_Reports.Controls.Add(this.btn_Stock_Rep);
+            this.pnl_Reports.Controls.Add(this.btn_Prod_Rep);
+            this.pnl_Reports.Controls.Add(this.btn_Emp_Rep);
+            this.pnl_Reports.Controls.Add(this.btn_Cust_Rep);
+            this.pnl_Reports.Location = new System.Drawing.Point(1328, 161);
+            this.pnl_Reports.Name = "pnl_Reports";
+            this.pnl_Reports.Size = new System.Drawing.Size(242, 240);
+            this.pnl_Reports.TabIndex = 16;
+            this.pnl_Reports.Visible = false;
+            // 
+            // btn_Dist_Rep
+            // 
+            this.btn_Dist_Rep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Dist_Rep.Location = new System.Drawing.Point(0, 191);
+            this.btn_Dist_Rep.Name = "btn_Dist_Rep";
+            this.btn_Dist_Rep.Size = new System.Drawing.Size(242, 46);
+            this.btn_Dist_Rep.TabIndex = 6;
+            this.btn_Dist_Rep.Text = "Distrubutor";
+            this.btn_Dist_Rep.UseVisualStyleBackColor = true;
+            // 
+            // btn_Stock_Rep
+            // 
+            this.btn_Stock_Rep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Stock_Rep.Location = new System.Drawing.Point(0, 144);
+            this.btn_Stock_Rep.Name = "btn_Stock_Rep";
+            this.btn_Stock_Rep.Size = new System.Drawing.Size(242, 47);
+            this.btn_Stock_Rep.TabIndex = 5;
+            this.btn_Stock_Rep.Text = "Stock ";
+            this.btn_Stock_Rep.UseVisualStyleBackColor = true;
+            // 
+            // btn_Prod_Rep
+            // 
+            this.btn_Prod_Rep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Prod_Rep.Location = new System.Drawing.Point(0, 96);
+            this.btn_Prod_Rep.Name = "btn_Prod_Rep";
+            this.btn_Prod_Rep.Size = new System.Drawing.Size(242, 48);
+            this.btn_Prod_Rep.TabIndex = 4;
+            this.btn_Prod_Rep.Text = "Product";
+            this.btn_Prod_Rep.UseVisualStyleBackColor = true;
+            // 
+            // btn_Emp_Rep
+            // 
+            this.btn_Emp_Rep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Emp_Rep.Location = new System.Drawing.Point(0, 48);
+            this.btn_Emp_Rep.Name = "btn_Emp_Rep";
+            this.btn_Emp_Rep.Size = new System.Drawing.Size(242, 48);
+            this.btn_Emp_Rep.TabIndex = 3;
+            this.btn_Emp_Rep.Text = "Employee";
+            this.btn_Emp_Rep.UseVisualStyleBackColor = true;
+            // 
+            // btn_Cust_Rep
+            // 
+            this.btn_Cust_Rep.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_Cust_Rep.Location = new System.Drawing.Point(0, 0);
+            this.btn_Cust_Rep.Name = "btn_Cust_Rep";
+            this.btn_Cust_Rep.Size = new System.Drawing.Size(242, 48);
+            this.btn_Cust_Rep.TabIndex = 2;
+            this.btn_Cust_Rep.Text = "Customer";
+            this.btn_Cust_Rep.UseVisualStyleBackColor = true;
+            // 
             // MDI_Camera_House
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1247, 870);
+            this.ClientSize = new System.Drawing.Size(1574, 870);
+            this.Controls.Add(this.pnl_Reports);
             this.Controls.Add(this.pnl_Distrubutor);
             this.Controls.Add(this.pnl_Stock);
             this.Controls.Add(this.pnl_Product);
@@ -489,6 +579,7 @@
             this.pnl_Product.ResumeLayout(false);
             this.pnl_Stock.ResumeLayout(false);
             this.pnl_Distrubutor.ResumeLayout(false);
+            this.pnl_Reports.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -527,7 +618,13 @@
         private System.Windows.Forms.Button btn_Add_Distrubutor;
         private System.Windows.Forms.Button Btn_Add_Stock;
         private System.Windows.Forms.Button btn_Stock_Details;
-
+        private System.Windows.Forms.Button btn_Reports;
+        private System.Windows.Forms.Panel pnl_Reports;
+        private System.Windows.Forms.Button btn_Dist_Rep;
+        private System.Windows.Forms.Button btn_Stock_Rep;
+        private System.Windows.Forms.Button btn_Prod_Rep;
+        private System.Windows.Forms.Button btn_Emp_Rep;
+        private System.Windows.Forms.Button btn_Cust_Rep;
     }
 }
 

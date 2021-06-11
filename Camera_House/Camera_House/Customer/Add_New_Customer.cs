@@ -46,31 +46,47 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            SqlCommand cmd = new SqlCommand("Select Distinct(Company_Name) From Add_New_Product",CF.Con);
-
-            var obj = cmd.ExecuteReader();
-            cmb_Company_Name.Items.Clear();
-
-            while(obj.Read())
+            try
             {
-                cmb_Company_Name.Items.Add(obj.GetString(obj.GetOrdinal("Company_Name")));
+                SqlCommand cmd = new SqlCommand("Select Distinct(Company_Name) From Add_New_Product", CF.Con);
+
+                var obj = cmd.ExecuteReader();
+                cmb_Company_Name.Items.Clear();
+
+                while (obj.Read())
+                {
+                    cmb_Company_Name.Items.Add(obj.GetString(obj.GetOrdinal("Company_Name")));
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+          
             CF.Con_Close();
         }
 
         private void cmb_Company_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             CF.Con_Open();
-            cmb_Model_Name.Enabled = true;
 
-            SqlCommand cmd = new SqlCommand("Select Model_Name From Add_New_Product Where Company_Name = '" + cmb_Company_Name.Text + "'", CF.Con);
-
-            var obj = cmd.ExecuteReader();
-            cmb_Model_Name.Items.Clear();
-
-            while(obj.Read())
+            try
             {
-                cmb_Model_Name.Items.Add(obj.GetString(obj.GetOrdinal("Model_Name")));
+                cmb_Model_Name.Enabled = true;
+
+                SqlCommand cmd = new SqlCommand("Select Model_Name From Add_New_Product Where Company_Name = '" + cmb_Company_Name.Text + "'", CF.Con);
+
+                var obj = cmd.ExecuteReader();
+                cmb_Model_Name.Items.Clear();
+
+                while (obj.Read())
+                {
+                    cmb_Model_Name.Items.Add(obj.GetString(obj.GetOrdinal("Model_Name")));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -80,67 +96,117 @@ namespace Camera_House
         private void cmb_Model_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             CF.Con_Open();
-            tb_Price.Enabled = true;
-            SqlCommand cmd = new SqlCommand("Select *From Add_New_Product Where Company_Name = '"+cmb_Company_Name.Text+"' And Model_Name = '"+cmb_Model_Name.Text+"' ",CF.Con);
-            var obj = cmd.ExecuteReader();
 
-            if (obj.Read())
+            try
             {
-                tb_Price.Text = obj["Sales_Price"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Invalid ID");
-            }
+                tb_Price.Enabled = true;
+                SqlCommand cmd = new SqlCommand("Select *From Add_New_Product Where Company_Name = '" + cmb_Company_Name.Text + "' And Model_Name = '" + cmb_Model_Name.Text + "' ", CF.Con);
+                var obj = cmd.ExecuteReader();
 
+                if (obj.Read())
+                {
+                    tb_Price.Text = obj["Sales_Price"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
+                obj.Close();
+                cmd.Dispose();
+
+                SqlCommand cmd1 = new SqlCommand("Select *From Add_New_Product Where Company_Name = '" + cmb_Company_Name.Text + "' And Model_Name = '" + cmb_Model_Name.Text + "' ", CF.Con);
+                var obj1 = cmd1.ExecuteReader();
+
+                if (obj1.Read())
+                {
+                    tb_Total_Stock.Text = obj1["Stock"].ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
+                obj1.Close();
+                cmd1.Dispose();
+
+                SqlCommand cmd2 = new SqlCommand("Select *From Add_Stock Where Company_Name = '" + cmb_Company_Name.Text + "' And Model_Name = '" + cmb_Model_Name.Text + "' ", CF.Con);
+                var obj2 = cmd2.ExecuteReader();
+
+                if (obj2.Read())
+                {
+
+                    tb_Prod_ID.Text = obj2["Prod_ID"].ToString();
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+         
             CF.Con_Close();
         }
 
         private void btn_Total_Click(object sender, EventArgs e)
         {
-            double Price = double.Parse(tb_Price.Text);
-            int Quantity = Convert.ToInt32(tb_Stock_Quantity.Text);
+            try
+            {
+                double Price = double.Parse(tb_Price.Text);
+                int Quantity = Convert.ToInt32(tb_Stock_Quantity.Text);
 
-            double res = Price * Quantity;
-            int GST = Convert.ToInt32(tb_GST.Text);
+                double res = Price * Quantity;
+                int GST = Convert.ToInt32(tb_GST.Text);
 
-            double CGST = res * GST / 100;
-            double SGST = CGST;
+                double CGST = res * GST / 100;
+                double SGST = CGST;
 
-            double Tax = CGST + SGST;
-            double Total = res + Tax;
+                double Tax = CGST + SGST;
+                double Total = res + Tax;
 
-            tb_Total_Price.Text = Total.ToString();
+                tb_Total_Price.Text = Total.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
                 
         }
 
         private void btn_Add_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-
-            if(tb_Customer_ID.Text != "" && cmb_Company_Name.Text != "" && cmb_Model_Name.Text != "" && tb_Stock_Quantity.Text != "" && tb_GST.Text != "" && tb_Total_Price.Text != "")
+            try
             {
-                    SqlDataAdapter sda = new SqlDataAdapter("insert into Cust_Camera_Details values("+tb_Customer_ID.Text+" , '"+dtp_Date.Text+"' , '"+cmb_Company_Name.Text+"','"+cmb_Model_Name.Text+"',"+tb_Price.Text+","+tb_Stock_Quantity.Text+","+tb_GST.Text+","+tb_Total_Price.Text+") ", CF.Con);
+                if (tb_Customer_ID.Text != "" && cmb_Company_Name.Text != "" && cmb_Model_Name.Text != "" && tb_Stock_Quantity.Text != "" && tb_GST.Text != "" && tb_Total_Price.Text != "")
+                {
+                    int Total_Stock = Convert.ToInt32(tb_Total_Stock.Text);
+                    int Quantity = Convert.ToInt32(tb_Stock_Quantity.Text);
+                    int res = Total_Stock - Quantity;
+                    SqlDataAdapter sda = new SqlDataAdapter("insert into Cust_Camera_Details values(" + tb_Customer_ID.Text + " , '" + dtp_Date.Text + "' , '" + cmb_Company_Name.Text + "','" + cmb_Model_Name.Text + "'," + tb_Price.Text + "," + tb_Stock_Quantity.Text + "," + tb_GST.Text + "," + tb_Total_Price.Text + "," + tb_Prod_ID.Text + "," + tb_Total_Stock.Text + ") Update Add_New_Product set Stock = " + res + "  where  Company_Name = '" + cmb_Company_Name.Text + "' AND Model_Name = '" + cmb_Model_Name.Text + "' ", CF.Con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
 
                     MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-             
-            }
-            else
-            {
-                     MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-            }
+
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
 
 
-            SqlDataAdapter sda1 = new SqlDataAdapter("Select * From Cust_Camera_Details Where Cust_ID = " + tb_Customer_ID.Text + "", CF.Con);
+                SqlDataAdapter sda1 = new SqlDataAdapter("Select * From Cust_Camera_Details Where Cust_ID = " + tb_Customer_ID.Text + "", CF.Con);
 
-            DataTable dt1 = new DataTable();
+                DataTable dt1 = new DataTable();
 
-            sda1.Fill(dt1);
+                sda1.Fill(dt1);
 
-            dgv_Product_List.DataSource = dt1;
+                dgv_Product_List.DataSource = dt1;
 
                 int Price = Convert.ToInt32(tb_Total_Price.Text);
                 if (tb_Bill.Text == "")
@@ -153,47 +219,68 @@ namespace Camera_House
                     int Res = Price + Bill;
                     tb_Bill.Text = Res.ToString();
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
                
             CF.Con_Close();
         }
 
         private void btn_Total_Bill_Click(object sender, EventArgs e)
         {
-            double Rprice = 0;
-            double Discount, Total, TPrice = 0;
+            try
+            {
+                double Rprice = 0;
+                double Discount, Total, TPrice = 0;
 
-            Rprice = double.Parse(tb_Bill.Text);
-            Discount = double.Parse(tb_Discount.Text);
+                Rprice = double.Parse(tb_Bill.Text);
+                Discount = double.Parse(tb_Discount.Text);
 
-            Total = Rprice * (Discount / 100);
-            TPrice = Rprice - Total;
+                Total = Rprice * (Discount / 100);
+                TPrice = Rprice - Total;
 
-            tb_Total_Bill.Text = TPrice.ToString();
+                tb_Total_Bill.Text = TPrice.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+          
         }
 
         private void btn_Save_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
 
-            if(tb_Customer_ID.Text != "" && tb_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Discount.Text != "" && tb_Total_Bill.Text != "")
+            try
             {
-                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Cust_Payment Values("+tb_Customer_ID.Text+",'"+tb_Name.Text+"','"+dtp_Date.Text+"',"+tb_Mobile_No.Text+",'"+tb_Address.Text+"',"+tb_Bill.Text+","+tb_Discount.Text+","+tb_Total_Bill.Text+")", CF.Con);
+                if (tb_Customer_ID.Text != "" && tb_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Discount.Text != "" && tb_Total_Bill.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Cust_Payment Values(" + tb_Customer_ID.Text + ",'" + tb_Name.Text + "','" + dtp_Date.Text + "'," + tb_Mobile_No.Text + ",'" + tb_Address.Text + "'," + tb_Bill.Text + "," + tb_Discount.Text + "," + tb_Total_Bill.Text + ")", CF.Con);
                     DataTable dt = new DataTable();
                     sda.Fill(dt);
 
                     MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    sda.Dispose();
+                    //Update_Stock();
                     clear_Text();
                     tb_Customer_ID.Text = Auto_Inc().ToString();
-                     Refresh_Grid();
+                    Refresh_Grid();
 
-            }
-            else
-            {
+
+                }
+                else
+                {
                     MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
-            }
 
-          
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             CF.Con_Close();
         }
@@ -201,14 +288,20 @@ namespace Camera_House
         void Refresh_Grid()
         {
             CF.Con_Open();
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Cust_Camera_Details Where Cust_ID = " + tb_Customer_ID.Text + " ", CF.Con);
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Cust_Camera_Details Where Cust_ID = " + tb_Customer_ID.Text + " ", CF.Con);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            sda.Fill(dt);
-
-            dgv_Product_List.DataSource = dt;
+                dgv_Product_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             CF.Con_Close();
         }
@@ -258,6 +351,61 @@ namespace Camera_House
         private void tb_Total_Bill_TextChanged(object sender, EventArgs e)
         {
             btn_Save.Enabled = true;
+        }
+
+        private void tb_Price_TextChanged(object sender, EventArgs e)
+        {
+            tb_Stock_Quantity.Enabled = true;
+        }
+
+        private void tb_Name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Mobile_No_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Stock_Quantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void tb_GST_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Discount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tb_Address_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

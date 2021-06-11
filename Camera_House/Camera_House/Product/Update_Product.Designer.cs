@@ -86,6 +86,7 @@
             this.tb_Prod_ID.Name = "tb_Prod_ID";
             this.tb_Prod_ID.Size = new System.Drawing.Size(414, 30);
             this.tb_Prod_ID.TabIndex = 0;
+            this.tb_Prod_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // lb_Update_Product
             // 
@@ -159,6 +160,7 @@
             this.tb_Purches_Price.Name = "tb_Purches_Price";
             this.tb_Purches_Price.Size = new System.Drawing.Size(364, 30);
             this.tb_Purches_Price.TabIndex = 2;
+            this.tb_Purches_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // lb_Sale_Price
             // 
@@ -180,6 +182,7 @@
             this.tb_Sale_Price.Name = "tb_Sale_Price";
             this.tb_Sale_Price.Size = new System.Drawing.Size(364, 30);
             this.tb_Sale_Price.TabIndex = 3;
+            this.tb_Sale_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // lb_Company_Name
             // 
@@ -213,6 +216,7 @@
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.Size = new System.Drawing.Size(364, 74);
             this.tb_Description.TabIndex = 4;
+            this.tb_Description.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Alphanumeric);
             // 
             // lb_Description
             // 
@@ -235,6 +239,7 @@
             this.tb_Company_Name.Name = "tb_Company_Name";
             this.tb_Company_Name.Size = new System.Drawing.Size(364, 30);
             this.tb_Company_Name.TabIndex = 32;
+            this.tb_Company_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // tb_Model_Name
             // 
@@ -246,6 +251,7 @@
             this.tb_Model_Name.Name = "tb_Model_Name";
             this.tb_Model_Name.Size = new System.Drawing.Size(364, 30);
             this.tb_Model_Name.TabIndex = 33;
+            this.tb_Model_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Alphanumeric);
             // 
             // tableLayoutPanel2
             // 

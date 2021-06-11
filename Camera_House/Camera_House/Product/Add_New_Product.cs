@@ -56,42 +56,56 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            int Stock = 0;
-            if (tb_Product_ID.Text != ""  && cmb_Company_Name.Text != "" && cmb_Model_Name.Text != "" && tb_Purches_Price.Text != "" && tb_Sale_Price.Text != "" )
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_New_Product(Prod_ID,Company_Name,Model_Name,Purches_Price,Sales_Price,Discription,Stock) Values(" + tb_Product_ID.Text + " , '" + cmb_Company_Name.Text + "','" + cmb_Model_Name.Text + "'," + tb_Purches_Price.Text + "," + tb_Sale_Price.Text + ", '" + tb_Description.Text + "'," + Stock + " )", CF.Con);
+                int Stock = 0;
+                if (tb_Product_ID.Text != "" && cmb_Company_Name.Text != "" && cmb_Model_Name.Text != "" && tb_Purches_Price.Text != "" && tb_Sale_Price.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("insert into Add_New_Product(Prod_ID,Company_Name,Model_Name,Purches_Price,Sales_Price,Discription,Stock) Values(" + tb_Product_ID.Text + " , '" + cmb_Company_Name.Text + "','" + cmb_Model_Name.Text + "'," + tb_Purches_Price.Text + "," + tb_Sale_Price.Text + ", '" + tb_Description.Text + "'," + Stock + " )", CF.Con);
 
-                DataTable dt = new DataTable();
+                    DataTable dt = new DataTable();
 
-                sda.Fill(dt);
-              
+                    sda.Fill(dt);
 
-                MessageBox.Show("SuccessFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-                tb_Product_ID.Text = Auto_Inc().ToString();
 
+                    MessageBox.Show("SuccessFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                    tb_Product_ID.Text = Auto_Inc().ToString();
+
+
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
-           
+          
             CF.Con_Close();
         }
 
         private void cmb_Company_Name_SelectedIndexChanged(object sender, EventArgs e)
         {
             CF.Con_Open();
-
-            SqlCommand cmd = new SqlCommand("Select Model_Name From Add_Model_Name Where Company_Name = '"+cmb_Company_Name.Text+"' ",CF.Con);
-
-            var obj = cmd.ExecuteReader();
-            cmb_Model_Name.Items.Clear();
-
-            while (obj.Read())
+            try
             {
-                cmb_Model_Name.Items.Add(obj.GetString(obj.GetOrdinal("Model_Name")));
+                SqlCommand cmd = new SqlCommand("Select Model_Name From Add_Model_Name Where Company_Name = '" + cmb_Company_Name.Text + "' ", CF.Con);
+
+                var obj = cmd.ExecuteReader();
+                cmb_Model_Name.Items.Clear();
+
+                while (obj.Read())
+                {
+                    cmb_Model_Name.Items.Add(obj.GetString(obj.GetOrdinal("Model_Name")));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -121,6 +135,21 @@ namespace Camera_House
              return Cnt;
          }
 
+        private void Only_Number(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
         }
+
+        private void Alphanumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+    }
  }
 

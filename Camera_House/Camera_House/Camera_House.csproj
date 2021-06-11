@@ -144,12 +144,6 @@
     <Compile Include="Product\Search_Product.Designer.cs">
       <DependentUpon>Search_Product.cs</DependentUpon>
     </Compile>
-    <Compile Include="Customer\Update_Customer.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customer\Update_Customer.Designer.cs">
-      <DependentUpon>Update_Customer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee\Update_Employee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,9 +239,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Product\Search_Product.resx">
       <DependentUpon>Search_Product.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customer\Update_Customer.resx">
-      <DependentUpon>Update_Customer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\Update_Employee.resx">
       <DependentUpon>Update_Employee.cs</DependentUpon>

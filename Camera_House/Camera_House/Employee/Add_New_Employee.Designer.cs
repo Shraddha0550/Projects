@@ -109,9 +109,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.Location = new System.Drawing.Point(373, 83);
+            this.tb_Name.MaxLength = 50;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(364, 30);
             this.tb_Name.TabIndex = 3;
+            this.tb_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lb_Add_New_Employee
             // 
@@ -175,9 +177,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Address.Location = new System.Drawing.Point(373, 163);
+            this.tb_Address.MaxLength = 70;
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Size = new System.Drawing.Size(364, 30);
             this.tb_Address.TabIndex = 11;
+            this.tb_Address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lb_Email_ID
             // 
@@ -196,6 +200,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Email_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Email_ID.Location = new System.Drawing.Point(1113, 83);
+            this.tb_Email_ID.MaxLength = 30;
             this.tb_Email_ID.Name = "tb_Email_ID";
             this.tb_Email_ID.Size = new System.Drawing.Size(364, 30);
             this.tb_Email_ID.TabIndex = 13;
@@ -395,9 +400,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Salary.Location = new System.Drawing.Point(1113, 323);
+            this.tb_Salary.MaxLength = 5;
             this.tb_Salary.Name = "tb_Salary";
             this.tb_Salary.Size = new System.Drawing.Size(364, 30);
             this.tb_Salary.TabIndex = 25;
+            this.tb_Salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // tb_Pan_Card_No
             // 
@@ -405,9 +412,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Pan_Card_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Pan_Card_No.Location = new System.Drawing.Point(1113, 243);
+            this.tb_Pan_Card_No.MaxLength = 10;
             this.tb_Pan_Card_No.Name = "tb_Pan_Card_No";
             this.tb_Pan_Card_No.Size = new System.Drawing.Size(364, 30);
             this.tb_Pan_Card_No.TabIndex = 23;
+            this.tb_Pan_Card_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Alphanumeric);
             // 
             // tb_Adhar_Card_No
             // 
@@ -415,9 +424,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Adhar_Card_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Adhar_Card_No.Location = new System.Drawing.Point(1113, 163);
+            this.tb_Adhar_Card_No.MaxLength = 12;
             this.tb_Adhar_Card_No.Name = "tb_Adhar_Card_No";
             this.tb_Adhar_Card_No.Size = new System.Drawing.Size(364, 30);
             this.tb_Adhar_Card_No.TabIndex = 21;
+            this.tb_Adhar_Card_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // dtp_Hire_Date
             // 
@@ -450,6 +461,7 @@
             this.tb_Account_No.Name = "tb_Account_No";
             this.tb_Account_No.Size = new System.Drawing.Size(364, 30);
             this.tb_Account_No.TabIndex = 31;
+            this.tb_Account_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Alphanumeric);
             // 
             // tb_Mobile_No
             // 
@@ -457,9 +469,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Mobile_No.Location = new System.Drawing.Point(373, 403);
+            this.tb_Mobile_No.MaxLength = 10;
             this.tb_Mobile_No.Name = "tb_Mobile_No";
             this.tb_Mobile_No.Size = new System.Drawing.Size(364, 30);
             this.tb_Mobile_No.TabIndex = 19;
+            this.tb_Mobile_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // tb_Alt_Mob_No
             // 
@@ -467,9 +481,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Alt_Mob_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Alt_Mob_No.Location = new System.Drawing.Point(373, 483);
+            this.tb_Alt_Mob_No.MaxLength = 10;
             this.tb_Alt_Mob_No.Name = "tb_Alt_Mob_No";
             this.tb_Alt_Mob_No.Size = new System.Drawing.Size(364, 30);
             this.tb_Alt_Mob_No.TabIndex = 33;
+            this.tb_Alt_Mob_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lb_IFC_Code
             // 
@@ -491,6 +507,7 @@
             this.tb_IFC_Code.Name = "tb_IFC_Code";
             this.tb_IFC_Code.Size = new System.Drawing.Size(364, 30);
             this.tb_IFC_Code.TabIndex = 35;
+            this.tb_IFC_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Alphanumeric);
             // 
             // tableLayoutPanel2
             // 

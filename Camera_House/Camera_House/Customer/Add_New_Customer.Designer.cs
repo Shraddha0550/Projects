@@ -54,12 +54,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dgv_Product_List = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_Total_Stock = new System.Windows.Forms.TextBox();
             this.lb_Date = new System.Windows.Forms.Label();
             this.cmb_Company_Name = new System.Windows.Forms.ComboBox();
             this.cmb_Model_Name = new System.Windows.Forms.ComboBox();
             this.dtp_Date = new System.Windows.Forms.DateTimePicker();
             this.tb_Total_Price = new System.Windows.Forms.TextBox();
             this.btn_Total = new System.Windows.Forms.Button();
+            this.tb_Prod_ID = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lb_Discount = new System.Windows.Forms.Label();
@@ -92,6 +94,7 @@
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Size = new System.Drawing.Size(230, 30);
             this.tb_Address.TabIndex = 23;
+            this.tb_Address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Address_KeyPress);
             // 
             // tb_Mobile_No
             // 
@@ -99,9 +102,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Mobile_No.Location = new System.Drawing.Point(918, 60);
+            this.tb_Mobile_No.MaxLength = 10;
             this.tb_Mobile_No.Name = "tb_Mobile_No";
             this.tb_Mobile_No.Size = new System.Drawing.Size(280, 30);
             this.tb_Mobile_No.TabIndex = 25;
+            this.tb_Mobile_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Mobile_No_KeyPress);
             // 
             // tb_Name
             // 
@@ -112,6 +117,7 @@
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(306, 30);
             this.tb_Name.TabIndex = 7;
+            this.tb_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Name_KeyPress);
             // 
             // lb_Mobile_No
             // 
@@ -176,10 +182,12 @@
             this.tb_GST.Enabled = false;
             this.tb_GST.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_GST.Location = new System.Drawing.Point(918, 174);
+            this.tb_GST.MaxLength = 2;
             this.tb_GST.Name = "tb_GST";
             this.tb_GST.Size = new System.Drawing.Size(280, 30);
             this.tb_GST.TabIndex = 32;
             this.tb_GST.TextChanged += new System.EventHandler(this.tb_GST_TextChanged);
+            this.tb_GST.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_GST_KeyPress);
             // 
             // label1
             // 
@@ -202,6 +210,7 @@
             this.tb_Price.Name = "tb_Price";
             this.tb_Price.Size = new System.Drawing.Size(230, 30);
             this.tb_Price.TabIndex = 30;
+            this.tb_Price.TextChanged += new System.EventHandler(this.tb_Price_TextChanged);
             // 
             // lb_Model_Name
             // 
@@ -243,10 +252,12 @@
             this.tb_Stock_Quantity.Enabled = false;
             this.tb_Stock_Quantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Stock_Quantity.Location = new System.Drawing.Point(364, 174);
+            this.tb_Stock_Quantity.MaxLength = 5;
             this.tb_Stock_Quantity.Name = "tb_Stock_Quantity";
             this.tb_Stock_Quantity.Size = new System.Drawing.Size(306, 30);
             this.tb_Stock_Quantity.TabIndex = 28;
             this.tb_Stock_Quantity.TextChanged += new System.EventHandler(this.tb_Stock_Quantity_TextChanged);
+            this.tb_Stock_Quantity.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Stock_Quantity_KeyPress);
             // 
             // lb_Stock_Quantity
             // 
@@ -369,6 +380,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 11.21693F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.Controls.Add(this.tb_Total_Stock, 6, 2);
             this.tableLayoutPanel1.Controls.Add(this.lb_Date, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.label1, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.lb_Customer_ID, 0, 0);
@@ -392,6 +404,7 @@
             this.tableLayoutPanel1.Controls.Add(this.tb_Total_Price, 5, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Total, 4, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Add, 6, 3);
+            this.tableLayoutPanel1.Controls.Add(this.tb_Prod_ID, 6, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 100);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
@@ -399,8 +412,16 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.25252F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.25252F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.24242F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1890, 227);
             this.tableLayoutPanel1.TabIndex = 31;
+            // 
+            // tb_Total_Stock
+            // 
+            this.tb_Total_Stock.Location = new System.Drawing.Point(1652, 117);
+            this.tb_Total_Stock.Name = "tb_Total_Stock";
+            this.tb_Total_Stock.Size = new System.Drawing.Size(235, 22);
+            this.tb_Total_Stock.TabIndex = 41;
             // 
             // lb_Date
             // 
@@ -474,6 +495,13 @@
             this.btn_Total.UseVisualStyleBackColor = true;
             this.btn_Total.Click += new System.EventHandler(this.btn_Total_Click);
             // 
+            // tb_Prod_ID
+            // 
+            this.tb_Prod_ID.Location = new System.Drawing.Point(1652, 60);
+            this.tb_Prod_ID.Name = "tb_Prod_ID";
+            this.tb_Prod_ID.Size = new System.Drawing.Size(235, 22);
+            this.tb_Prod_ID.TabIndex = 40;
+            // 
             // tableLayoutPanel2
             // 
             this.tableLayoutPanel2.ColumnCount = 2;
@@ -527,10 +555,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Discount.Location = new System.Drawing.Point(941, 3);
+            this.tb_Discount.MaxLength = 2;
             this.tb_Discount.Name = "tb_Discount";
             this.tb_Discount.Size = new System.Drawing.Size(304, 30);
             this.tb_Discount.TabIndex = 38;
             this.tb_Discount.TextChanged += new System.EventHandler(this.tb_Discount_TextChanged);
+            this.tb_Discount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tb_Discount_KeyPress);
             // 
             // btn_Total_Bill
             // 
@@ -613,5 +643,7 @@
         private System.Windows.Forms.TextBox tb_Discount;
         private System.Windows.Forms.Button btn_Total;
         private System.Windows.Forms.Button btn_Total_Bill;
+        private System.Windows.Forms.TextBox tb_Prod_ID;
+        private System.Windows.Forms.TextBox tb_Total_Stock;
     }
 }

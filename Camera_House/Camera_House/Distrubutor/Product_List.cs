@@ -23,11 +23,18 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From Dist_Product_List Where Dist_ID = "+ tb_ID.Text+" ", CF.Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select *From Dist_Product_List Where Dist_ID = " + tb_ID.Text + " ", CF.Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            dgv_Product_List.DataSource = dt;
+                dgv_Product_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }   
 
             CF.Con_Close();
         }
@@ -39,6 +46,14 @@ namespace Camera_House
             // TODO: This line of code loads data into the 'camera_House_DBDataSet.Dist_Product_List' table. You can move, or remove it, as needed.
 
 
+        }
+
+        private void tb_ID_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

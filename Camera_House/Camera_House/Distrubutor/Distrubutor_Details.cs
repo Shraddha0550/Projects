@@ -21,21 +21,29 @@ namespace Camera_House
         private void btn_Add_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            if(tb_Distrubutor_ID.Text != "" && tb_Company_Name.Text != "" && tb_Model_Name.Text != "")
-            {
-                SqlDataAdapter sda = new SqlDataAdapter("Insert into Dist_Product_List Values("+tb_Distrubutor_ID.Text+" , '"+tb_Company_Name.Text+"' , '"+tb_Model_Name.Text+"')",CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
 
-                MessageBox.Show("Added Successfully.." , "Success" , MessageBoxButtons.OK);
-                tb_Model_Name.Clear();
-                tb_Company_Name.Clear();
-                Refresh_Grid();
-                btn_Save.Enabled = true;
-            }
-            else
+            try
             {
-                MessageBox.Show("First Fill All Fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (tb_Distrubutor_ID.Text != "" && tb_Company_Name.Text != "" && tb_Model_Name.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Dist_Product_List Values(" + tb_Distrubutor_ID.Text + " , '" + tb_Company_Name.Text + "' , '" + tb_Model_Name.Text + "')", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    MessageBox.Show("Added Successfully..", "Success", MessageBoxButtons.OK);
+                    tb_Model_Name.Clear();
+                    tb_Company_Name.Clear();
+                    Refresh_Grid();
+                    btn_Save.Enabled = true;
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -47,26 +55,28 @@ namespace Camera_House
         void Refresh_Grid()
         {
             CF.Con_Open();
+            try
+            {
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Dist_Product_List Where Dist_ID = " + tb_Distrubutor_ID.Text + " ", CF.Con);
 
-         
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Dist_Product_List Where Dist_ID = " + tb_Distrubutor_ID.Text + " ", CF.Con);
+                DataTable dt = new DataTable();
 
-            DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            sda.Fill(dt);
-
-            dgv_Product_List.DataSource = dt;
+                dgv_Product_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             CF.Con_Close();
         }
 
         private void Distrubutor_Details_Load(object sender, EventArgs e)
         {
-
             tb_Distrubutor_ID.Text = Auto_Inc().ToString();
-       
-
-
+      
         }
 
         int Auto_Inc()
@@ -85,9 +95,7 @@ namespace Camera_House
 
             return Cnt;
         }
-
-       
-
+        
         void Data()
         {
             CF.Con_Open();
@@ -107,21 +115,29 @@ namespace Camera_House
         private void btn_Save_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            if (tb_Distrubutor_ID.Text != "" && tb_Name.Text != "" && tb_Mobile_No.Text != ""  && tb_Pan_Card_No.Text != "" && tb_Email_ID.Text != "" && tb_Adhar_Card_No.Text != "")
-            {
-                SqlDataAdapter sda = new SqlDataAdapter("Insert into Dist_Details Values(" + tb_Distrubutor_ID.Text + " , '" + tb_Name.Text + "' , " + tb_Mobile_No.Text + " ," + tb_Alt_Mob_No.Text + " ,'" + tb_Address.Text+"' , '"+tb_Email_ID.Text+"' , "+tb_Adhar_Card_No.Text+" , '"+tb_Pan_Card_No.Text+"','"+tb_Account_No.Text+"','"+tb_IFC_Code.Text+"')", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
 
-                MessageBox.Show("Added Successfully..", "Success", MessageBoxButtons.OK);
-                clear_Text();
-                tb_Distrubutor_ID.Text = Auto_Inc().ToString();
-                Refresh_Grid();
-            }
-            else
+            try
             {
-                MessageBox.Show("First Fill All Fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (tb_Distrubutor_ID.Text != "" && tb_Name.Text != "" && tb_Mobile_No.Text != "" && tb_Pan_Card_No.Text != "" && tb_Email_ID.Text != "" && tb_Adhar_Card_No.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Dist_Details Values(" + tb_Distrubutor_ID.Text + " , '" + tb_Name.Text + "' , " + tb_Mobile_No.Text + " ," + tb_Alt_Mob_No.Text + " ,'" + tb_Address.Text + "' , '" + tb_Email_ID.Text + "' , " + tb_Adhar_Card_No.Text + " , '" + tb_Pan_Card_No.Text + "','" + tb_Account_No.Text + "','" + tb_IFC_Code.Text + "')", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    MessageBox.Show("Added Successfully..", "Success", MessageBoxButtons.OK);
+                    clear_Text();
+                    tb_Distrubutor_ID.Text = Auto_Inc().ToString();
+                    Refresh_Grid();
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }        
 
             CF.Con_Close();
         }
@@ -148,6 +164,30 @@ namespace Camera_House
         private void btn_Clear_Click(object sender, EventArgs e)
         {
             clear_Text();
+        }
+
+        private void Only_Char(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Numeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_AlphNumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

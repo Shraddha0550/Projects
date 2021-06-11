@@ -21,33 +21,41 @@ namespace Camera_House
         private void btn_Save_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            if (tb_Employee_ID.Text != "" && tb_Name.Text != "" && tb_Address.Text != "" && dtp_DOB.Text != "" && tb_Email_ID.Text != "" && dtp_Hire_Date.Text != "" && tb_Mobile_No.Text != "" && tb_Adhar_Card_No.Text != "" && tb_Pan_Card_No.Text != "" && tb_Salary.Text != "" && tb_Account_No.Text != "")
+            try
             {
-                String Gender = "";
-
-                if (rb_Male.Checked)
+                if (tb_Employee_ID.Text != "" && tb_Name.Text != "" && tb_Address.Text != "" && dtp_DOB.Text != "" && tb_Email_ID.Text != "" && dtp_Hire_Date.Text != "" && tb_Mobile_No.Text != "" && tb_Adhar_Card_No.Text != "" && tb_Pan_Card_No.Text != "" && tb_Salary.Text != "" && tb_Account_No.Text != "")
                 {
-                    Gender = rb_Male.Text;
+                    String Gender = "";
+
+                    if (rb_Male.Checked)
+                    {
+                        Gender = rb_Male.Text;
+                    }
+                    else if (rb_Female.Checked)
+                    {
+                        Gender = rb_Female.Text;
+                    }
+
+                    SqlDataAdapter sda = new SqlDataAdapter("Insert into Add_New_Employee Values('" + tb_Employee_ID.Text + "','" + tb_Name.Text + "','" + tb_Address.Text + "','" + Gender + "','" + dtp_DOB.Text + "'," + tb_Mobile_No.Text + "," + tb_Alt_Mob_No.Text + ",'" + dtp_Hire_Date.Text + "','" + tb_Email_ID.Text + "'," + tb_Adhar_Card_No.Text + ",'" + tb_Pan_Card_No.Text + "'," + tb_Salary.Text + ",'" + tb_Account_No.Text + "','" + tb_IFC_Code.Text + "')", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
+
+                    MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    clear();
+                    tb_Employee_ID.Text = Auto_Inc().ToString();
+
                 }
-                else if (rb_Female.Checked)
+                else
                 {
-                    Gender = rb_Female.Text;
+                    MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
-
-                SqlDataAdapter sda = new SqlDataAdapter("Insert into Add_New_Employee Values('" + tb_Employee_ID.Text + "','" + tb_Name.Text + "','" + tb_Address.Text + "','" + Gender + "','" + dtp_DOB.Text + "'," + tb_Mobile_No.Text + "," + tb_Alt_Mob_No.Text + ",'" + dtp_Hire_Date.Text + "','" + tb_Email_ID.Text + "'," + tb_Adhar_Card_No.Text + ",'" + tb_Pan_Card_No.Text + "'," + tb_Salary.Text + ",'" + tb_Account_No.Text + "','"+tb_IFC_Code.Text+"')", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
-
-                MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                clear();
-                tb_Employee_ID.Text = Auto_Inc().ToString();
-
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+         
             CF.Con_Close();
         }
 
@@ -106,6 +114,30 @@ namespace Camera_House
         {
             tb_Employee_ID.Text = Auto_Inc().ToString();
             tb_Employee_ID.Focus();
+        }
+
+        private void Only_Char(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Numeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Alphanumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

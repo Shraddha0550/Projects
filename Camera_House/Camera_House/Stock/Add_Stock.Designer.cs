@@ -56,7 +56,7 @@
             this.lb_Company_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Company_Name.AutoSize = true;
             this.lb_Company_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Company_Name.Location = new System.Drawing.Point(298, 58);
+            this.lb_Company_Name.Location = new System.Drawing.Point(298, 0);
             this.lb_Company_Name.Name = "lb_Company_Name";
             this.lb_Company_Name.Size = new System.Drawing.Size(186, 29);
             this.lb_Company_Name.TabIndex = 25;
@@ -69,7 +69,7 @@
             this.cmb_Company_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Company_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_Company_Name.FormattingEnabled = true;
-            this.cmb_Company_Name.Location = new System.Drawing.Point(490, 61);
+            this.cmb_Company_Name.Location = new System.Drawing.Point(490, 3);
             this.cmb_Company_Name.Name = "cmb_Company_Name";
             this.cmb_Company_Name.Size = new System.Drawing.Size(482, 33);
             this.cmb_Company_Name.TabIndex = 27;
@@ -80,7 +80,7 @@
             this.lb_Model_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Model_Name.AutoSize = true;
             this.lb_Model_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Model_Name.Location = new System.Drawing.Point(302, 116);
+            this.lb_Model_Name.Location = new System.Drawing.Point(302, 58);
             this.lb_Model_Name.Name = "lb_Model_Name";
             this.lb_Model_Name.Size = new System.Drawing.Size(182, 29);
             this.lb_Model_Name.TabIndex = 26;
@@ -93,10 +93,11 @@
             this.cmb_Model_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Model_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_Model_Name.FormattingEnabled = true;
-            this.cmb_Model_Name.Location = new System.Drawing.Point(490, 119);
+            this.cmb_Model_Name.Location = new System.Drawing.Point(490, 61);
             this.cmb_Model_Name.Name = "cmb_Model_Name";
             this.cmb_Model_Name.Size = new System.Drawing.Size(482, 33);
             this.cmb_Model_Name.TabIndex = 28;
+            this.cmb_Model_Name.SelectedIndexChanged += new System.EventHandler(this.cmb_Model_Name_SelectedIndexChanged);
             // 
             // lb_Current_Stock
             // 
@@ -116,9 +117,12 @@
             this.tb_Current_Stock.Enabled = false;
             this.tb_Current_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Current_Stock.Location = new System.Drawing.Point(490, 235);
+            this.tb_Current_Stock.MaxLength = 5;
             this.tb_Current_Stock.Name = "tb_Current_Stock";
             this.tb_Current_Stock.Size = new System.Drawing.Size(482, 30);
             this.tb_Current_Stock.TabIndex = 30;
+            this.tb_Current_Stock.TextChanged += new System.EventHandler(this.tb_Current_Stock_TextChanged);
+            this.tb_Current_Stock.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Number);
             // 
             // tb_Product_ID
             // 
@@ -126,17 +130,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Product_ID.Enabled = false;
             this.tb_Product_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Product_ID.Location = new System.Drawing.Point(490, 3);
+            this.tb_Product_ID.Location = new System.Drawing.Point(490, 177);
             this.tb_Product_ID.Name = "tb_Product_ID";
             this.tb_Product_ID.Size = new System.Drawing.Size(482, 30);
             this.tb_Product_ID.TabIndex = 32;
+            this.tb_Product_ID.TextChanged += new System.EventHandler(this.tb_Product_ID_TextChanged);
             // 
             // lb_Product_ID
             // 
             this.lb_Product_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Product_ID.AutoSize = true;
             this.lb_Product_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Product_ID.Location = new System.Drawing.Point(305, 0);
+            this.lb_Product_ID.Location = new System.Drawing.Point(305, 174);
             this.lb_Product_ID.Name = "lb_Product_ID";
             this.lb_Product_ID.Size = new System.Drawing.Size(179, 29);
             this.lb_Product_ID.TabIndex = 31;
@@ -185,17 +190,17 @@
             this.tableLayoutPanel1.Controls.Add(this.tb_Total_Stock, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.tb_Stock_Added, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.lb_Stock_Added, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.cmb_Distrubutor_Name, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.lb_Distrubutor, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.tb_Product_ID, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.cmb_Company_Name, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cmb_Model_Name, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lb_Product_ID, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lb_Company_Name, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lb_Model_Name, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.lb_Current_Stock, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.tb_Current_Stock, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.tb_Product_ID, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.btn_Total_STock, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Company_Name, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Product_ID, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.cmb_Company_Name, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Model_Name, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cmb_Model_Name, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Distrubutor, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.cmb_Distrubutor_Name, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(146, 218);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 7;
@@ -216,6 +221,7 @@
             this.tb_Total_Stock.Enabled = false;
             this.tb_Total_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Total_Stock.Location = new System.Drawing.Point(490, 351);
+            this.tb_Total_Stock.MaxLength = 10;
             this.tb_Total_Stock.Name = "tb_Total_Stock";
             this.tb_Total_Stock.Size = new System.Drawing.Size(482, 30);
             this.tb_Total_Stock.TabIndex = 45;
@@ -226,10 +232,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Stock_Added.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Stock_Added.Location = new System.Drawing.Point(490, 293);
+            this.tb_Stock_Added.MaxLength = 5;
             this.tb_Stock_Added.Name = "tb_Stock_Added";
             this.tb_Stock_Added.Size = new System.Drawing.Size(482, 30);
             this.tb_Stock_Added.TabIndex = 45;
             this.tb_Stock_Added.TextChanged += new System.EventHandler(this.tb_Stock_Added_TextChanged);
+            this.tb_Stock_Added.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Number);
             // 
             // lb_Stock_Added
             // 
@@ -249,7 +257,7 @@
             this.cmb_Distrubutor_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmb_Distrubutor_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.cmb_Distrubutor_Name.FormattingEnabled = true;
-            this.cmb_Distrubutor_Name.Location = new System.Drawing.Point(490, 177);
+            this.cmb_Distrubutor_Name.Location = new System.Drawing.Point(490, 119);
             this.cmb_Distrubutor_Name.Name = "cmb_Distrubutor_Name";
             this.cmb_Distrubutor_Name.Size = new System.Drawing.Size(482, 33);
             this.cmb_Distrubutor_Name.TabIndex = 46;
@@ -260,7 +268,7 @@
             this.lb_Distrubutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Distrubutor.AutoSize = true;
             this.lb_Distrubutor.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Distrubutor.Location = new System.Drawing.Point(283, 174);
+            this.lb_Distrubutor.Location = new System.Drawing.Point(283, 116);
             this.lb_Distrubutor.Name = "lb_Distrubutor";
             this.lb_Distrubutor.Size = new System.Drawing.Size(201, 29);
             this.lb_Distrubutor.TabIndex = 45;

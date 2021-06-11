@@ -110,9 +110,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Purches_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Purches_Price.Location = new System.Drawing.Point(1083, 3);
+            this.tb_Purches_Price.MaxLength = 5;
             this.tb_Purches_Price.Name = "tb_Purches_Price";
             this.tb_Purches_Price.Size = new System.Drawing.Size(357, 30);
             this.tb_Purches_Price.TabIndex = 11;
+            this.tb_Purches_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // lb_Sale_Price
             // 
@@ -131,9 +133,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Sale_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Sale_Price.Location = new System.Drawing.Point(1083, 106);
+            this.tb_Sale_Price.MaxLength = 5;
             this.tb_Sale_Price.Name = "tb_Sale_Price";
             this.tb_Sale_Price.Size = new System.Drawing.Size(357, 30);
             this.tb_Sale_Price.TabIndex = 13;
+            this.tb_Sale_Price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Number);
             // 
             // btn_Refresh
             // 
@@ -189,10 +193,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Description.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Description.Location = new System.Drawing.Point(363, 312);
+            this.tb_Description.MaxLength = 70;
             this.tb_Description.Multiline = true;
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.Size = new System.Drawing.Size(354, 83);
             this.tb_Description.TabIndex = 22;
+            this.tb_Description.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Alphanumeric);
             // 
             // tableLayoutPanel1
             // 

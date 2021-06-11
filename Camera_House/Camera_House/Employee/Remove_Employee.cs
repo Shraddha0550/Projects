@@ -22,19 +22,25 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if (tb_Employee_ID.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "' ", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                if (tb_Employee_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "' ", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
-                dgv_Employee_List.DataSource = dt;
+                    dgv_Employee_List.DataSource = dt;
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid ID");
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
-
 
             CF.Con_Close();
         }
@@ -43,24 +49,29 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if (tb_Employee_ID.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Delete From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "'", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                if (tb_Employee_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Delete From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "'", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
 
-                MessageBox.Show("Employee Deleted Successfully!! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refresh();
+                    MessageBox.Show("Employee Deleted Successfully!! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    refresh();
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Employee ID ", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid Employee ID ", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
-            
-           
-
+          
             CF.Con_Close();
         }
 
@@ -80,6 +91,11 @@ namespace Camera_House
 
             dgv_Employee_List.DataSource = dt;
             CF.Con_Close();
+        }
+
+        private void Only_Numeric(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }

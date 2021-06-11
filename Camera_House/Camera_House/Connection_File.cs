@@ -9,7 +9,7 @@ namespace Camera_House
 {
     class Connection_File
     {
-        public SqlConnection Con = new SqlConnection(@"Data Source=.\EXPRESS;Initial Catalog=Camera_House_DB;Integrated Security=True");
+        public SqlConnection Con = new SqlConnection(@"Data Source=.\EXPRESS;Initial Catalog=Camera_House_DB;Integrated Security=True;MultipleActiveResultSets=true");
 
         public void Con_Open()
         {

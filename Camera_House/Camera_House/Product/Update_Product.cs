@@ -22,36 +22,40 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if(tb_Prod_ID.Text != "")
+            try
             {
-                int val = Convert.ToInt32(tb_Prod_ID.Text);
-                if (val <= 100)
+                if (tb_Prod_ID.Text != "")
                 {
-                    MessageBox.Show("Invalid ID");
+                    int val = Convert.ToInt32(tb_Prod_ID.Text);
+                    if (val <= 100)
+                    {
+                        MessageBox.Show("Invalid ID");
+                    }
+                    else
+                    {
+                        SqlCommand cmd = new SqlCommand("Select * From Add_New_Product Where Prod_ID = " + tb_Prod_ID.Text + "", CF.Con);
+                        var obj = cmd.ExecuteReader();
+
+                        if (obj.Read())
+                        {
+                            tb_Purches_Price.Text = obj["Purches_Price"].ToString();
+                            tb_Description.Text = obj.GetString(obj.GetOrdinal("Discription"));
+                            tb_Sale_Price.Text = obj["Sales_Price"].ToString();
+                            tb_Company_Name.Text = obj.GetString(obj.GetOrdinal("Company_Name"));
+                            tb_Model_Name.Text = obj.GetString(obj.GetOrdinal("Model_Name"));
+
+                        }
+                    }
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("Select * From Add_New_Product Where Prod_ID = " + tb_Prod_ID.Text + "", CF.Con);
-                    var obj = cmd.ExecuteReader();
-
-                    if (obj.Read())
-                    {
-                        tb_Purches_Price.Text = obj["Purches_Price"].ToString();
-                        tb_Description.Text = obj.GetString(obj.GetOrdinal("Discription"));
-                        tb_Sale_Price.Text = obj["Sales_Price"].ToString();
-                        tb_Company_Name.Text = obj.GetString(obj.GetOrdinal("Company_Name"));
-                        tb_Model_Name.Text = obj.GetString(obj.GetOrdinal("Model_Name"));
-
-
-                    }
+                    MessageBox.Show("Invalid ID");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid ID");
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
-
-          
 
             CF.Con_Close();
         }
@@ -76,22 +80,29 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if (tb_Prod_ID.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Update Add_New_Product Set Purches_Price = " + tb_Purches_Price.Text + ",Sales_Price = " + tb_Sale_Price.Text + ", Discription = '" + tb_Description.Text + "' Where Prod_ID = " + tb_Prod_ID.Text + " ", CF.Con);
+                if (tb_Prod_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Update Add_New_Product Set Purches_Price = " + tb_Purches_Price.Text + ",Sales_Price = " + tb_Sale_Price.Text + ", Discription = '" + tb_Description.Text + "' Where Prod_ID = " + tb_Prod_ID.Text + " ", CF.Con);
 
-                DataTable dt = new DataTable();
+                    DataTable dt = new DataTable();
 
-                sda.Fill(dt);
+                    sda.Fill(dt);
 
-                MessageBox.Show("SuccessFully Updated !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                refresh();
+                    MessageBox.Show("SuccessFully Updated !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    refresh();
 
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid ID");
-            }
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }          
 
             CF.Con_Close();
 
@@ -100,6 +111,30 @@ namespace Camera_House
         private void Update_Product_Load(object sender, EventArgs e)
         {
             tb_Prod_ID.Focus();
+        }
+
+        private void Only_Number(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Alphanumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Char(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

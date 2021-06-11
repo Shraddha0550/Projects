@@ -23,23 +23,30 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if (tb_ID.Text != "" && tb_Company_Name.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Company_Name(ID,Company_Name) Values('" + tb_ID.Text + "' , '" + tb_Company_Name.Text + "')", CF.Con);
+                if (tb_ID.Text != "" && tb_Company_Name.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Company_Name(ID,Company_Name) Values('" + tb_ID.Text + "' , '" + tb_Company_Name.Text + "')", CF.Con);
 
-                DataTable dt = new DataTable();
+                    DataTable dt = new DataTable();
 
-                sda.Fill(dt);
+                    sda.Fill(dt);
 
-                MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tb_Company_Name.Text = "";
-                tb_ID.Text = Auto_Inc().ToString();
-              
-                tb_ID.Focus();
+                    MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    tb_Company_Name.Text = "";
+                    tb_ID.Text = Auto_Inc().ToString();
+
+                    tb_ID.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -48,18 +55,25 @@ namespace Camera_House
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            tb_Company_Name.Text = "";
 
-            tb_ID.Focus();
+            try
+            {
+                tb_Company_Name.Text = "";
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_Company_Name ",CF.Con);
+                tb_ID.Focus();
 
-            DataTable dt = new DataTable();
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_Company_Name ", CF.Con);
 
-            sda.Fill(dt);
+                DataTable dt = new DataTable();
 
-            dgv_Company_Name_List.DataSource = dt;
+                sda.Fill(dt);
 
+                dgv_Company_Name_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
             CF.Con_Close();
         }
 
@@ -86,6 +100,14 @@ namespace Camera_House
         private void Add_Company_Name_Load(object sender, EventArgs e)
         {
             tb_ID.Text = Auto_Inc().ToString();
+        }
+
+        private void Only_Char(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

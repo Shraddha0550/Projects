@@ -57,38 +57,45 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            SqlCommand cmd = new SqlCommand("Select * From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "'", CF.Con);
-            var obj = cmd.ExecuteReader();
-
-            if (obj.Read())
+            try
             {
-                tb_Name.Text = obj.GetString(obj.GetOrdinal("Name"));
-                tb_Address.Text = obj.GetString(obj.GetOrdinal("Address"));
-                dtp_DOB.Text = obj["DOB"].ToString();
-                tb_Email_ID.Text = obj.GetString(obj.GetOrdinal("Email"));
-                dtp_Hire_Date.Text = obj["Hire_Date"].ToString();
-                tb_Mobile_No.Text = obj["Mob_No"].ToString();
-                tb_Adhar_Card_No.Text = obj["Aadhar_No"].ToString();
-                tb_Pan_Card_No.Text = obj.GetString(obj.GetOrdinal("PAN_No"));
-                tb_Salary.Text = obj["Salary"].ToString();
-                tb_Account_No.Text = obj["Bank_No"].ToString();
-                tb_Alt_Mob_No.Text = obj["Alt_Mob_No"].ToString();
-                tb_IFC_Code.Text = obj.GetString(obj.GetOrdinal("IFC_Code"));
-                String Gender = obj.GetString(obj.GetOrdinal("Gender"));
-                if (Gender == "Male")
+                SqlCommand cmd = new SqlCommand("Select * From Add_New_Employee Where Emp_ID = '" + tb_Employee_ID.Text + "'", CF.Con);
+                var obj = cmd.ExecuteReader();
+
+                if (obj.Read())
                 {
-                    rb_Male.Checked = true;
+                    tb_Name.Text = obj.GetString(obj.GetOrdinal("Name"));
+                    tb_Address.Text = obj.GetString(obj.GetOrdinal("Address"));
+                    dtp_DOB.Text = obj["DOB"].ToString();
+                    tb_Email_ID.Text = obj.GetString(obj.GetOrdinal("Email"));
+                    dtp_Hire_Date.Text = obj["Hire_Date"].ToString();
+                    tb_Mobile_No.Text = obj["Mob_No"].ToString();
+                    tb_Adhar_Card_No.Text = obj["Aadhar_No"].ToString();
+                    tb_Pan_Card_No.Text = obj.GetString(obj.GetOrdinal("PAN_No"));
+                    tb_Salary.Text = obj["Salary"].ToString();
+                    tb_Account_No.Text = obj["Bank_No"].ToString();
+                    tb_Alt_Mob_No.Text = obj["Alt_Mob_No"].ToString();
+                    tb_IFC_Code.Text = obj.GetString(obj.GetOrdinal("IFC_Code"));
+                    String Gender = obj.GetString(obj.GetOrdinal("Gender"));
+                    if (Gender == "Male")
+                    {
+                        rb_Male.Checked = true;
+                    }
+                    else
+                    {
+                        rb_Female.Checked = true;
+                    }
                 }
                 else
                 {
-                    rb_Female.Checked = true;
+                    MessageBox.Show("Employee ID Not Found", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    tb_Employee_ID.Text = "";
+                    tb_Employee_ID.Focus();
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Employee ID Not Found", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                tb_Employee_ID.Text = "";
-                tb_Employee_ID.Focus();
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
 
             CF.Con_Close();
@@ -124,6 +131,30 @@ namespace Camera_House
             }
             
             
+        }
+
+        private void Only_Numeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_Char(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetter(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Only_AlphNumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

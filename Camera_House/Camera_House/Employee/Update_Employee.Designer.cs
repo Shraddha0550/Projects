@@ -73,8 +73,8 @@
             // 
             // lb_Update_Employee
             // 
-            this.lb_Update_Employee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Update_Employee.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Update_Employee.AutoSize = true;
             this.lb_Update_Employee.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_Update_Employee.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -86,13 +86,15 @@
             // 
             // tb_Employee_ID
             // 
-            this.tb_Employee_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Employee_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Employee_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Employee_ID.Location = new System.Drawing.Point(357, 3);
+            this.tb_Employee_ID.MaxLength = 20;
             this.tb_Employee_ID.Name = "tb_Employee_ID";
             this.tb_Employee_ID.Size = new System.Drawing.Size(348, 30);
             this.tb_Employee_ID.TabIndex = 26;
+            this.tb_Employee_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lb_Employee_ID
             // 
@@ -119,8 +121,8 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -175,8 +177,8 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 4;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
@@ -223,13 +225,15 @@
             // 
             // tb_Salary
             // 
-            this.tb_Salary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Salary.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Salary.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Salary.Location = new System.Drawing.Point(1122, 263);
+            this.tb_Salary.MaxLength = 5;
             this.tb_Salary.Name = "tb_Salary";
             this.tb_Salary.Size = new System.Drawing.Size(369, 30);
             this.tb_Salary.TabIndex = 25;
+            this.tb_Salary.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lb_Salary
             // 
@@ -244,13 +248,15 @@
             // 
             // tb_Pan_Card_No
             // 
-            this.tb_Pan_Card_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Pan_Card_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Pan_Card_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Pan_Card_No.Location = new System.Drawing.Point(1122, 198);
+            this.tb_Pan_Card_No.MaxLength = 10;
             this.tb_Pan_Card_No.Name = "tb_Pan_Card_No";
             this.tb_Pan_Card_No.Size = new System.Drawing.Size(369, 30);
             this.tb_Pan_Card_No.TabIndex = 23;
+            this.tb_Pan_Card_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_AlphNumeric);
             // 
             // lb_Pan_Card_No
             // 
@@ -265,13 +271,15 @@
             // 
             // tb_Adhar_Card_No
             // 
-            this.tb_Adhar_Card_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Adhar_Card_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Adhar_Card_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Adhar_Card_No.Location = new System.Drawing.Point(1122, 133);
+            this.tb_Adhar_Card_No.MaxLength = 12;
             this.tb_Adhar_Card_No.Name = "tb_Adhar_Card_No";
             this.tb_Adhar_Card_No.Size = new System.Drawing.Size(369, 30);
             this.tb_Adhar_Card_No.TabIndex = 21;
+            this.tb_Adhar_Card_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lb_Adhar_Card_No
             // 
@@ -297,8 +305,8 @@
             // 
             // dtp_Hire_Date
             // 
-            this.dtp_Hire_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Hire_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_Hire_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_Hire_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_Hire_Date.Location = new System.Drawing.Point(1122, 3);
@@ -319,13 +327,14 @@
             // 
             // tb_Account_No
             // 
-            this.tb_Account_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Account_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Account_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Account_No.Location = new System.Drawing.Point(1122, 328);
             this.tb_Account_No.Name = "tb_Account_No";
             this.tb_Account_No.Size = new System.Drawing.Size(369, 30);
             this.tb_Account_No.TabIndex = 31;
+            this.tb_Account_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_AlphNumeric);
             // 
             // lb_Email_ID
             // 
@@ -340,10 +349,11 @@
             // 
             // tb_Email_ID
             // 
-            this.tb_Email_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Email_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Email_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Email_ID.Location = new System.Drawing.Point(1122, 68);
+            this.tb_Email_ID.MaxLength = 30;
             this.tb_Email_ID.Name = "tb_Email_ID";
             this.tb_Email_ID.Size = new System.Drawing.Size(369, 30);
             this.tb_Email_ID.TabIndex = 13;
@@ -361,13 +371,14 @@
             // 
             // tb_IFC_Code
             // 
-            this.tb_IFC_Code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_IFC_Code.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_IFC_Code.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_IFC_Code.Location = new System.Drawing.Point(1122, 393);
             this.tb_IFC_Code.Name = "tb_IFC_Code";
             this.tb_IFC_Code.Size = new System.Drawing.Size(369, 30);
             this.tb_IFC_Code.TabIndex = 35;
+            this.tb_IFC_Code.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_AlphNumeric);
             // 
             // lb_Name
             // 
@@ -382,13 +393,15 @@
             // 
             // tb_Name
             // 
-            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Name.Location = new System.Drawing.Point(376, 3);
+            this.tb_Name.MaxLength = 30;
             this.tb_Name.Name = "tb_Name";
             this.tb_Name.Size = new System.Drawing.Size(367, 30);
             this.tb_Name.TabIndex = 3;
+            this.tb_Name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lb_Address
             // 
@@ -403,13 +416,15 @@
             // 
             // tb_Address
             // 
-            this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Address.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Address.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Address.Location = new System.Drawing.Point(376, 68);
+            this.tb_Address.MaxLength = 70;
             this.tb_Address.Name = "tb_Address";
             this.tb_Address.Size = new System.Drawing.Size(367, 30);
             this.tb_Address.TabIndex = 11;
+            this.tb_Address.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Char);
             // 
             // lb_Gender
             // 
@@ -424,8 +439,8 @@
             // 
             // gb_Gender
             // 
-            this.gb_Gender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gb_Gender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_Gender.Controls.Add(this.rb_Female);
             this.gb_Gender.Controls.Add(this.rb_Male);
             this.gb_Gender.Location = new System.Drawing.Point(376, 133);
@@ -495,8 +510,8 @@
             // 
             // dtp_DOB
             // 
-            this.dtp_DOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_DOB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_DOB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtp_DOB.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtp_DOB.Location = new System.Drawing.Point(376, 198);
@@ -506,23 +521,27 @@
             // 
             // tb_Mobile_No
             // 
-            this.tb_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Mobile_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Mobile_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Mobile_No.Location = new System.Drawing.Point(376, 263);
+            this.tb_Mobile_No.MaxLength = 10;
             this.tb_Mobile_No.Name = "tb_Mobile_No";
             this.tb_Mobile_No.Size = new System.Drawing.Size(367, 30);
             this.tb_Mobile_No.TabIndex = 19;
+            this.tb_Mobile_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // tb_Alt_Mob_No
             // 
-            this.tb_Alt_Mob_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Alt_Mob_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Alt_Mob_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Alt_Mob_No.Location = new System.Drawing.Point(376, 328);
+            this.tb_Alt_Mob_No.MaxLength = 10;
             this.tb_Alt_Mob_No.Name = "tb_Alt_Mob_No";
             this.tb_Alt_Mob_No.Size = new System.Drawing.Size(367, 30);
             this.tb_Alt_Mob_No.TabIndex = 33;
+            this.tb_Alt_Mob_No.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // Update_Employee
             // 

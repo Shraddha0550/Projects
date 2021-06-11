@@ -51,20 +51,28 @@ namespace Camera_House
         private void btn_Delete_Click(object sender, EventArgs e)
         {
             CF.Con_Open();
-            if (tb_Product_ID.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("Delete From Add_New_Product Where Prod_ID = " + tb_Product_ID.Text + "", CF.Con);
-                DataTable dt = new DataTable();
-                sda.Fill(dt);
+                if (tb_Product_ID.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("Delete From Add_New_Product Where Prod_ID = " + tb_Product_ID.Text + "", CF.Con);
+                    DataTable dt = new DataTable();
+                    sda.Fill(dt);
 
-                MessageBox.Show("Product Is Deleted..");
-                refresh();
-                
+                    MessageBox.Show("Product Is Deleted..");
+                    refresh();
+
+                }
+                else
+                {
+                    MessageBox.Show("Invalid ID");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid ID");
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
+           
 
             CF.Con_Close();
         }
@@ -76,16 +84,32 @@ namespace Camera_House
 
         void refresh()
         {
-            tb_Product_ID.Text = "";
-            int var = 0;
             CF.Con_Open();
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Product Where Prod_ID =" + var + " ", CF.Con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
+            try
+            {
+                tb_Product_ID.Text = "";
+                int var = 0;
+              
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_New_Product Where Prod_ID =" + var + " ", CF.Con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
 
-            dgv_Product_List.DataSource = dt;
+                dgv_Product_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
+         
             CF.Con_Close();
         }
 
+        private void Only_Number(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

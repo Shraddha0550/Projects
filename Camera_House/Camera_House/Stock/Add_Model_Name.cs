@@ -43,22 +43,29 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            if(tb_ID.Text != "" && tb_Model_Name.Text != ""  && cmb_Company_Name.Text != "")
+            try
             {
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Model_Name(ID,Company_Name,Model_Name) Values('" + tb_ID.Text + "' , '" + cmb_Company_Name.Text + "','" + tb_Model_Name.Text + "')", CF.Con);
+                if (tb_ID.Text != "" && tb_Model_Name.Text != "" && cmb_Company_Name.Text != "")
+                {
+                    SqlDataAdapter sda = new SqlDataAdapter("insert into Add_Model_Name(ID,Company_Name,Model_Name) Values('" + tb_ID.Text + "' , '" + cmb_Company_Name.Text + "','" + tb_Model_Name.Text + "')", CF.Con);
 
                     DataTable dt = new DataTable();
 
                     sda.Fill(dt);
 
-                    MessageBox.Show("SuccesFully Added !! ","Success",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("SuccesFully Added !! ", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cmb_Company_Name.SelectedIndex = -1;
                     tb_Model_Name.Text = "";
                     tb_ID.Text = Auto_Inc().ToString();
+                }
+                else
+                {
+                    MessageBox.Show("First Fill All Fields..!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("First Fill All Fields..!!", "Failure",MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
             }
           
             CF.Con_Close();
@@ -74,16 +81,23 @@ namespace Camera_House
         {
             CF.Con_Open();
 
-            cmb_Company_Name.SelectedIndex = -1;
-            tb_Model_Name.Text = "";
+            try
+            {
+                cmb_Company_Name.SelectedIndex = -1;
+                tb_Model_Name.Text = "";
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_Model_Name", CF.Con);
+                SqlDataAdapter sda = new SqlDataAdapter("Select * From Add_Model_Name", CF.Con);
 
-            DataTable dt = new DataTable();
+                DataTable dt = new DataTable();
 
-            sda.Fill(dt);
+                sda.Fill(dt);
 
-            dgv_Model_Name_List.DataSource = dt;
+                dgv_Model_Name_List.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something Went Wrong...!!" + "\n\t" + ex.Message);
+            }
 
             CF.Con_Close();
         }
@@ -101,7 +115,6 @@ namespace Camera_House
 
             Cnt = 1 + Cnt;
 
-           // Cnt = 1 + Cnt;
             String count = Cnt.ToString();
 
             CF.Con_Close();
@@ -109,6 +122,12 @@ namespace Camera_House
             return Var+count;
         }
 
-       
+        private void Alphanumeric(object sender, KeyPressEventArgs e)
+        {
+            if (!((char.IsLetterOrDigit(e.KeyChar)) || (e.KeyChar == (char)Keys.Back) || (e.KeyChar == (char)Keys.Space)))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

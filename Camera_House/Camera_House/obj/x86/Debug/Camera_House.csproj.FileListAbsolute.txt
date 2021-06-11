@@ -71,7 +71,6 @@ C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Search_Customer.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Search_Employee.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Search_Product.resources
-C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Update_Customer.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Update_Employee.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Update_Product.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.View_All_Customer.resources
@@ -82,3 +81,6 @@ C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.View_Distrubutor_Details.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\obj\x86\Debug\Camera_House.Product_List.resources
 C:\Users\sai\Desktop\Projects C#\Camera_House\Camera_House\Camera_House\bin\Debug\Camera_House.exe.config
+C:\Users\sai\Desktop\Camera_House\Camera_House\bin\Debug\Camera_House.exe.config
+C:\Users\sai\Desktop\Camera_House\Camera_House\obj\x86\Debug\Camera_House.exe
+C:\Users\sai\Desktop\Camera_House\Camera_House\obj\x86\Debug\Camera_House.pdb
