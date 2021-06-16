@@ -1,0 +1,730 @@
+﻿namespace Lodging_Managment_System
+{
+    partial class Update_Room_Booking_Details
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_Bill = new System.Windows.Forms.TextBox();
+            this.lb_Bill = new System.Windows.Forms.Label();
+            this.tb_Prev_Room_Bill = new System.Windows.Forms.TextBox();
+            this.lb_Prev_Room_Bill = new System.Windows.Forms.Label();
+            this.lb_Check_in_Date = new System.Windows.Forms.Label();
+            this.dtp_Ckeck_In_Date = new System.Windows.Forms.DateTimePicker();
+            this.lb_Room_Type = new System.Windows.Forms.Label();
+            this.cb__Room_Type = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtp_Check_Out_Date = new System.Windows.Forms.DateTimePicker();
+            this.lb_Bed_Type = new System.Windows.Forms.Label();
+            this.cb_Bed_Type = new System.Windows.Forms.ComboBox();
+            this.lb_Amount = new System.Windows.Forms.Label();
+            this.tb_Amount = new System.Windows.Forms.TextBox();
+            this.lb_Total = new System.Windows.Forms.Label();
+            this.tb_Total = new System.Windows.Forms.TextBox();
+            this.lb_Discount = new System.Windows.Forms.Label();
+            this.tb_Discount = new System.Windows.Forms.TextBox();
+            this.lb_Pay = new System.Windows.Forms.Label();
+            this.tb_Pay = new System.Windows.Forms.TextBox();
+            this.lb_Remaining = new System.Windows.Forms.Label();
+            this.tb_Remaining = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
+            this.tb_Day = new System.Windows.Forms.TextBox();
+            this.lb_Day = new System.Windows.Forms.Label();
+            this.lb_Hrs = new System.Windows.Forms.Label();
+            this.tb_Hrs = new System.Windows.Forms.TextBox();
+            this.lb_hr = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.cmb_Room_No = new System.Windows.Forms.ComboBox();
+            this.btn_Next = new System.Windows.Forms.Button();
+            this.lb_Cust_ID = new System.Windows.Forms.Label();
+            this.lb_Room_No = new System.Windows.Forms.Label();
+            this.btn_Search = new System.Windows.Forms.Button();
+            this.tb_Cust_ID = new System.Windows.Forms.TextBox();
+            this.btn_Total = new System.Windows.Forms.Button();
+            this.btn_Update = new System.Windows.Forms.Button();
+            this.btn_Remaining = new System.Windows.Forms.Button();
+            this.btn_Generate_Bill = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tableLayoutPanel7.SuspendLayout();
+            this.tableLayoutPanel6.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel7
+            // 
+            this.tableLayoutPanel7.ColumnCount = 4;
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.33724F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.54567F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.85949F));
+            this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.4918F));
+            this.tableLayoutPanel7.Controls.Add(this.tb_Bill, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Bill, 0, 4);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Prev_Room_Bill, 1, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Prev_Room_Bill, 0, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Check_in_Date, 0, 0);
+            this.tableLayoutPanel7.Controls.Add(this.dtp_Ckeck_In_Date, 1, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Room_Type, 0, 1);
+            this.tableLayoutPanel7.Controls.Add(this.cb__Room_Type, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.label2, 2, 0);
+            this.tableLayoutPanel7.Controls.Add(this.dtp_Check_Out_Date, 3, 0);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Bed_Type, 2, 1);
+            this.tableLayoutPanel7.Controls.Add(this.cb_Bed_Type, 3, 1);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Amount, 0, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Amount, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Total, 2, 2);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Total, 3, 2);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Discount, 2, 3);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Discount, 3, 3);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Pay, 2, 4);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Pay, 3, 4);
+            this.tableLayoutPanel7.Controls.Add(this.lb_Remaining, 0, 5);
+            this.tableLayoutPanel7.Controls.Add(this.tb_Remaining, 1, 5);
+            this.tableLayoutPanel7.Location = new System.Drawing.Point(22, 202);
+            this.tableLayoutPanel7.Name = "tableLayoutPanel7";
+            this.tableLayoutPanel7.RowCount = 6;
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
+            this.tableLayoutPanel7.Size = new System.Drawing.Size(854, 581);
+            this.tableLayoutPanel7.TabIndex = 95;
+            // 
+            // tb_Bill
+            // 
+            this.tb_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Bill.Enabled = false;
+            this.tb_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Bill.Location = new System.Drawing.Point(244, 387);
+            this.tb_Bill.Name = "tb_Bill";
+            this.tb_Bill.Size = new System.Drawing.Size(177, 38);
+            this.tb_Bill.TabIndex = 113;
+            // 
+            // lb_Bill
+            // 
+            this.lb_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Bill.AutoSize = true;
+            this.lb_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Bill.Location = new System.Drawing.Point(8, 384);
+            this.lb_Bill.Name = "lb_Bill";
+            this.lb_Bill.Size = new System.Drawing.Size(230, 32);
+            this.lb_Bill.TabIndex = 112;
+            this.lb_Bill.Text = "Bill                         ";
+            // 
+            // tb_Prev_Room_Bill
+            // 
+            this.tb_Prev_Room_Bill.Enabled = false;
+            this.tb_Prev_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Prev_Room_Bill.Location = new System.Drawing.Point(244, 291);
+            this.tb_Prev_Room_Bill.Name = "tb_Prev_Room_Bill";
+            this.tb_Prev_Room_Bill.Size = new System.Drawing.Size(177, 38);
+            this.tb_Prev_Room_Bill.TabIndex = 112;
+            // 
+            // lb_Prev_Room_Bill
+            // 
+            this.lb_Prev_Room_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Prev_Room_Bill.AutoSize = true;
+            this.lb_Prev_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Prev_Room_Bill.Location = new System.Drawing.Point(6, 288);
+            this.lb_Prev_Room_Bill.Name = "lb_Prev_Room_Bill";
+            this.lb_Prev_Room_Bill.Size = new System.Drawing.Size(232, 32);
+            this.lb_Prev_Room_Bill.TabIndex = 113;
+            this.lb_Prev_Room_Bill.Text = "Prev_Room_Bill   ";
+            // 
+            // lb_Check_in_Date
+            // 
+            this.lb_Check_in_Date.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Check_in_Date.AutoSize = true;
+            this.lb_Check_in_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Check_in_Date.Location = new System.Drawing.Point(9, 0);
+            this.lb_Check_in_Date.Name = "lb_Check_in_Date";
+            this.lb_Check_in_Date.Size = new System.Drawing.Size(229, 32);
+            this.lb_Check_in_Date.TabIndex = 12;
+            this.lb_Check_in_Date.Text = "Check-In Date     ";
+            // 
+            // dtp_Ckeck_In_Date
+            // 
+            this.dtp_Ckeck_In_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Ckeck_In_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Ckeck_In_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Ckeck_In_Date.Location = new System.Drawing.Point(244, 3);
+            this.dtp_Ckeck_In_Date.Name = "dtp_Ckeck_In_Date";
+            this.dtp_Ckeck_In_Date.Size = new System.Drawing.Size(177, 30);
+            this.dtp_Ckeck_In_Date.TabIndex = 13;
+            // 
+            // lb_Room_Type
+            // 
+            this.lb_Room_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Room_Type.AutoSize = true;
+            this.lb_Room_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Room_Type.Location = new System.Drawing.Point(8, 96);
+            this.lb_Room_Type.Name = "lb_Room_Type";
+            this.lb_Room_Type.Size = new System.Drawing.Size(230, 32);
+            this.lb_Room_Type.TabIndex = 16;
+            this.lb_Room_Type.Text = "Room Type          ";
+            // 
+            // cb__Room_Type
+            // 
+            this.cb__Room_Type.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb__Room_Type.Enabled = false;
+            this.cb__Room_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb__Room_Type.FormattingEnabled = true;
+            this.cb__Room_Type.Items.AddRange(new object[] {
+            "A/C",
+            "NON - A/C"});
+            this.cb__Room_Type.Location = new System.Drawing.Point(244, 99);
+            this.cb__Room_Type.Name = "cb__Room_Type";
+            this.cb__Room_Type.Size = new System.Drawing.Size(177, 39);
+            this.cb__Room_Type.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(444, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(231, 32);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Check - Out Date";
+            // 
+            // dtp_Check_Out_Date
+            // 
+            this.dtp_Check_Out_Date.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_Check_Out_Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtp_Check_Out_Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtp_Check_Out_Date.Location = new System.Drawing.Point(681, 3);
+            this.dtp_Check_Out_Date.Name = "dtp_Check_Out_Date";
+            this.dtp_Check_Out_Date.Size = new System.Drawing.Size(170, 38);
+            this.dtp_Check_Out_Date.TabIndex = 1;
+            this.dtp_Check_Out_Date.ValueChanged += new System.EventHandler(this.dtp_Check_Out_Date_ValueChanged);
+            // 
+            // lb_Bed_Type
+            // 
+            this.lb_Bed_Type.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Bed_Type.AutoSize = true;
+            this.lb_Bed_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Bed_Type.Location = new System.Drawing.Point(448, 96);
+            this.lb_Bed_Type.Name = "lb_Bed_Type";
+            this.lb_Bed_Type.Size = new System.Drawing.Size(227, 32);
+            this.lb_Bed_Type.TabIndex = 18;
+            this.lb_Bed_Type.Text = "Bed Type             ";
+            // 
+            // cb_Bed_Type
+            // 
+            this.cb_Bed_Type.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cb_Bed_Type.Enabled = false;
+            this.cb_Bed_Type.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_Bed_Type.FormattingEnabled = true;
+            this.cb_Bed_Type.Items.AddRange(new object[] {
+            "Single",
+            "Double",
+            "King-Size"});
+            this.cb_Bed_Type.Location = new System.Drawing.Point(681, 99);
+            this.cb_Bed_Type.Name = "cb_Bed_Type";
+            this.cb_Bed_Type.Size = new System.Drawing.Size(170, 39);
+            this.cb_Bed_Type.TabIndex = 3;
+            // 
+            // lb_Amount
+            // 
+            this.lb_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Amount.AutoSize = true;
+            this.lb_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Amount.Location = new System.Drawing.Point(13, 192);
+            this.lb_Amount.Name = "lb_Amount";
+            this.lb_Amount.Size = new System.Drawing.Size(225, 32);
+            this.lb_Amount.TabIndex = 32;
+            this.lb_Amount.Text = "Amount                ";
+            // 
+            // tb_Amount
+            // 
+            this.tb_Amount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Amount.Enabled = false;
+            this.tb_Amount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Amount.Location = new System.Drawing.Point(244, 195);
+            this.tb_Amount.Name = "tb_Amount";
+            this.tb_Amount.Size = new System.Drawing.Size(177, 38);
+            this.tb_Amount.TabIndex = 33;
+            // 
+            // lb_Total
+            // 
+            this.lb_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Total.AutoSize = true;
+            this.lb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Total.Location = new System.Drawing.Point(442, 192);
+            this.lb_Total.Name = "lb_Total";
+            this.lb_Total.Size = new System.Drawing.Size(233, 32);
+            this.lb_Total.TabIndex = 43;
+            this.lb_Total.Text = "Total                      ";
+            // 
+            // tb_Total
+            // 
+            this.tb_Total.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Total.Enabled = false;
+            this.tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Total.Location = new System.Drawing.Point(681, 195);
+            this.tb_Total.Name = "tb_Total";
+            this.tb_Total.Size = new System.Drawing.Size(170, 38);
+            this.tb_Total.TabIndex = 34;
+            // 
+            // lb_Discount
+            // 
+            this.lb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Discount.AutoSize = true;
+            this.lb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Discount.Location = new System.Drawing.Point(444, 288);
+            this.lb_Discount.Name = "lb_Discount";
+            this.lb_Discount.Size = new System.Drawing.Size(231, 32);
+            this.lb_Discount.TabIndex = 12;
+            this.lb_Discount.Text = "Discount               ";
+            // 
+            // tb_Discount
+            // 
+            this.tb_Discount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Discount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Discount.Location = new System.Drawing.Point(681, 291);
+            this.tb_Discount.Name = "tb_Discount";
+            this.tb_Discount.Size = new System.Drawing.Size(170, 38);
+            this.tb_Discount.TabIndex = 1;
+            // 
+            // lb_Pay
+            // 
+            this.lb_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Pay.AutoSize = true;
+            this.lb_Pay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Pay.Location = new System.Drawing.Point(457, 384);
+            this.lb_Pay.Name = "lb_Pay";
+            this.lb_Pay.Size = new System.Drawing.Size(218, 32);
+            this.lb_Pay.TabIndex = 14;
+            this.lb_Pay.Text = "Pay                      ";
+            // 
+            // tb_Pay
+            // 
+            this.tb_Pay.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Pay.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Pay.Location = new System.Drawing.Point(681, 387);
+            this.tb_Pay.Name = "tb_Pay";
+            this.tb_Pay.Size = new System.Drawing.Size(170, 38);
+            this.tb_Pay.TabIndex = 2;
+            // 
+            // lb_Remaining
+            // 
+            this.lb_Remaining.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Remaining.AutoSize = true;
+            this.lb_Remaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Remaining.Location = new System.Drawing.Point(9, 480);
+            this.lb_Remaining.Name = "lb_Remaining";
+            this.lb_Remaining.Size = new System.Drawing.Size(229, 32);
+            this.lb_Remaining.TabIndex = 10;
+            this.lb_Remaining.Text = "Remaining            ";
+            // 
+            // tb_Remaining
+            // 
+            this.tb_Remaining.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Remaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Remaining.Location = new System.Drawing.Point(244, 483);
+            this.tb_Remaining.Name = "tb_Remaining";
+            this.tb_Remaining.Size = new System.Drawing.Size(177, 38);
+            this.tb_Remaining.TabIndex = 11;
+            // 
+            // tableLayoutPanel6
+            // 
+            this.tableLayoutPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel6.ColumnCount = 6;
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 17.47126F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.51724F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.87356F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.18391F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.83908F));
+            this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 123F));
+            this.tableLayoutPanel6.Controls.Add(this.tb_Day, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lb_Day, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lb_Hrs, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.tb_Hrs, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.lb_hr, 4, 0);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(911, 202);
+            this.tableLayoutPanel6.Name = "tableLayoutPanel6";
+            this.tableLayoutPanel6.RowCount = 1;
+            this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(854, 69);
+            this.tableLayoutPanel6.TabIndex = 96;
+            // 
+            // tb_Day
+            // 
+            this.tb_Day.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Day.Location = new System.Drawing.Point(130, 3);
+            this.tb_Day.Name = "tb_Day";
+            this.tb_Day.Size = new System.Drawing.Size(180, 38);
+            this.tb_Day.TabIndex = 28;
+            // 
+            // lb_Day
+            // 
+            this.lb_Day.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Day.AutoSize = true;
+            this.lb_Day.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Day.Location = new System.Drawing.Point(38, 0);
+            this.lb_Day.Name = "lb_Day";
+            this.lb_Day.Size = new System.Drawing.Size(86, 32);
+            this.lb_Day.TabIndex = 26;
+            this.lb_Day.Text = "Day   ";
+            // 
+            // lb_Hrs
+            // 
+            this.lb_Hrs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Hrs.AutoSize = true;
+            this.lb_Hrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Hrs.Location = new System.Drawing.Point(325, 0);
+            this.lb_Hrs.Name = "lb_Hrs";
+            this.lb_Hrs.Size = new System.Drawing.Size(79, 32);
+            this.lb_Hrs.TabIndex = 27;
+            this.lb_Hrs.Text = "Hrs   ";
+            // 
+            // tb_Hrs
+            // 
+            this.tb_Hrs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Hrs.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Hrs.Location = new System.Drawing.Point(410, 3);
+            this.tb_Hrs.Name = "tb_Hrs";
+            this.tb_Hrs.Size = new System.Drawing.Size(156, 38);
+            this.tb_Hrs.TabIndex = 29;
+            // 
+            // lb_hr
+            // 
+            this.lb_hr.AutoSize = true;
+            this.lb_hr.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_hr.Location = new System.Drawing.Point(572, 0);
+            this.lb_hr.Name = "lb_hr";
+            this.lb_hr.Size = new System.Drawing.Size(39, 25);
+            this.lb_hr.TabIndex = 31;
+            this.lb_hr.Text = "hrs";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1788, 55);
+            this.panel1.TabIndex = 97;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.DarkBlue;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Blue;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.button1.Location = new System.Drawing.Point(1728, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(60, 55);
+            this.button1.TabIndex = 84;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkBlue;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 940);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1788, 23);
+            this.panel2.TabIndex = 98;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 211F));
+            this.tableLayoutPanel1.Controls.Add(this.cmb_Room_No, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Next, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Cust_ID, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lb_Room_No, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btn_Search, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.tb_Cust_ID, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(22, 78);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(851, 101);
+            this.tableLayoutPanel1.TabIndex = 99;
+            // 
+            // cmb_Room_No
+            // 
+            this.cmb_Room_No.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cmb_Room_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmb_Room_No.FormattingEnabled = true;
+            this.cmb_Room_No.Location = new System.Drawing.Point(323, 53);
+            this.cmb_Room_No.Name = "cmb_Room_No";
+            this.cmb_Room_No.Size = new System.Drawing.Size(314, 39);
+            this.cmb_Room_No.TabIndex = 109;
+            this.cmb_Room_No.SelectedIndexChanged += new System.EventHandler(this.cmb_Room_No_SelectedIndexChanged);
+            // 
+            // btn_Next
+            // 
+            this.btn_Next.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Next.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Next.FlatAppearance.BorderSize = 0;
+            this.btn_Next.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Next.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Next.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Next.Location = new System.Drawing.Point(643, 3);
+            this.btn_Next.Name = "btn_Next";
+            this.btn_Next.Size = new System.Drawing.Size(205, 44);
+            this.btn_Next.TabIndex = 108;
+            this.btn_Next.Text = "Next";
+            this.btn_Next.UseVisualStyleBackColor = false;
+            this.btn_Next.Click += new System.EventHandler(this.btn_Next_Click);
+            // 
+            // lb_Cust_ID
+            // 
+            this.lb_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Cust_ID.AutoSize = true;
+            this.lb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Cust_ID.Location = new System.Drawing.Point(189, 0);
+            this.lb_Cust_ID.Name = "lb_Cust_ID";
+            this.lb_Cust_ID.Size = new System.Drawing.Size(128, 32);
+            this.lb_Cust_ID.TabIndex = 80;
+            this.lb_Cust_ID.Text = "Cust ID   ";
+            // 
+            // lb_Room_No
+            // 
+            this.lb_Room_No.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lb_Room_No.AutoSize = true;
+            this.lb_Room_No.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_Room_No.Location = new System.Drawing.Point(184, 50);
+            this.lb_Room_No.Name = "lb_Room_No";
+            this.lb_Room_No.Size = new System.Drawing.Size(133, 32);
+            this.lb_Room_No.TabIndex = 23;
+            this.lb_Room_No.Text = "Room No";
+            // 
+            // btn_Search
+            // 
+            this.btn_Search.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Search.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Search.FlatAppearance.BorderSize = 0;
+            this.btn_Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Search.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Search.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Search.Location = new System.Drawing.Point(643, 53);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(205, 44);
+            this.btn_Search.TabIndex = 105;
+            this.btn_Search.Text = "Search";
+            this.btn_Search.UseVisualStyleBackColor = false;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
+            // tb_Cust_ID
+            // 
+            this.tb_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Cust_ID.Location = new System.Drawing.Point(323, 3);
+            this.tb_Cust_ID.MaxLength = 4;
+            this.tb_Cust_ID.Name = "tb_Cust_ID";
+            this.tb_Cust_ID.Size = new System.Drawing.Size(314, 38);
+            this.tb_Cust_ID.TabIndex = 81;
+            // 
+            // btn_Total
+            // 
+            this.btn_Total.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Total.FlatAppearance.BorderSize = 0;
+            this.btn_Total.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Total.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Total.Location = new System.Drawing.Point(911, 295);
+            this.btn_Total.Name = "btn_Total";
+            this.btn_Total.Size = new System.Drawing.Size(241, 46);
+            this.btn_Total.TabIndex = 106;
+            this.btn_Total.Text = "Total";
+            this.btn_Total.UseVisualStyleBackColor = false;
+            this.btn_Total.Click += new System.EventHandler(this.btn_Total_Click);
+            // 
+            // btn_Update
+            // 
+            this.btn_Update.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_Update.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Update.FlatAppearance.BorderSize = 0;
+            this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Update.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Update.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Update.Location = new System.Drawing.Point(270, 825);
+            this.btn_Update.Name = "btn_Update";
+            this.btn_Update.Size = new System.Drawing.Size(223, 57);
+            this.btn_Update.TabIndex = 107;
+            this.btn_Update.Text = "Update";
+            this.btn_Update.UseVisualStyleBackColor = false;
+            this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+            // 
+            // btn_Remaining
+            // 
+            this.btn_Remaining.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Remaining.FlatAppearance.BorderSize = 0;
+            this.btn_Remaining.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Remaining.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Remaining.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Remaining.Location = new System.Drawing.Point(911, 471);
+            this.btn_Remaining.Name = "btn_Remaining";
+            this.btn_Remaining.Size = new System.Drawing.Size(241, 46);
+            this.btn_Remaining.TabIndex = 111;
+            this.btn_Remaining.Text = "Remaining";
+            this.btn_Remaining.UseVisualStyleBackColor = false;
+            this.btn_Remaining.Click += new System.EventHandler(this.btn_Remaining_Click);
+            // 
+            // btn_Generate_Bill
+            // 
+            this.btn_Generate_Bill.BackColor = System.Drawing.SystemColors.Desktop;
+            this.btn_Generate_Bill.FlatAppearance.BorderSize = 0;
+            this.btn_Generate_Bill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Generate_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Generate_Bill.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btn_Generate_Bill.Location = new System.Drawing.Point(911, 381);
+            this.btn_Generate_Bill.Name = "btn_Generate_Bill";
+            this.btn_Generate_Bill.Size = new System.Drawing.Size(241, 46);
+            this.btn_Generate_Bill.TabIndex = 110;
+            this.btn_Generate_Bill.Text = "Generate Bill";
+            this.btn_Generate_Bill.UseVisualStyleBackColor = false;
+            this.btn_Generate_Bill.Click += new System.EventHandler(this.btn_Generate_Bill_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.Desktop;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(178, 55);
+            this.button2.TabIndex = 109;
+            this.button2.Text = "Back";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Update_Room_Booking_Details
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1788, 963);
+            this.Controls.Add(this.btn_Remaining);
+            this.Controls.Add(this.btn_Generate_Bill);
+            this.Controls.Add(this.btn_Update);
+            this.Controls.Add(this.btn_Total);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.tableLayoutPanel6);
+            this.Controls.Add(this.tableLayoutPanel7);
+            this.Name = "Update_Room_Booking_Details";
+            this.Text = "Update_Room_Booking_Details";
+            this.tableLayoutPanel7.ResumeLayout(false);
+            this.tableLayoutPanel7.PerformLayout();
+            this.tableLayoutPanel6.ResumeLayout(false);
+            this.tableLayoutPanel6.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private System.Windows.Forms.TextBox tb_Amount;
+        private System.Windows.Forms.Label lb_Amount;
+        private System.Windows.Forms.Label lb_Check_in_Date;
+        private System.Windows.Forms.DateTimePicker dtp_Ckeck_In_Date;
+        private System.Windows.Forms.Label lb_Room_Type;
+        private System.Windows.Forms.ComboBox cb__Room_Type;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtp_Check_Out_Date;
+        private System.Windows.Forms.Label lb_Bed_Type;
+        private System.Windows.Forms.ComboBox cb_Bed_Type;
+        private System.Windows.Forms.TextBox tb_Total;
+        private System.Windows.Forms.Label lb_Total;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
+        private System.Windows.Forms.TextBox tb_Day;
+        private System.Windows.Forms.Label lb_Day;
+        private System.Windows.Forms.Label lb_Hrs;
+        private System.Windows.Forms.TextBox tb_Hrs;
+        private System.Windows.Forms.Label lb_hr;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lb_Cust_ID;
+        private System.Windows.Forms.TextBox tb_Cust_ID;
+        private System.Windows.Forms.Button btn_Search;
+        private System.Windows.Forms.Label lb_Discount;
+        private System.Windows.Forms.TextBox tb_Discount;
+        private System.Windows.Forms.Label lb_Pay;
+        private System.Windows.Forms.TextBox tb_Pay;
+        private System.Windows.Forms.Label lb_Remaining;
+        private System.Windows.Forms.TextBox tb_Remaining;
+        private System.Windows.Forms.Button btn_Total;
+        private System.Windows.Forms.Button btn_Update;
+        private System.Windows.Forms.Button btn_Next;
+        private System.Windows.Forms.Label lb_Room_No;
+        private System.Windows.Forms.ComboBox cmb_Room_No;
+        private System.Windows.Forms.TextBox tb_Bill;
+        private System.Windows.Forms.Label lb_Bill;
+        private System.Windows.Forms.TextBox tb_Prev_Room_Bill;
+        private System.Windows.Forms.Label lb_Prev_Room_Bill;
+        private System.Windows.Forms.Button btn_Remaining;
+        private System.Windows.Forms.Button btn_Generate_Bill;
+        private System.Windows.Forms.Button button2;
+    }
+}
