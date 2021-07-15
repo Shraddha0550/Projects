@@ -50,3 +50,6 @@ E:\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\bin
 E:\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\stdole.dll
 E:\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\obj\Debug\Lodging_Managment_System.Reports.resources
 E:\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\obj\Debug\Lodging_Managment_System.Loading.resources
+C:\Users\sai\Desktop\Github\Projects\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\bin\Debug\Lodging_Managment_System.exe.config
+C:\Users\sai\Desktop\Github\Projects\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\obj\Debug\Lodging_Managment_System.exe
+C:\Users\sai\Desktop\Github\Projects\Lodging_Mangment_System\Lodging_Managment_System\Lodging_Managment_System\obj\Debug\Lodging_Managment_System.pdb

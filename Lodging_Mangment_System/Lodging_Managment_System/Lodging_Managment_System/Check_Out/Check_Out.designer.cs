@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtp_Payment_Date = new System.Windows.Forms.DateTimePicker();
             this.lb_Check_Out_Date = new System.Windows.Forms.Label();
             this.btn_Check_Out = new System.Windows.Forms.Button();
@@ -141,7 +141,7 @@
             this.btn_Enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Enter.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btn_Enter.Location = new System.Drawing.Point(565, 3);
+            this.btn_Enter.Location = new System.Drawing.Point(563, 3);
             this.btn_Enter.Name = "btn_Enter";
             this.btn_Enter.Size = new System.Drawing.Size(110, 57);
             this.btn_Enter.TabIndex = 27;
@@ -183,7 +183,7 @@
             this.lb_Cust_ID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Cust_ID.AutoSize = true;
             this.lb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Cust_ID.Location = new System.Drawing.Point(166, 0);
+            this.lb_Cust_ID.Location = new System.Drawing.Point(165, 0);
             this.lb_Cust_ID.Name = "lb_Cust_ID";
             this.lb_Cust_ID.Size = new System.Drawing.Size(135, 32);
             this.lb_Cust_ID.TabIndex = 76;
@@ -195,9 +195,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Cust_ID.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Cust_ID.Location = new System.Drawing.Point(307, 3);
+            this.tb_Cust_ID.Location = new System.Drawing.Point(306, 3);
             this.tb_Cust_ID.Name = "tb_Cust_ID";
-            this.tb_Cust_ID.Size = new System.Drawing.Size(252, 38);
+            this.tb_Cust_ID.Size = new System.Drawing.Size(251, 38);
             this.tb_Cust_ID.TabIndex = 75;
             // 
             // lb_Paid
@@ -205,7 +205,7 @@
             this.lb_Paid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Paid.AutoSize = true;
             this.lb_Paid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Paid.Location = new System.Drawing.Point(1145, 103);
+            this.lb_Paid.Location = new System.Drawing.Point(1143, 103);
             this.lb_Paid.Name = "lb_Paid";
             this.lb_Paid.Size = new System.Drawing.Size(122, 32);
             this.lb_Paid.TabIndex = 86;
@@ -218,7 +218,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Paid.Enabled = false;
             this.tb_Paid.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Paid.Location = new System.Drawing.Point(1273, 106);
+            this.tb_Paid.Location = new System.Drawing.Point(1271, 106);
             this.tb_Paid.Name = "tb_Paid";
             this.tb_Paid.Size = new System.Drawing.Size(248, 38);
             this.tb_Paid.TabIndex = 87;
@@ -228,7 +228,7 @@
             this.lb_Remaining_Room_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Remaining_Room_Bill.AutoSize = true;
             this.lb_Remaining_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Remaining_Room_Bill.Location = new System.Drawing.Point(6, 206);
+            this.lb_Remaining_Room_Bill.Location = new System.Drawing.Point(5, 206);
             this.lb_Remaining_Room_Bill.Name = "lb_Remaining_Room_Bill";
             this.lb_Remaining_Room_Bill.Size = new System.Drawing.Size(295, 32);
             this.lb_Remaining_Room_Bill.TabIndex = 84;
@@ -241,9 +241,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Remaining_Room_Bill.Enabled = false;
             this.tb_Remaining_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Remaining_Room_Bill.Location = new System.Drawing.Point(307, 209);
+            this.tb_Remaining_Room_Bill.Location = new System.Drawing.Point(306, 209);
             this.tb_Remaining_Room_Bill.Name = "tb_Remaining_Room_Bill";
-            this.tb_Remaining_Room_Bill.Size = new System.Drawing.Size(252, 38);
+            this.tb_Remaining_Room_Bill.Size = new System.Drawing.Size(251, 38);
             this.tb_Remaining_Room_Bill.TabIndex = 85;
             // 
             // panel1
@@ -293,7 +293,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Total.Enabled = false;
             this.tb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Total.Location = new System.Drawing.Point(1273, 209);
+            this.tb_Total.Location = new System.Drawing.Point(1271, 209);
             this.tb_Total.Name = "tb_Total";
             this.tb_Total.Size = new System.Drawing.Size(248, 38);
             this.tb_Total.TabIndex = 90;
@@ -303,7 +303,7 @@
             this.lb_Total.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Total.AutoSize = true;
             this.lb_Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Total.Location = new System.Drawing.Point(1146, 206);
+            this.lb_Total.Location = new System.Drawing.Point(1144, 206);
             this.lb_Total.Name = "lb_Total";
             this.lb_Total.Size = new System.Drawing.Size(121, 32);
             this.lb_Total.TabIndex = 91;
@@ -316,7 +316,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Service.Enabled = false;
             this.tb_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Service.Location = new System.Drawing.Point(765, 209);
+            this.tb_Service.Location = new System.Drawing.Point(763, 209);
             this.tb_Service.Name = "tb_Service";
             this.tb_Service.Size = new System.Drawing.Size(248, 38);
             this.tb_Service.TabIndex = 79;
@@ -327,7 +327,7 @@
             this.lb_Service.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Service.AutoSize = true;
             this.lb_Service.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Service.Location = new System.Drawing.Point(607, 206);
+            this.lb_Service.Location = new System.Drawing.Point(605, 206);
             this.lb_Service.Name = "lb_Service";
             this.lb_Service.Size = new System.Drawing.Size(152, 32);
             this.lb_Service.TabIndex = 64;
@@ -340,7 +340,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Room_Bill.Enabled = false;
             this.tb_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Room_Bill.Location = new System.Drawing.Point(765, 106);
+            this.tb_Room_Bill.Location = new System.Drawing.Point(763, 106);
             this.tb_Room_Bill.Name = "tb_Room_Bill";
             this.tb_Room_Bill.Size = new System.Drawing.Size(248, 38);
             this.tb_Room_Bill.TabIndex = 81;
@@ -350,7 +350,7 @@
             this.lb_Room_Bill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Room_Bill.AutoSize = true;
             this.lb_Room_Bill.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Room_Bill.Location = new System.Drawing.Point(608, 103);
+            this.lb_Room_Bill.Location = new System.Drawing.Point(606, 103);
             this.lb_Room_Bill.Name = "lb_Room_Bill";
             this.lb_Room_Bill.Size = new System.Drawing.Size(151, 32);
             this.lb_Room_Bill.TabIndex = 80;
@@ -363,9 +363,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tb_Name.Enabled = false;
             this.tb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Name.Location = new System.Drawing.Point(307, 106);
+            this.tb_Name.Location = new System.Drawing.Point(306, 106);
             this.tb_Name.Name = "tb_Name";
-            this.tb_Name.Size = new System.Drawing.Size(252, 38);
+            this.tb_Name.Size = new System.Drawing.Size(251, 38);
             this.tb_Name.TabIndex = 78;
             // 
             // lb_Name
@@ -373,7 +373,7 @@
             this.lb_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lb_Name.AutoSize = true;
             this.lb_Name.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lb_Name.Location = new System.Drawing.Point(169, 103);
+            this.lb_Name.Location = new System.Drawing.Point(168, 103);
             this.lb_Name.Name = "lb_Name";
             this.lb_Name.Size = new System.Drawing.Size(132, 32);
             this.lb_Name.TabIndex = 77;
@@ -388,7 +388,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 285F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 289F));
             this.tableLayoutPanel1.Controls.Add(this.lb_Cust_ID, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.tb_Total, 5, 2);
             this.tableLayoutPanel1.Controls.Add(this.tb_Cust_ID, 1, 0);
@@ -436,14 +436,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_Rooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Rooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Rooms.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_Rooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Rooms.Location = new System.Drawing.Point(3, 3);
             this.dgv_Rooms.Name = "dgv_Rooms";
