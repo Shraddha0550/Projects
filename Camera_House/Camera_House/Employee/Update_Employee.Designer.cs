@@ -94,6 +94,7 @@
             this.tb_Employee_ID.Name = "tb_Employee_ID";
             this.tb_Employee_ID.Size = new System.Drawing.Size(348, 38);
             this.tb_Employee_ID.TabIndex = 26;
+            this.tb_Employee_ID.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Only_Numeric);
             // 
             // lb_Employee_ID
             // 

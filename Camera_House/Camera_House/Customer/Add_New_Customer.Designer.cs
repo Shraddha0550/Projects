@@ -422,7 +422,6 @@
             this.tb_Total_Stock.Name = "tb_Total_Stock";
             this.tb_Total_Stock.Size = new System.Drawing.Size(235, 22);
             this.tb_Total_Stock.TabIndex = 41;
-            this.tb_Total_Stock.Visible = false;
             // 
             // lb_Date
             // 
@@ -502,7 +501,6 @@
             this.tb_Prod_ID.Name = "tb_Prod_ID";
             this.tb_Prod_ID.Size = new System.Drawing.Size(235, 22);
             this.tb_Prod_ID.TabIndex = 40;
-            this.tb_Prod_ID.Visible = false;
             // 
             // tableLayoutPanel2
             // 

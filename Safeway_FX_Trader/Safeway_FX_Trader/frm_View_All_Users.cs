@@ -72,9 +72,8 @@ namespace Safeway_FX_Trader
 
             Con.Open();
 
-            int val = 0;
 
-            SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_User where ID = " + val + " ", Con);
+            SqlDataAdapter sda = new SqlDataAdapter("Select *From Add_User  ", Con);
 
             DataTable dt = new DataTable();
 

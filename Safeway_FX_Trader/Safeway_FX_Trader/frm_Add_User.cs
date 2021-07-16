@@ -39,26 +39,36 @@ namespace Safeway_FX_Trader
         private void btn_Add_Click(object sender, EventArgs e)
         {
             Con.Open();
+            int count = 0;
+            int Cnt = 0;
 
-            if(tb_Id.Text != "" && tb_Refer_Id.Text != "" && tb_Name.Text != "" && tb_Mob_No.Text != "" && tb_Mail.Text != "" && tb_Adhar_No.Text != "")
+            if (tb_Id.Text != "" && tb_Refer_Id.Text != "" && tb_Name.Text != "" && tb_Mob_No.Text != "" && tb_Mail.Text != "" )
             {
 
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_User Values("+tb_Id.Text+","+tb_Refer_Id.Text+",'"+tb_Name.Text+"',"+tb_Mob_No.Text+",'"+tb_Mail.Text+"',"+tb_Adhar_No.Text+")",Con);
+                Cnt = Convert.ToInt32(textBox1.Text) + 1;
+
+                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_User(ID,Refer_ID,Name,Mob_No,E_Mail) Values(" + tb_Id.Text+","+tb_Refer_Id.Text+",'"+tb_Name.Text+"',"+tb_Mob_No.Text+",'"+tb_Mail.Text+"')Update Add_User set Count = "+ Cnt + "  where ID="+tb_Refer_Id.Text+" ",Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
 
                 MessageBox.Show("Succesfull");
+             
                 tb_Id.Text = Convert.ToString(Auto_Incr());
                 Refresh();
+
             }
-            else if(tb_Id.Text != ""  && tb_Name.Text != "" && tb_Mob_No.Text != "" && tb_Mail.Text != "" && tb_Adhar_No.Text != "")
+            else if(tb_Id.Text != ""  && tb_Name.Text != "" && tb_Mob_No.Text != "" && tb_Mail.Text != "" )
             {
-                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_User(ID,Name,Mob_No,E_Mail,Adhar_No) Values(" + tb_Id.Text + ",'" + tb_Name.Text + "'," + tb_Mob_No.Text + ",'" + tb_Mail.Text + "'," + tb_Adhar_No.Text + ")", Con);
+
+                SqlDataAdapter sda = new SqlDataAdapter("insert into Add_User(ID,Name,Mob_No,E_Mail,Count) Values(" + tb_Id.Text + ",'" + tb_Name.Text + "'," + tb_Mob_No.Text + ",'" + tb_Mail.Text + "',"+count+")", Con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
+
                 MessageBox.Show("Succesfull");
+
                 tb_Id.Text = Convert.ToString(Auto_Incr());
                 Refresh();
+
             }
             else
             {
@@ -92,17 +102,41 @@ namespace Safeway_FX_Trader
 
         private void btn_Refresh_Click(object sender, EventArgs e)
         {
-            
+
             Refresh();
         }
 
         public void Refresh()
         {
-            tb_Adhar_No.Clear();
             tb_Mail.Clear();
             tb_Mob_No.Clear();
             tb_Name.Clear();
             tb_Refer_Id.Clear();
+        }
+
+        private void tb_Refer_Id_TextChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void tb_Name_TextChanged(object sender, EventArgs e)
+        {
+            Con_Open();
+
+            if(tb_Refer_Id.Text != "")
+            {
+                SqlCommand cmd = new SqlCommand("Select * From Add_User where ID = " + tb_Refer_Id.Text + " ", Con);
+
+                var obj = cmd.ExecuteReader();
+
+                if (obj.Read())
+                {
+
+                    textBox1.Text = obj["Count"].ToString();
+
+                }
+            }
+
+            Con_Close();
         }
     }
 }

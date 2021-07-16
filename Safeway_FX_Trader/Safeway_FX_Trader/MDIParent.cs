@@ -19,6 +19,16 @@ namespace Safeway_FX_Trader
             InitializeComponent();
         }
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams handelparam = base.CreateParams;
+                handelparam.ExStyle = 0x02000000;
+                return handelparam;
+            }
+        }
+
         private void ShowNewForm(object sender, EventArgs e)
         {
             Form childForm = new Form();
@@ -98,7 +108,6 @@ namespace Safeway_FX_Trader
         {
             frm_Add_User obj = new frm_Add_User();
             obj.MdiParent = this;
-            obj.WindowState = FormWindowState.Maximized;
             obj.Show();
         }
 
@@ -106,7 +115,6 @@ namespace Safeway_FX_Trader
         {
             frm_View_All_Users obj = new frm_View_All_Users();
             obj.MdiParent = this;
-            obj.WindowState = FormWindowState.Maximized;
             obj.Show();
         }
 
@@ -116,7 +124,13 @@ namespace Safeway_FX_Trader
         {
             frm_Referal_User obj = new frm_Referal_User();
             obj.MdiParent = this;
-            obj.WindowState = FormWindowState.Maximized;
+            obj.Show();
+        }
+
+        private void btn_twty_per_Click(object sender, EventArgs e)
+        {
+            frm_Twenty_Per_User obj = new frm_Twenty_Per_User();
+            obj.MdiParent = this;
             obj.Show();
         }
     }

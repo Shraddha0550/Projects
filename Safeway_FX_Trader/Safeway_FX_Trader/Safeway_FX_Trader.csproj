@@ -58,6 +58,12 @@
     <Compile Include="frm_Referal_User.Designer.cs">
       <DependentUpon>frm_Referal_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_Twenty_Per_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Twenty_Per_User.Designer.cs">
+      <DependentUpon>frm_Twenty_Per_User.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIParent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     <EmbeddedResource Include="frm_Referal_User.resx">
       <DependentUpon>frm_Referal_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_Twenty_Per_User.resx">
+      <DependentUpon>frm_Twenty_Per_User.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MDIParent.resx">
       <DependentUpon>MDIParent.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,6 +98,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="frm_View_All_Users.resx">
       <DependentUpon>frm_View_All_Users.cs</DependentUpon>
@@ -105,6 +115,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trading_img.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\T3 %282%29.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
